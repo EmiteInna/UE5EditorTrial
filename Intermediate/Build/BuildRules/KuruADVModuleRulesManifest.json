@@ -1,0 +1,9 @@
+{
+	"SourceFiles": [
+		"H:\\KuruEditors\\KuruADV\\Source\\KuruADV\\KuruADV.Build.cs",
+		"H:\\KuruEditors\\KuruADV\\Plugins\\KuruEditorToolMaker\\Source\\KuruEditorToolMaker\\KuruEditorToolMaker.Build.cs",
+		"H:\\KuruEditors\\KuruADV\\Source\\KuruADV.Target.cs",
+		"H:\\KuruEditors\\KuruADV\\Source\\KuruADVEditor.Target.cs"
+	],
+	"EngineVersion": "5.3.2"
+}

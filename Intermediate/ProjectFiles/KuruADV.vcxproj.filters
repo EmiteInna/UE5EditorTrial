@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\KuruADV.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\KuruADV.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\KuruADVEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Plugins">
+      <UniqueIdentifier>{BB38096A-B391-30DC-A0D4-4F3EA6B44507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\KuruEditorToolMaker">
+      <UniqueIdentifier>{F0A09D18-728C-3394-A636-C397C867F2D6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\KuruEditorToolMaker\Source">
+      <UniqueIdentifier>{E99C6ED7-6989-332B-A5DD-E27D28C64D56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker">
+      <UniqueIdentifier>{5469F0D8-BDDE-36CD-893D-27667CDD322D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker\KuruEditorToolMaker.Build.cs">
+      <Filter>Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker</Filter>
+    </None>
+    <Filter Include="Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker\Private">
+      <UniqueIdentifier>{ACD40363-3865-3BFE-857E-B1C4E532B7DC}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker\Private\KuruEditorToolMaker.cpp">
+      <Filter>Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker\Public">
+      <UniqueIdentifier>{3CDFAAC4-09FD-3977-92CC-D08845F6F18D}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker\Public\KuruEditorToolMaker.h">
+      <Filter>Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker\Public</Filter>
+    </ClInclude>
+    <None Include="..\..\Plugins\KuruEditorToolMaker\KuruEditorToolMaker.uplugin">
+      <Filter>Plugins\KuruEditorToolMaker</Filter>
+    </None>
+    <Filter Include="Plugins\KuruEditorToolMaker\Resources">
+      <UniqueIdentifier>{7C52387C-493F-3916-9F1B-E8D388656355}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\KuruEditorToolMaker\Resources\Icon128.png">
+      <Filter>Plugins\KuruEditorToolMaker\Resources</Filter>
+    </None>
+    <Filter Include="Source\KuruADV">
+      <UniqueIdentifier>{112F0537-2789-31FF-AA66-619C0F71D7D0}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\KuruADV\KuruADV.Build.cs">
+      <Filter>Source\KuruADV</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\KuruADV\KuruADV.cpp">
+      <Filter>Source\KuruADV</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\KuruADV\KuruADV.h">
+      <Filter>Source\KuruADV</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

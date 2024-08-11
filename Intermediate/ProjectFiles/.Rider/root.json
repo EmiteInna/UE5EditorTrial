@@ -1,0 +1,94 @@
+{
+	"ConfigurationsAndPlatforms": [
+		{
+			"Configuration": "Debug",
+			"Platform": "Win64",
+			"Target": "Client"
+		},
+		{
+			"Configuration": "Debug",
+			"Platform": "Win64",
+			"Target": "Editor"
+		},
+		{
+			"Configuration": "Debug",
+			"Platform": "Win64",
+			"Target": "Server"
+		},
+		{
+			"Configuration": "DebugGame",
+			"Platform": "Win64",
+			"Target": "Client"
+		},
+		{
+			"Configuration": "DebugGame",
+			"Platform": "Win64",
+			"Target": "Editor"
+		},
+		{
+			"Configuration": "DebugGame",
+			"Platform": "Win64",
+			"Target": "Server"
+		},
+		{
+			"Configuration": "DebugGame",
+			"Platform": "Win64",
+			"Target": "Game"
+		},
+		{
+			"Configuration": "Debug",
+			"Platform": "Win64",
+			"Target": "Game"
+		},
+		{
+			"Configuration": "Development",
+			"Platform": "Win64",
+			"Target": "Client"
+		},
+		{
+			"Configuration": "Development",
+			"Platform": "Win64",
+			"Target": "Editor"
+		},
+		{
+			"Configuration": "Development",
+			"Platform": "Win64",
+			"Target": "Server"
+		},
+		{
+			"Configuration": "Development",
+			"Platform": "Win64",
+			"Target": "Game"
+		},
+		{
+			"Configuration": "Shipping",
+			"Platform": "Win64",
+			"Target": "Client"
+		},
+		{
+			"Configuration": "Shipping",
+			"Platform": "Win64",
+			"Target": "Server"
+		},
+		{
+			"Configuration": "Shipping",
+			"Platform": "Win64",
+			"Target": "Game"
+		},
+		{
+			"Configuration": "Test",
+			"Platform": "Win64",
+			"Target": "Client"
+		},
+		{
+			"Configuration": "Test",
+			"Platform": "Win64",
+			"Target": "Server"
+		},
+		{
+			"Configuration": "Test",
+			"Platform": "Win64",
+			"Target": "Game"
+		}
+	]
+}

@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "KuruADV",
+			"Path": "..\\Source\\KuruADV.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "KuruADVEditor",
+			"Path": "..\\Source\\KuruADVEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

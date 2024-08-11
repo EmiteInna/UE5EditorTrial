@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\kurueditors\\kuruadv\\source\\kuruadv\\kuruadv.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\04unreal\\unrealengine\\source\\engine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "h:\\kurueditors\\kuruadv\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\kuruadv\\definitions.kuruadv.h",
+            "h:\\kurueditors\\kuruadv\\source\\kuruadv\\kuruadv.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

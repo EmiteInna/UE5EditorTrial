@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\kurueditors\\kuruadv\\plugins\\kurueditortoolmaker\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\kurueditortoolmaker\\module.kurueditortoolmaker.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\04unreal\\unrealengine\\source\\engine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "h:\\kurueditors\\kuruadv\\plugins\\kurueditortoolmaker\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\kurueditortoolmaker\\definitions.kurueditortoolmaker.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurueditortoolmaker\\source\\kurueditortoolmaker\\private\\kurueditortoolmaker.cpp",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurueditortoolmaker\\source\\kurueditortoolmaker\\public\\kurueditortoolmaker.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

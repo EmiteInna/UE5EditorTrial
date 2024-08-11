@@ -1,0 +1,13 @@
+# Ignore build and intermediate files
+/Binaries/
+/Intermediate/
+/Saved/
+/*.vcxproj
+/*.VC.db
+/*.opensdf
+/*.suo
+/DerivedDataCache/
+
+# Ignore Rider-specific files
+/.idea/
+./*.iml
