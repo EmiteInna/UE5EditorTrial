@@ -26,6 +26,9 @@ public class KuruEditorToolMaker : ModuleRules
 			new string[]
 			{
 				"Core",
+				"LevelEditor",
+				"ToolMenus",
+				
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);

@@ -13,6 +13,14 @@ public:
 	virtual void StartupModule() override;
 	virtual void ShutdownModule() override;
 
-private:
+	static void GE_PrintMessage(const FString& Message);
 	
+	void BindAction_CreateNewUObjectCode();
+
+	
+private:
+	//创建创建新UObject代码的菜单。
+	void CreateAddNewUObjectTypeMenu();
 };
+
+
