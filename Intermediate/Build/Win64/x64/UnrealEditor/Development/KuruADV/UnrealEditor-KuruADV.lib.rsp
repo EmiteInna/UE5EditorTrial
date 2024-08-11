@@ -6,7 +6,15 @@
 /NAME:"UnrealEditor-KuruADV.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
+"..\Intermediate\Build\Win64\x64\UnrealEditor\Development\UnrealEd\SharedPCH.UnrealEd.Cpp20.h.obj"
+"H:\KuruEditors\KuruADV\Intermediate\Build\Win64\x64\UnrealEditor\Development\KuruADV\KuruADV.init.gen.cpp.obj"
+"H:\KuruEditors\KuruADV\Intermediate\Build\Win64\x64\UnrealEditor\Development\KuruADV\TestObj.gen.cpp.obj"
+"H:\KuruEditors\KuruADV\Intermediate\Build\Win64\x64\UnrealEditor\Development\KuruADV\TestObj_AssetDefinition.gen.cpp.obj"
+"H:\KuruEditors\KuruADV\Intermediate\Build\Win64\x64\UnrealEditor\Development\KuruADV\TestObj_Factory.gen.cpp.obj"
 "H:\KuruEditors\KuruADV\Intermediate\Build\Win64\x64\UnrealEditor\Development\KuruADV\KuruADV.cpp.obj"
+"H:\KuruEditors\KuruADV\Intermediate\Build\Win64\x64\UnrealEditor\Development\KuruADV\TestObj.cpp.obj"
+"H:\KuruEditors\KuruADV\Intermediate\Build\Win64\x64\UnrealEditor\Development\KuruADV\TestObj_AssetDefinition.cpp.obj"
+"H:\KuruEditors\KuruADV\Intermediate\Build\Win64\x64\UnrealEditor\Development\KuruADV\TestObj_EditorTool.cpp.obj"
+"H:\KuruEditors\KuruADV\Intermediate\Build\Win64\x64\UnrealEditor\Development\KuruADV\TestObj_Factory.cpp.obj"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Default.rc2.res"
 /OUT:"H:\KuruEditors\KuruADV\Intermediate\Build\Win64\x64\UnrealEditor\Development\KuruADV\UnrealEditor-KuruADV.lib"

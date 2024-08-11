@@ -44,6 +44,7 @@
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Core\UnrealEditor-Core.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\LevelEditor\UnrealEditor-LevelEditor.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\ToolMenus\UnrealEditor-ToolMenus.lib"
+"..\Intermediate\Build\Win64\x64\UnrealEditor\Development\DesktopPlatform\UnrealEditor-DesktopPlatform.lib"
 "delayimp.lib"
 "wininet.lib"
 "rpcrt4.lib"

@@ -3,6 +3,7 @@
 #include "KuruEditorToolMaker.h"
 
 #include "LevelEditor.h"
+#include "KuruEditorToolMaker/NewUAssetTypeDialog.h"
 
 #define LOCTEXT_NAMESPACE "FKuruEditorToolMakerModule"
 
@@ -29,7 +30,28 @@ void FKuruEditorToolMakerModule::GE_PrintMessage(const FString& Message)
 
 void FKuruEditorToolMakerModule::BindAction_CreateNewUObjectCode()
 {
-	GE_PrintMessage(TEXT("准备创建UObject附带类"));
+	GE_PrintMessage(TEXT("准备创建UAsset附带类"));
+	const FVector2D WindowSize =FVector2D(940, 480);
+
+	FText WindowTitle = FText::FromString(TEXT("创建新uasset类型"));
+
+
+	TSharedRef<SWindow> AddCodeWindow =
+		SNew(SWindow)
+		.Title( WindowTitle )
+		.ClientSize( WindowSize )
+		.SizingRule( ESizingRule::FixedSize )
+		.SupportsMinimize(false) .SupportsMaximize(false);
+
+	TSharedRef<SNewUAssetTypeDialog> NewClassDialog =
+		SNew(SNewUAssetTypeDialog)
+		.InitialPath(TEXT("InitialPath"))
+		.DefaultClassNmae(TEXT("Nya"));
+	
+
+	AddCodeWindow->SetContent( NewClassDialog );
+
+	FSlateApplication::Get().AddWindow(AddCodeWindow);
 }
 
 void FKuruEditorToolMakerModule::CreateAddNewUObjectTypeMenu()

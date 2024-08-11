@@ -369,6 +369,14 @@
     <ClCompile_AdditionalOptions>$(AdditionalOptions) /Yu"D:\04unreal\UnrealEngine\Source\Engine\Intermediate\Build\Win64\x64\UnrealEditor\Development\Engine\SharedPCH.Engine.Cpp20.h"</ClCompile_AdditionalOptions>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\KuruADV\TestObj.cpp" />
+    <ClCompile Include="..\..\Source\KuruADV\TestObj_AssetDefinition.cpp" />
+    <ClCompile Include="..\..\Source\KuruADV\TestObj_EditorTool.cpp" />
+    <ClCompile Include="..\..\Source\KuruADV\TestObj_Factory.cpp" />
+    <ClInclude Include="..\..\Source\KuruADV\TestObj.h" />
+    <ClInclude Include="..\..\Source\KuruADV\TestObj_AssetDefinition.h" />
+    <ClInclude Include="..\..\Source\KuruADV\TestObj_EditorTool.h" />
+    <ClInclude Include="..\..\Source\KuruADV\TestObj_Factory.h" />
     <None Include="..\..\KuruADV.uproject"/>
     <None Include="..\..\Source\KuruADV.Target.cs"/>
     <None Include="..\..\Source\KuruADVEditor.Target.cs"/>

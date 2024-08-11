@@ -28,7 +28,8 @@ public class KuruEditorToolMaker : ModuleRules
 				"Core",
 				"LevelEditor",
 				"ToolMenus",
-				
+				"Slate",
+				"DesktopPlatform",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);

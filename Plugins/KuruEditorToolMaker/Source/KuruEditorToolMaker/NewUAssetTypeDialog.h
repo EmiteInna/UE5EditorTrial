@@ -1,6 +1,7 @@
 ﻿#pragma once
 
-DECLARE_DELEGATE_TwoParams( FOnAddNewUAsset, const FString& /*ClassName*/, const FString& /*ClassPath*/);
+class SMultiLineEditableTextBox;
+DECLARE_DELEGATE_TwoParams(FOnAddNewUAsset, const FString& /*ClassName*/, const FString& /*ClassPath*/);
 
 /*
  * 创建新UAsset类型所使用的工具框，
@@ -36,4 +37,18 @@ public:
 	FReply HandleChooseFolderButtonClicked();
 
 	FOnAddNewUAsset OnAddedToProject;
+
+
+public:
+	FString SelectedName = "";
+	
+	FString SelectedPath = "";
+	
+	TSharedPtr<SMultiLineEditableTextBox> SW_InputName;
+
+	TSharedPtr<SMultiLineEditableTextBox> SW_InputPath;
+
+	FReply CreateTheUAsset();
+
+	FReply CancelTheProcess();
 };
