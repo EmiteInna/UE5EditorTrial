@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.KuruEditorToolMaker.cpp.obj": [
+			"KuruEditorToolMaker.cpp.obj"
+		]
+	}
+}

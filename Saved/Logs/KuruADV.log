@@ -1128,3 +1128,36 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.08.11-17.00.08:502][990]LogAssetEditorSubsystem: Opening Asset editor for TestObj /Game/NewTestObj.NewTestObj
 [2024.08.11-17.00.13:433][569]LogSlate: Window 'NewTestObj' being destroyed
 [2024.08.11-17.00.13:437][569]LogSlate: Window 'NewTestObj' being destroyed
+[2024.08.11-17.11.27:938][212]LogUObjectHash: Compacting FUObjectHashTables data took   0.38ms
+[2024.08.11-17.11.28:864][323]LogUObjectHash: Compacting FUObjectHashTables data took   0.15ms
+[2024.08.11-17.11.29:547][405]LogUObjectHash: Compacting FUObjectHashTables data took   0.15ms
+[2024.08.11-17.11.32:470][741]LogUObjectHash: Compacting FUObjectHashTables data took   0.17ms
+[2024.08.11-17.11.32:646][762]LogUObjectHash: Compacting FUObjectHashTables data took   0.16ms
+[2024.08.11-17.11.32:796][780]LogUObjectHash: Compacting FUObjectHashTables data took   0.18ms
+[2024.08.11-17.11.32:989][803]LogUObjectHash: Compacting FUObjectHashTables data took   0.16ms
+[2024.08.11-17.11.34:040][928]LogUObjectHash: Compacting FUObjectHashTables data took   0.16ms
+[2024.08.11-17.11.34:042][928]LogStall: Shutdown...
+[2024.08.11-17.11.34:050][928]LogStall: Shutdown complete.
+[2024.08.11-17.11.34:073][928]LogSlate: Window 'KuruADV - Unreal Editor' being destroyed
+[2024.08.11-17.11.34:137][929]Cmd: QUIT_EDITOR
+[2024.08.11-17.11.34:137][929]LogCore: Engine exit requested (reason: UUnrealEdEngine::CloseEditor())
+[2024.08.11-17.11.34:140][929]LogCore: Engine exit requested (reason: EngineExit() was called; note: exit was already requested)
+[2024.08.11-17.11.34:141][929]LogStaticMesh: Abandoning remaining async distance field tasks for shutdown
+[2024.08.11-17.11.34:141][929]LogStaticMesh: Abandoning remaining async card representation tasks for shutdown
+[2024.08.11-17.11.34:144][929]LogWorld: UWorld::CleanupWorld for NewMap, bSessionEnded=true, bCleanupResources=true
+[2024.08.11-17.11.34:144][929]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.08.11-17.11.34:147][929]LogContentBundle: [NewMap(Standalone)] Deleting container.
+[2024.08.11-17.11.34:157][929]LogLevelSequenceEditor: LevelSequenceEditor subsystem deinitialized.
+[2024.08.11-17.11.34:362][929]LogAnalyticsSessionSummarySender: Sent summary session report for: AppId=UEEditor.UnrealEngine.Release SessionId={6C62326F-4D65-BEF5-2D79-B6BB485B4192}
+[2024.08.11-17.11.34:368][929]LogAudio: Display: Beginning Audio Device Manager Shutdown (Module: AudioMixerXAudio2)...
+[2024.08.11-17.11.34:368][929]LogAudio: Display: Destroying 1 Remaining Audio Device(s)...
+[2024.08.11-17.11.34:368][929]LogAudio: Display: Audio Device unregistered from world 'NewMap'.
+[2024.08.11-17.11.34:368][929]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 1
+[2024.08.11-17.11.34:369][929]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1
+[2024.08.11-17.11.34:371][929]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1
+[2024.08.11-17.11.34:378][929]LogAudio: Display: Audio Device Manager Shutdown
+[2024.08.11-17.11.34:379][929]LogSlate: Window '创建新uasset类型' being destroyed
+[2024.08.11-17.11.34:383][929]LogWindowsTextInputMethodSystem: Activated input method: 中文(简体，中国) - 搜狗拼音输入法 (TSF IME).
+[2024.08.11-17.11.34:387][929]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
+[2024.08.11-17.11.34:387][929]LogExit: Preparing to exit.
+[2024.08.11-17.11.34:409][929]LogUObjectHash: Compacting FUObjectHashTables data took   0.29ms
