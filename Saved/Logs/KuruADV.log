@@ -1105,3 +1105,39 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.08.11-11.10.15:397][886]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
 [2024.08.11-11.10.15:486][889]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
 [2024.08.11-11.12.35:761][696]LogDerivedDataCache: ../../../Engine/DerivedDataCache: Maintenance finished in +00:00:33.074 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 17454 files in 20034 folders with total size 3325 MiB.
+[2024.08.11-11.22.16:199][240]LogSlate: Took 0.004323 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2024.08.11-11.22.21:804][897]LogSlate: Window 'Add C++ Class' being destroyed
+[2024.08.11-11.25.07:621][353]LogAnalytics: Display: [UEEditor.UnrealEngine.Release] APIServer = https://datarouter.ol.epicgames.com/. AppVersion = 5.3.2-0+UE5
+[2024.08.11-11.25.07:926][353]LogAnalyticsSessionSummarySender: Sent summary session report for: AppId=UEEditor.UnrealEngine.Release SessionId={C6D76618-46C7-A28E-930D-81A39C5D15FC}
+[2024.08.11-11.33.36:222][ 93]LogSlate: Window 'Add C++ Class' being destroyed
+[2024.08.11-11.49.54:698][377]LogViewport: Scene viewport resized to 800x288, mode Windowed.
+[2024.08.11-11.49.55:901][399]LogViewport: Scene viewport resized to 1206x448, mode Windowed.
+[2024.08.11-11.49.57:707][609]LogViewport: Scene viewport resized to 1206x450, mode Windowed.
+[2024.08.11-11.49.57:721][610]LogViewport: Scene viewport resized to 1206x452, mode Windowed.
+[2024.08.11-11.49.57:745][611]LogViewport: Scene viewport resized to 1206x458, mode Windowed.
+[2024.08.11-11.49.57:759][612]LogViewport: Scene viewport resized to 1206x461, mode Windowed.
+[2024.08.11-11.49.57:776][613]LogViewport: Scene viewport resized to 1206x464, mode Windowed.
+[2024.08.11-11.49.57:793][614]LogViewport: Scene viewport resized to 1206x470, mode Windowed.
+[2024.08.11-11.49.57:809][615]LogViewport: Scene viewport resized to 1206x475, mode Windowed.
+[2024.08.11-11.49.57:825][616]LogViewport: Scene viewport resized to 1206x479, mode Windowed.
+[2024.08.11-11.49.57:842][617]LogViewport: Scene viewport resized to 1206x484, mode Windowed.
+[2024.08.11-11.49.57:859][618]LogViewport: Scene viewport resized to 1206x493, mode Windowed.
+[2024.08.11-11.49.57:877][619]LogViewport: Scene viewport resized to 1206x498, mode Windowed.
+[2024.08.11-11.49.57:894][620]LogViewport: Scene viewport resized to 1206x502, mode Windowed.
+[2024.08.11-11.49.57:911][621]LogViewport: Scene viewport resized to 1206x506, mode Windowed.
+[2024.08.11-11.49.58:033][635]LogViewport: Scene viewport resized to 1206x507, mode Windowed.
+[2024.08.11-11.49.58:046][636]LogViewport: Scene viewport resized to 1206x513, mode Windowed.
+[2024.08.11-11.49.58:069][637]LogViewport: Scene viewport resized to 1206x523, mode Windowed.
+[2024.08.11-11.49.58:088][638]LogViewport: Scene viewport resized to 1206x528, mode Windowed.
+[2024.08.11-11.49.58:105][639]LogViewport: Scene viewport resized to 1206x535, mode Windowed.
+[2024.08.11-11.49.58:121][640]LogViewport: Scene viewport resized to 1206x538, mode Windowed.
+[2024.08.11-11.49.58:142][641]LogViewport: Scene viewport resized to 1206x539, mode Windowed.
+[2024.08.11-11.49.58:274][655]LogViewport: Scene viewport resized to 1206x540, mode Windowed.
+[2024.08.11-11.49.58:286][656]LogViewport: Scene viewport resized to 1206x542, mode Windowed.
+[2024.08.11-12.00.07:651][739]LogAnalytics: Display: [UEEditor.UnrealEngine.Release] APIServer = https://datarouter.ol.epicgames.com/. AppVersion = 5.3.2-0+UE5
+[2024.08.11-12.00.07:973][739]LogAnalyticsSessionSummarySender: Sent summary session report for: AppId=UEEditor.UnrealEngine.Release SessionId={971D830F-4477-BE0E-AB3E-518E85B12EDA}
+[2024.08.11-12.05.07:653][700]LogAnalytics: Display: [UEEditor.UnrealEngine.Release] APIServer = https://datarouter.ol.epicgames.com/. AppVersion = 5.3.2-0+UE5
+[2024.08.11-12.05.07:941][700]LogAnalyticsSessionSummarySender: Sent summary session report for: AppId=UEEditor.UnrealEngine.Release SessionId={C043F41C-4F47-816E-5842-2C95E3704697}
+[2024.08.11-12.10.07:659][658]LogAnalytics: Display: [UEEditor.UnrealEngine.Release] APIServer = https://datarouter.ol.epicgames.com/. AppVersion = 5.3.2-0+UE5
+[2024.08.11-12.10.07:964][658]LogAnalyticsSessionSummarySender: Sent summary session report for: AppId=UEEditor.UnrealEngine.Release SessionId={A41B3E5E-41F0-B485-1E89-68A811C6F5CA}
+[2024.08.11-12.12.35:768][395]LogDerivedDataCache: ../../../Engine/DerivedDataCache: Maintenance finished in +00:00:33.079 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 17454 files in 20034 folders with total size 3325 MiB.

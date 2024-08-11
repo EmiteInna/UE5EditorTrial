@@ -48,7 +48,7 @@ void FKuruEditorToolMakerModule::CreateAddNewUObjectTypeMenu()
 			FToolMenuSection& NewSection = InMenu->AddSection("Section");
 			NewSection.AddMenuEntry(
 			"KuruEditorEntry",
-			FText::FromString(TEXT("Kuru编辑器")),
+			FText::FromString(TEXT("创建一个新的自定义UAsset")),
 			FText::FromString(TEXT("关注EmiteInna谢谢喵")),
 			FSlateIcon(),
 			FUIAction(FExecuteAction::CreateRaw(this,

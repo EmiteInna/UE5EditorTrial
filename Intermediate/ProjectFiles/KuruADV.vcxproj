@@ -378,11 +378,13 @@
     <None Include="..\..\Config\DefaultGame.ini"/>
     <None Include="..\..\Config\DefaultInput.ini"/>
     <None Include="..\..\Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker\KuruEditorToolMaker.Build.cs"/>
+    <ClCompile Include="..\..\Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker\NewUAssetTypeDialog.cpp" />
     <ClCompile Include="..\..\Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker\Private\KuruEditorToolMaker.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <ClInclude Include="..\..\Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker\NewUAssetTypeDialog.h" />
     <ClInclude Include="..\..\Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker\Public\KuruEditorToolMaker.h"/>
     <None Include="..\..\Plugins\KuruEditorToolMaker\KuruEditorToolMaker.uplugin"/>
     <None Include="..\..\Plugins\KuruEditorToolMaker\Resources\Icon128.png"/>
