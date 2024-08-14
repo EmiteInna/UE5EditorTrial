@@ -1,0 +1,9 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.KuruEditorToolMaker.cpp.obj": [
+			"NewUAssetTypeDialog.cpp.obj",
+			"KuruEditorToolMaker.cpp.obj"
+		]
+	}
+}

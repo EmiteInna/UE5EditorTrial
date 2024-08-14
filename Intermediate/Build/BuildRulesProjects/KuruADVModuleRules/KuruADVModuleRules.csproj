@@ -16,6 +16,7 @@
   </ItemGroup>
   <ItemGroup>
   <Compile Include="..\..\..\..\Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker\KuruEditorToolMaker.Build.cs"><Link>Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker\KuruEditorToolMaker.Build.cs</Link></Compile>
+  <Compile Include="..\..\..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\KuruStoryModule.Build.cs"><Link>Plugins\KuruStoryModule\Source\KuruStoryModule\KuruStoryModule.Build.cs</Link></Compile>
   <Compile Include="..\..\..\..\Source\KuruADV.Target.cs"><Link>Source\KuruADV.Target.cs</Link></Compile>
   <Compile Include="..\..\..\..\Source\KuruADVEditor.Target.cs"><Link>Source\KuruADVEditor.Target.cs</Link></Compile>
   <Compile Include="..\..\..\..\Source\KuruADV\KuruADV.Build.cs"><Link>Source\KuruADV\KuruADV.Build.cs</Link></Compile>

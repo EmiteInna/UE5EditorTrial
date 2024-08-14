@@ -11,7 +11,9 @@
     <None Include="..\..\Source\KuruADVEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitignore" />
     <None Include="..\..\.vsconfig" />
+    <None Include="..\..\README.md" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -42,6 +44,12 @@
     <None Include="..\..\Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker\KuruEditorToolMaker.Build.cs">
       <Filter>Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker</Filter>
     </None>
+    <ClCompile Include="..\..\Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker\NewUAssetTypeDialog.cpp">
+      <Filter>Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker\NewUAssetTypeDialog.h">
+      <Filter>Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker</Filter>
+    </ClInclude>
     <Filter Include="Plugins\KuruEditorToolMaker\Source\KuruEditorToolMaker\Private">
       <UniqueIdentifier>{ACD40363-3865-3BFE-857E-B1C4E532B7DC}</UniqueIdentifier>
     </Filter>
@@ -63,6 +71,39 @@
     <None Include="..\..\Plugins\KuruEditorToolMaker\Resources\Icon128.png">
       <Filter>Plugins\KuruEditorToolMaker\Resources</Filter>
     </None>
+    <Filter Include="Plugins\KuruStoryModule">
+      <UniqueIdentifier>{7444AB98-48AC-3BC0-A889-FF114F372509}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\KuruStoryModule\KuruStoryModule.uplugin">
+      <Filter>Plugins\KuruStoryModule</Filter>
+    </None>
+    <Filter Include="Plugins\KuruStoryModule\Resources">
+      <UniqueIdentifier>{698681BA-34AE-3367-B857-CC25EFBA14C7}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\KuruStoryModule\Resources\Icon128.png">
+      <Filter>Plugins\KuruStoryModule\Resources</Filter>
+    </None>
+    <Filter Include="Plugins\KuruStoryModule\Source">
+      <UniqueIdentifier>{A2400619-0F57-38F0-AD01-EB45CAAFC5A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\KuruStoryModule\Source\KuruStoryModule">
+      <UniqueIdentifier>{C745DF7A-5884-3118-8FB5-A6EE6BFB640C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\KuruStoryModule.Build.cs">
+      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule</Filter>
+    </None>
+    <Filter Include="Plugins\KuruStoryModule\Source\KuruStoryModule\Private">
+      <UniqueIdentifier>{F9D9FB78-38AE-302C-B018-A212F1CCBB7A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Private\KuruStoryModule.cpp">
+      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\KuruStoryModule\Source\KuruStoryModule\Public">
+      <UniqueIdentifier>{F8C59613-3266-3371-8023-9586FD6144D4}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Public\KuruStoryModule.h">
+      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Public</Filter>
+    </ClInclude>
     <Filter Include="Source\KuruADV">
       <UniqueIdentifier>{112F0537-2789-31FF-AA66-619C0F71D7D0}</UniqueIdentifier>
     </Filter>
@@ -73,6 +114,30 @@
       <Filter>Source\KuruADV</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\KuruADV\KuruADV.h">
+      <Filter>Source\KuruADV</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\KuruADV\TestObj.cpp">
+      <Filter>Source\KuruADV</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\KuruADV\TestObj.h">
+      <Filter>Source\KuruADV</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\KuruADV\TestObj_AssetDefinition.cpp">
+      <Filter>Source\KuruADV</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\KuruADV\TestObj_AssetDefinition.h">
+      <Filter>Source\KuruADV</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\KuruADV\TestObj_EditorTool.cpp">
+      <Filter>Source\KuruADV</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\KuruADV\TestObj_EditorTool.h">
+      <Filter>Source\KuruADV</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\KuruADV\TestObj_Factory.cpp">
+      <Filter>Source\KuruADV</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\KuruADV\TestObj_Factory.h">
       <Filter>Source\KuruADV</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,0 +1,24 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.KuruStoryModule.cpp.obj": [
+			"KuruStoryClipData.gen.cpp.obj",
+			"KuruStoryClipData_AssetDefinition.gen.cpp.obj",
+			"KuruStoryClipData_Factory.gen.cpp.obj",
+			"KuruStoryModule.init.gen.cpp.obj",
+			"KuruStorySectionData.gen.cpp.obj",
+			"KuruStorySectionData_AssetDefinition.gen.cpp.obj",
+			"KuruStorySectionData_Factory.gen.cpp.obj",
+			"SSectionEditorWidget.cpp.obj",
+			"KuruStoryClipData.cpp.obj",
+			"KuruStoryClipData_AssetDefinition.cpp.obj",
+			"KuruStoryClipData_EditorTool.cpp.obj",
+			"KuruStoryClipData_Factory.cpp.obj",
+			"KuruStorySectionData.cpp.obj",
+			"KuruStorySectionData_AssetDefinition.cpp.obj",
+			"KuruStorySectionData_EditorTool.cpp.obj",
+			"KuruStorySectionData_Factory.cpp.obj",
+			"KuruStoryModule.cpp.obj"
+		]
+	}
+}
