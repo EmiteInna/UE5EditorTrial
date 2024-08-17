@@ -29,6 +29,7 @@ public class KuruStoryModule : ModuleRules
 				"UnrealEd",
 				"AssetDefinition",
 				"Kismet",
+				"ContentBrowser"
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);

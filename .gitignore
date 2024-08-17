@@ -6,6 +6,7 @@
 /*.VC.db
 /*.opensdf
 /*.suo
+/*.pdb
 /DerivedDataCache/
 
 # Ignore Rider-specific files

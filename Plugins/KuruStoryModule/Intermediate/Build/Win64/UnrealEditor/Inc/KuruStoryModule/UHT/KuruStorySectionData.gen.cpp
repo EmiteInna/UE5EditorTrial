@@ -6,6 +6,7 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "KuruStoryModule/Data/KuruStorySectionData.h"
+#include "Serialization/ArchiveUObjectFromStructuredArchive.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeKuruStorySectionData() {}
 // Cross Module References
@@ -62,7 +63,13 @@ void EmptyLinkFunctionForGeneratedCodeKuruStorySectionData() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStorySectionData_Statics::NewProp_Title_MetaData[] = {
 		{ "Category", "Story" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//0\n" },
+#endif
 		{ "ModuleRelativePath", "Data/KuruStorySectionData.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "0" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_UKuruStorySectionData_Statics::NewProp_Title = { "Title", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKuruStorySectionData, Title), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStorySectionData_Statics::NewProp_Title_MetaData), Z_Construct_UClass_UKuruStorySectionData_Statics::NewProp_Title_MetaData) };
@@ -70,7 +77,13 @@ void EmptyLinkFunctionForGeneratedCodeKuruStorySectionData() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStorySectionData_Statics::NewProp_ClipDatas_MetaData[] = {
 		{ "Category", "Story" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//1\n" },
+#endif
 		{ "ModuleRelativePath", "Data/KuruStorySectionData.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "1" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UKuruStorySectionData_Statics::NewProp_ClipDatas = { "ClipDatas", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKuruStorySectionData, ClipDatas), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStorySectionData_Statics::NewProp_ClipDatas_MetaData), Z_Construct_UClass_UKuruStorySectionData_Statics::NewProp_ClipDatas_MetaData) };
@@ -112,14 +125,15 @@ void EmptyLinkFunctionForGeneratedCodeKuruStorySectionData() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UKuruStorySectionData);
 	UKuruStorySectionData::~UKuruStorySectionData() {}
+	IMPLEMENT_FSTRUCTUREDARCHIVE_SERIALIZER(UKuruStorySectionData)
 	struct Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStorySectionData_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStorySectionData_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UKuruStorySectionData, UKuruStorySectionData::StaticClass, TEXT("UKuruStorySectionData"), &Z_Registration_Info_UClass_UKuruStorySectionData, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UKuruStorySectionData), 4209007132U) },
+		{ Z_Construct_UClass_UKuruStorySectionData, UKuruStorySectionData::StaticClass, TEXT("UKuruStorySectionData"), &Z_Registration_Info_UClass_UKuruStorySectionData, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UKuruStorySectionData), 3139530424U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStorySectionData_h_1547054802(TEXT("/Script/KuruStoryModule"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStorySectionData_h_2497520087(TEXT("/Script/KuruStoryModule"),
 		Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStorySectionData_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStorySectionData_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -1,5 +1,6 @@
 ﻿#include "SSectionEditorWidget.h"
 
+#include "SSectionClipRowWidget.h"
 #include "KuruStoryModule/Data/KuruStoryClipData.h"
 #include "KuruStoryModule/Data/KuruStorySectionData.h"
 #include "KuruStoryModule/Types/ColorStores.h"
@@ -11,23 +12,16 @@
 
 void SSectionEditorWidget::Construct(const FArguments& InArgs)
 {
+	KuruColorStores::InitializeKuruStores();
+	
 	FSlateFontInfo TitleTextFont = FCoreStyle::Get().GetFontStyle(FName("EnbossedText"));
 	TitleTextFont.Size = 25;
-
-	FSlateBrush* MyBackgroundBrush = new FSlateBrush();
-	MyBackgroundBrush->TintColor = KuruColorStores::KawaiiPink;
-	const FEditableTextBoxStyle* DefaultStyle = &FCoreStyle::Get().GetWidgetStyle<FEditableTextBoxStyle>("NormalEditableTextBox");
-
-	KawaiiTextBoxStyle = *DefaultStyle;
-	KawaiiTextBoxStyle.BackgroundImageNormal.TintColor = FSlateColor(KuruColorStores::KawaiiBlue);
-
-	KawaiiButtonStyle = KuruColorStores::GetButtonStyleFromColor(KuruColorStores::DeepPink,KuruColorStores::KawaiiPink,
-							KuruColorStores::DeepPink,FLinearColor(.6,.6,.6));
+	
 	
 	ChildSlot[
 		SNew(SOverlay)+
 		SOverlay::Slot()[
-			SNew(SImage).Image(MyBackgroundBrush)
+			SNew(SImage).Image(KuruColorStores::PinkBrush)
 		]
 			+
 		SOverlay::Slot()
@@ -44,21 +38,19 @@ void SSectionEditorWidget::Construct(const FArguments& InArgs)
 					
 					+SHorizontalBox::Slot().Padding(0,5).AutoWidth()[
 						SAssignNew(TitleTextBox,SEditableTextBox).Text(FTFs(GetTitleText()))
-						.BackgroundColor(KuruColorStores::DeepBlue)
-						.ForegroundColor(KuruColorStores::DeepPink)
 						.MinDesiredWidth(150)
-						//.Style(&KawaiiTextBoxStyle)
+						.Style(KuruColorStores::KawaiiTextBox)
 						.Font(TitleTextFont).OnTextCommitted(this,&SSectionEditorWidget::Bind_OnEditingTitle)
 					]	
 				]
 				//这个是按钮组
-				+SVerticalBox::Slot().Padding(5).MaxHeight(50).HAlign(HAlign_Right)[
+				+SVerticalBox::Slot().Padding(0).MaxHeight(50).HAlign(HAlign_Right)[
 					SNew(SHorizontalBox)
 					+
-					SHorizontalBox::Slot().Padding(5).AutoWidth().VAlign(VAlign_Center)[
+					SHorizontalBox::Slot().Padding(0).AutoWidth().VAlign(VAlign_Center)[
 						SAssignNew(Button_CreatingNewClip,SButton).Text(FTF("创建新Clip"))
-						//.ButtonStyle(&KawaiiButtonStyle)
-						.ForegroundColor(KuruColorStores::KawaiiPink)
+						.ButtonStyle(KuruColorStores::KawaiiDefaultButton)
+						.ForegroundColor(KuruColorStores::KawaiiBlack)
 						.OnClicked(this,&SSectionEditorWidget::Button_OnCreatingNewClip)
 						.VAlign(VAlign_Center)
 					]
@@ -68,11 +60,13 @@ void SSectionEditorWidget::Construct(const FArguments& InArgs)
 					SNew(SSeparator).Orientation(Orient_Horizontal)
 				]
 				//这个是Clip列表
-				+SVerticalBox::Slot().Padding(5).AutoHeight()[
+				+SVerticalBox::Slot().Padding(5).VAlign(VAlign_Fill).FillHeight(10.)[
 					SNew(SScrollBox)
+					.Style(KuruColorStores::KawaiiScrollBox)
+					.ScrollBarStyle(KuruColorStores::KawaiiScrollBar)
 					+SScrollBox::Slot()[
 						SAssignNew(SW_ClipDataList,SListView<UKuruStoryClipData*>)
-						.ItemHeight(60.f)
+						.ItemHeight(50.f)
 						.ListItemsSource(&Editing_ClipDatas)
 						.OnGenerateRow(this,&SSectionEditorWidget::OnGenerateRowForClip)
 					]
@@ -104,17 +98,15 @@ void SSectionEditorWidget::Bind_OnEditingTitle(const FText& NewText, ETextCommit
 TSharedRef<ITableRow> SSectionEditorWidget::OnGenerateRowForClip(UKuruStoryClipData* Data,
 	const TSharedRef<STableViewBase>& OwnerTable)
 {
-	FText NameText;
-	if (Data)
-	{
-		NameText = FTFs(Data->Teller.ToString());
-	}else
-	{
-		NameText = FTF("还没有哦~");
-	}
+	ensure(Data);
+	TSharedRef<SSectionClipRowWidget> ChildWidget =
+		SNew(SSectionClipRowWidget)
+			.EditingData(Data)
+			.SectionEditorWidget(this);
+	
 	TSharedRef<STableRow<UKuruStoryClipData*>> ListView =
 		SNew(STableRow<UKuruStoryClipData*>,OwnerTable)[
-			SNew(STextBlock).Text(NameText)
+			ChildWidget
 		];
 	return ListView;
 }
@@ -133,16 +125,36 @@ FString SSectionEditorWidget::GetTitleText() const
 void SSectionEditorWidget::RefreshClipDatas()
 {
 	if (EditingData){
+
+		for (int i=0;i<EditingData->ClipDatas.Num();i++)
+		{
+			if (EditingData->ClipDatas[i]){
+				EditingData->ClipDatas[i]->Number = i+1;
+			}
+		}
+		
 		Editing_ClipDatas.Empty();
 		for (auto data:EditingData->ClipDatas)
 		{
 			Editing_ClipDatas.Emplace(data);
 		}
+		
 	}
+	
 	if (SW_ClipDataList)
 	{
+		SW_ClipDataList->SetItemsSource(&Editing_ClipDatas);
 		SW_ClipDataList->RequestListRefresh();
 	}
+
+	for(auto child:ChildWidgets)
+	{
+		if (child)
+		{
+			child->BindRefreshProperty();
+		}
+	}
+	
 }
 
 FReply SSectionEditorWidget::Button_OnCreatingNewClip()
@@ -155,6 +167,82 @@ FReply SSectionEditorWidget::Button_OnCreatingNewClip()
 		EditingData->ClipDatas.Emplace(Clip);
 
 		RefreshClipDatas();
+	}
+	return FReply::Handled();
+}
+int SSectionEditorWidget::GetChildClipIndex(UKuruStoryClipData* ChildClip)
+{
+	if (EditingData)
+	{
+		for(int i=0;i< EditingData->ClipDatas.Num();i++)
+		{
+			if (ChildClip == EditingData->ClipDatas[i])
+			{
+				return i;
+			}
+		}
+
+	}
+
+	return -1;
+}
+FReply SSectionEditorWidget::ChildMoveUp(SSectionClipRowWidget* ChildWidget)
+{
+	if (ChildWidget && EditingData)
+	{
+		UKuruStoryClipData* ClipData = ChildWidget->GetEditingData();
+		int index = GetChildClipIndex(ClipData);
+		if (index != 0 && index != -1)
+		{
+			auto tmp = EditingData->ClipDatas[index-1];
+			EditingData->ClipDatas[index - 1]=ClipData;
+			EditingData->ClipDatas[index] = tmp;
+
+			const FScopedTransaction AddTaskTransaction(FText::FromString("Clip Move"));
+			EditingData->Modify();
+
+			RefreshClipDatas();
+		}
+	}
+	return FReply::Handled();
+}
+
+FReply SSectionEditorWidget::ChildMoveDown(SSectionClipRowWidget* ChildWidget)
+{
+	if (ChildWidget && EditingData)
+	{
+		UKuruStoryClipData* ClipData = ChildWidget->GetEditingData();
+		int index = GetChildClipIndex(ClipData);
+		if (index != EditingData->ClipDatas.Num()-1 && index != -1)
+		{
+			auto tmp = EditingData->ClipDatas[index+1];
+			EditingData->ClipDatas[index + 1]=ClipData;
+			EditingData->ClipDatas[index] = tmp;
+
+			const FScopedTransaction AddTaskTransaction(FText::FromString("Clip Move"));
+			EditingData->Modify();
+
+			RefreshClipDatas();
+		}
+	}
+	return FReply::Handled();
+}
+
+FReply SSectionEditorWidget::ChildDelete(SSectionClipRowWidget* ChildWidget)
+{
+	if (ChildWidget && EditingData)
+	{
+		UKuruStoryClipData* ClipData = ChildWidget->GetEditingData();
+		EAppReturnType::Type Ret = FMessageDialog::Open(EAppMsgType::YesNo,FTF("真的要删除对话吗TT？"));
+		if (Ret == EAppReturnType::Yes)
+		{
+			const FScopedTransaction AddTaskTransaction(FText::FromString("Clip Move"));
+			EditingData->Modify();
+
+			EditingData->ClipDatas.Remove(ClipData);
+			RefreshClipDatas();
+
+		}
 	}
 	return FReply::Handled();
 }

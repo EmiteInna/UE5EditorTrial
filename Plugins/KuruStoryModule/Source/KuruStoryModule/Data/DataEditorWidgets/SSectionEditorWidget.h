@@ -3,6 +3,7 @@
 #include "CoreMinimal.h"
 #include "Widgets/SCompoundWidget.h"
 
+class SSectionClipRowWidget;
 class UKuruStoryClipData;
 class UKuruStorySectionData;
 class FKuruStorySectionData_EditorTool;
@@ -20,14 +21,12 @@ public:
 	UKuruStorySectionData* EditingData = nullptr;
 	TArray<UKuruStoryClipData*> Editing_ClipDatas;
 
+	TArray<SSectionClipRowWidget*> ChildWidgets;
 public:
 	TSharedPtr<SEditableTextBox> TitleTextBox;
 	TSharedPtr<SButton> Button_CreatingNewClip;
 	TSharedPtr<SListView<UKuruStoryClipData*>> SW_ClipDataList;
 	
-	FEditableTextBoxStyle KawaiiTextBoxStyle;
-	FButtonStyle KawaiiButtonStyle;
-
 
 	
 	void Bind_RefreshProperty();
@@ -42,7 +41,13 @@ protected:
 	TSharedRef<ITableRow> OnGenerateRowForClip(UKuruStoryClipData* Data, const TSharedRef<STableViewBase>& OwnerTable);
 
 	FReply Button_OnCreatingNewClip();
+public:
+	FReply ChildMoveUp(SSectionClipRowWidget* ChildWidget);
+	FReply ChildMoveDown(SSectionClipRowWidget* ChildWidget);
+	FReply ChildDelete(SSectionClipRowWidget* ChildWidget);
+	int GetChildClipIndex(UKuruStoryClipData* ChildClip);
 };
+
 
 
 
