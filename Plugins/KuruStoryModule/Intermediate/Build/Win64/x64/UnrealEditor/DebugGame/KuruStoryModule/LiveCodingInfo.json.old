@@ -2,10 +2,8 @@
 	"RemapUnityFiles": 
 	{
 		"Module.KuruStoryModule.cpp.obj": [
-			"KuruStoryClipData.gen.cpp.obj",
 			"KuruStoryClipData_AssetDefinition.gen.cpp.obj",
 			"KuruStoryClipData_Factory.gen.cpp.obj",
-			"KuruStoryModule.init.gen.cpp.obj",
 			"KuruStorySectionData.gen.cpp.obj",
 			"KuruStorySectionData_AssetDefinition.gen.cpp.obj",
 			"KuruStorySectionData_Factory.gen.cpp.obj",
@@ -19,6 +17,8 @@
 			"KuruStorySectionData_Factory.cpp.obj",
 			"KuruStoryModule.cpp.obj",
 			"ColorStores.cpp.obj",
+			"KuruStoryClipData.gen.cpp.obj",
+			"KuruStoryModule.init.gen.cpp.obj",
 			"SClipTimelineWidget.cpp.obj",
 			"SSectionClipRowWidget.cpp.obj",
 			"SSectionEditorWidget.cpp.obj",

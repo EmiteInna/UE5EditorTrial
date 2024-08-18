@@ -8,6 +8,7 @@ void UKuruStoryClipData::Serialize(FArchive& Ar)
 	if (Ar.IsSaving())
 	{
 		int key=-1;
+		Ar<<key;
 		
 		key=0;
 		Ar<<key;
@@ -25,13 +26,20 @@ void UKuruStoryClipData::Serialize(FArchive& Ar)
 		Ar<<key;
 		Ar<<SimpleContent;
 
+		key = -1;
+		Ar<<key;
 	
 	}else if (Ar.IsLoading())
 	{
-		for (int i=0;i<=3;i++)
+		int key=-1;
+		Ar<<key;
+		for (int i=0;i<=114514;i++)
 		{
-			int key=-1;
 			Ar<<key;
+			if (key==-1)
+			{
+				break;
+			}
 			switch (key)
 			{
 			case 0:
@@ -45,6 +53,7 @@ void UKuruStoryClipData::Serialize(FArchive& Ar)
 				break;
 			case 3:
 				Ar<<SimpleContent;
+				break;
 			}
 		}
 	}
