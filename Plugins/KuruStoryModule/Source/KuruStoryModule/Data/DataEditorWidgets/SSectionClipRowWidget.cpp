@@ -2,8 +2,10 @@
 
 #include "ContentBrowserModule.h"
 #include "SAssetView.h"
+#include "SClipTimelineWidget.h"
 #include "SSectionEditorWidget.h"
 #include "KuruStoryModule/Data/KuruStoryClipData.h"
+#include "KuruStoryModule/Data/KuruStorySectionData.h"
 #include "KuruStoryModule/Types/ColorStores.h"
 #include "Widgets/Input/SMultiLineEditableTextBox.h"
 #include "Widgets/Layout/SConstraintCanvas.h"
@@ -195,7 +197,7 @@ void SSectionClipRowWidget::Construct(const FArguments& InArgs)
 						.ForegroundColor(KuruColorStores::KawaiiBlack)
 						.VAlign(VAlign_Center)
 						.HAlign(HAlign_Center)
-						//.OnClicked(this,&SSectionClipRowWidget::BindButton_OnClickUp)
+						.OnClicked(this,&SSectionClipRowWidget::BindButton_OnClickOpenTimelinePanel)
 					]
 				]
 			]
@@ -237,20 +239,20 @@ FString SSectionClipRowWidget::GetAttributeName(FName AttributeType)
 
 void SSectionClipRowWidget::Bind_OnEditingTeller(const FText& NewText, ETextCommit::Type CommitType)
 {
-	if (mEditingData)
+	if (mEditingData && mEditingData->Parent)
 	{
 		const FScopedTransaction AddTaskTransaction(FText::FromString("Editing Name"));
-		mEditingData->Modify();
+		mEditingData->Parent->Modify();
 		mEditingData->Teller = FName(NewText.ToString());
 	}
 }
 
 void SSectionClipRowWidget::Bind_OnEditingContent(const FText& NewText, ETextCommit::Type CommitType)
 {
-	if (mEditingData)
+	if (mEditingData && mEditingData->Parent)
 	{
 		const FScopedTransaction AddTaskTransaction(FText::FromString("Editing Content"));
-		mEditingData->Modify();
+		mEditingData->Parent->Modify();
 		mEditingData->SimpleContent = FName(NewText.ToString());
 	}
 }
@@ -314,18 +316,46 @@ FReply SSectionClipRowWidget::BindButton_OnClickDelete()
 	return FReply::Unhandled();
 }
 
+FReply SSectionClipRowWidget::BindButton_OnClickOpenTimelinePanel()
+{
+	TSharedRef<SWindow> NewWindow = SNew(SWindow)
+	.Title(FTF("TimeEvent Editor"))
+	.ClientSize(FVector2D(1600,1280))
+	.SupportsMaximize(false)
+	.SupportsMinimize(false)
+	;
+
+	mChildTimelineWidget = SNew(SClipTimelineWidget).EditingData(mEditingData)
+		.ParentWidget(this);
+	NewWindow->SetContent(
+		mChildTimelineWidget.ToSharedRef()
+		);
+
+	NewWindow->SetOnWindowClosed(FOnWindowClosed::CreateLambda(
+		[this](const TSharedRef<SWindow>& InWindow)
+		{
+			if (mChildTimelineWidget)
+			{
+				mChildTimelineWidget->OnUnregisterTabs();
+			}
+		}));
+	FSlateApplication::Get().AddModalWindow(NewWindow,AsShared());
+
+	return FReply::Handled();
+}
+
 FReply SSectionClipRowWidget::Bind_OnImageSelectButtonDown(const FGeometry& MyGeometry,
                                                            const FPointerEvent& MouseEvent)
 {
-	UE_LOG(LogTemp,Error,TEXT("打开了一次窗口"))
 	
 		
 	FAssetPickerConfig AssetPickerConfig;
 	AssetPickerConfig.Filter.ClassPaths.Add(UTexture2D::StaticClass()->GetClassPathName());
 	AssetPickerConfig.OnAssetSelected = FOnAssetSelected::CreateSP(this, &SSectionClipRowWidget::OnImageSelected);
-	AssetPickerConfig.InitialAssetViewType = EAssetViewType::Tile; 
+	AssetPickerConfig.InitialAssetViewType = EAssetViewType::List; 
 	AssetPickerConfig.SelectionMode = ESelectionMode::Single;
-
+	AssetPickerConfig.bAllowDragging = true;
+	
 	FContentBrowserModule& ContentBrowserModule =
 		FModuleManager::LoadModuleChecked<FContentBrowserModule>(TEXT("ContentBrowser"));
 	AssetPickerInstance = ContentBrowserModule.Get().CreateAssetPicker(AssetPickerConfig);

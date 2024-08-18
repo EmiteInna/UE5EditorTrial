@@ -400,6 +400,7 @@
     <None Include="..\..\Plugins\KuruStoryModule\KuruStoryModule.uplugin"/>
     <None Include="..\..\Plugins\KuruStoryModule\Resources\Icon128.png"/>
     <None Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\KuruStoryModule.Build.cs"/>
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SClipTimelineWidget.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SImageSelectorWidget.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SSectionClipRowWidget.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SSectionEditorWidget.cpp" />
@@ -420,6 +421,7 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions_1)</AdditionalOptions>
     </ClCompile>
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SClipTimelineWidget.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SImageSelectorWidget.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SSectionClipRowWidget.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SSectionEditorWidget.h" />

@@ -1,5 +1,6 @@
 ﻿#pragma once
 
+class SClipTimelineWidget;
 class SSectionEditorWidget;
 class SAssetView;
 class SMultiLineEditableTextBox;
@@ -17,6 +18,8 @@ public:
 	~SSectionClipRowWidget();
 
 public:
+
+	
 	TSharedPtr<STextBlock> SW_Index;
 	TSharedPtr<SEditableTextBox> SW_Teller;
 	TSharedPtr<SMultiLineEditableTextBox> SW_Content;
@@ -31,6 +34,7 @@ public:
 protected:
 	UKuruStoryClipData* mEditingData=nullptr;
 	SSectionEditorWidget* mSectionEditorWidget=nullptr;
+	TSharedPtr<SClipTimelineWidget> mChildTimelineWidget=nullptr;
 	
 	FString GetAttributeName(FName AttributeType);
 	
@@ -40,6 +44,7 @@ protected:
 	FReply BindButton_OnClickUp();
 	FReply BindButton_OnClickDown();
 	FReply BindButton_OnClickDelete();
+	FReply BindButton_OnClickOpenTimelinePanel();
 
 	TSharedPtr<SWidget> AssetPickerInstance=nullptr;
 	FReply Bind_OnImageSelectButtonDown(const FGeometry& MyGeometry, const FPointerEvent& MouseEvent);

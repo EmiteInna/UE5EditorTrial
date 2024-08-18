@@ -130,6 +130,7 @@ void SSectionEditorWidget::RefreshClipDatas()
 		{
 			if (EditingData->ClipDatas[i]){
 				EditingData->ClipDatas[i]->Number = i+1;
+				EditingData->ClipDatas[i]->Parent = EditingData;
 			}
 		}
 		
@@ -162,6 +163,7 @@ FReply SSectionEditorWidget::Button_OnCreatingNewClip()
 	if (EditingData)
 	{
 		UKuruStoryClipData* Clip = NewObject<UKuruStoryClipData>();
+		Clip->Parent = EditingData;
 		const FScopedTransaction AddTaskTransaction(FText::FromString("Create New Clip"));
 		EditingData->Modify();
 		EditingData->ClipDatas.Emplace(Clip);

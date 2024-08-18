@@ -6,6 +6,7 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "KuruStoryModule/Data/KuruStoryClipData.h"
+#include "Serialization/ArchiveUObjectFromStructuredArchive.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeKuruStoryClipData() {}
 // Cross Module References
@@ -13,6 +14,7 @@ void EmptyLinkFunctionForGeneratedCodeKuruStoryClipData() {}
 	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 	KURUSTORYMODULE_API UClass* Z_Construct_UClass_UKuruStoryClipData();
 	KURUSTORYMODULE_API UClass* Z_Construct_UClass_UKuruStoryClipData_NoRegister();
+	KURUSTORYMODULE_API UClass* Z_Construct_UClass_UKuruStorySectionData_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_KuruStoryModule();
 // End Cross Module References
 	void UKuruStoryClipData::StaticRegisterNativesUKuruStoryClipData()
@@ -45,6 +47,10 @@ void EmptyLinkFunctionForGeneratedCodeKuruStoryClipData() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_SimpleContent_MetaData[];
 #endif
 		static const UECodeGen_Private::FNamePropertyParams NewProp_SimpleContent;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Parent_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_Parent;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -69,36 +75,76 @@ void EmptyLinkFunctionForGeneratedCodeKuruStoryClipData() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Number_MetaData[] = {
 		{ "Category", "Story" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//0\n" },
+#endif
 		{ "ModuleRelativePath", "Data/KuruStoryClipData.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "0" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Number = { "Number", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKuruStoryClipData, Number), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Number_MetaData), Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Number_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Texture2D_MetaData[] = {
 		{ "Category", "Story" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//1\n" },
+#endif
 		{ "ModuleRelativePath", "Data/KuruStoryClipData.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "1" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Texture2D = { "Texture2D", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKuruStoryClipData, Texture2D), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Texture2D_MetaData), Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Texture2D_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Teller_MetaData[] = {
 		{ "Category", "Story" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//2\n" },
+#endif
 		{ "ModuleRelativePath", "Data/KuruStoryClipData.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "2" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Teller = { "Teller", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKuruStoryClipData, Teller), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Teller_MetaData), Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Teller_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_SimpleContent_MetaData[] = {
 		{ "Category", "Story" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//3\n" },
+#endif
 		{ "ModuleRelativePath", "Data/KuruStoryClipData.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "3" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_SimpleContent = { "SimpleContent", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKuruStoryClipData, SimpleContent), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_SimpleContent_MetaData), Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_SimpleContent_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Parent_MetaData[] = {
+		{ "Category", "Hide" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//no need to serialize\n" },
+#endif
+		{ "EditCondition", "false" },
+		{ "EditConditionHides", "" },
+		{ "ModuleRelativePath", "Data/KuruStoryClipData.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "no need to serialize" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Parent = { "Parent", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKuruStoryClipData, Parent), Z_Construct_UClass_UKuruStorySectionData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Parent_MetaData), Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Parent_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UKuruStoryClipData_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Number,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Texture2D,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Teller,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_SimpleContent,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Parent,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UKuruStoryClipData_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UKuruStoryClipData>::IsAbstract,
@@ -133,14 +179,15 @@ void EmptyLinkFunctionForGeneratedCodeKuruStoryClipData() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UKuruStoryClipData);
 	UKuruStoryClipData::~UKuruStoryClipData() {}
+	IMPLEMENT_FSTRUCTUREDARCHIVE_SERIALIZER(UKuruStoryClipData)
 	struct Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UKuruStoryClipData, UKuruStoryClipData::StaticClass, TEXT("UKuruStoryClipData"), &Z_Registration_Info_UClass_UKuruStoryClipData, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UKuruStoryClipData), 2988717506U) },
+		{ Z_Construct_UClass_UKuruStoryClipData, UKuruStoryClipData::StaticClass, TEXT("UKuruStoryClipData"), &Z_Registration_Info_UClass_UKuruStoryClipData, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UKuruStoryClipData), 2331710139U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_327558470(TEXT("/Script/KuruStoryModule"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_4018168924(TEXT("/Script/KuruStoryModule"),
 		Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
