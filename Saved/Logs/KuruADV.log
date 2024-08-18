@@ -1106,3 +1106,8 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.08.18-03.41.32:708][770]LogTurnkeySupport: Turnkey Device: Win64@DESKTOP-1N4NUE0: (Name=DESKTOP-1N4NUE0, Type=Computer, Status=Valid, MinAllowed=10.0.18362.0, MaxAllowed=, Current=10.0.19045.0, Flags="Device_InstallSoftwareValid")
 [2024.08.18-03.42.03:512][430]LogSlate: Window 'HaruHikage3' being destroyed
 [2024.08.18-03.42.03:519][430]LogSlate: Window 'HaruHikage3' being destroyed
+[2024.08.18-03.43.35:626][461]LogDerivedDataCache: ../../../Engine/DerivedDataCache: Maintenance finished in +00:00:33.185 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 17542 files in 20128 folders with total size 3334 MiB.
+[2024.08.18-03.46.07:267][654]LogAnalytics: Display: [UEEditor.UnrealEngine.Release] APIServer = https://datarouter.ol.epicgames.com/. AppVersion = 5.3.2-0+UE5
+[2024.08.18-03.46.07:556][654]LogAnalyticsSessionSummarySender: Sent summary session report for: AppId=UEEditor.UnrealEngine.Release SessionId={61A97975-4097-B9D4-F810-5ABE45A5B041}
+[2024.08.18-03.51.07:275][542]LogAnalytics: Display: [UEEditor.UnrealEngine.Release] APIServer = https://datarouter.ol.epicgames.com/. AppVersion = 5.3.2-0+UE5
+[2024.08.18-03.51.07:562][542]LogAnalyticsSessionSummarySender: Sent summary session report for: AppId=UEEditor.UnrealEngine.Release SessionId={BE031B2E-40BF-C88D-2CFF-FC836CA00E55}
