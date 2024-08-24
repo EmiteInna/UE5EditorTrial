@@ -3,112 +3,63 @@
 
 #include "KuruStoryClipData.h"
 
+#include "KuruStoryModule/Types/KuruSerializeUtil.h"
 #include "Preferences/PersonaOptions.h"
 
 void UKuruStoryClipData::Serialize(FArchive& Ar)
 {
 	if (Ar.IsSaving())
 	{
-		int key=-1;
-		Ar<<key;
-		
-		key=0;
-		Ar<<key;
-		Ar<<Number;
-		
-		key = 1;
-		Ar<<key;
-		Ar<<Texture2D;
-
-		key = 2;
-		Ar<<key;
-		Ar<<Teller;
-
-		key = 3;
-		Ar<<key;
-		Ar<<SimpleContent;
-
-		key = 4;
-		double lower=ViewRange.GetLowerBound().GetValue();
-		double upper=ViewRange.GetUpperBound().GetValue();
-		Ar<<key;
-		Ar<<lower<<upper;
-
-		key =5;
-		Ar<<key;
-		lower = PlayRange.GetLowerBound().GetValue();
-		upper = PlayRange.GetUpperBound().GetValue();
-		Ar<<lower<<upper;
-
-		key =6;
-		Ar<<key;
-		lower = WorkingRange.GetLowerBound().GetValue();
-		upper = WorkingRange.GetUpperBound().GetValue();
-		Ar<<lower<<upper;
-		
-		key=7;
-		Ar<<key;
-		int EditableItemNum = EditableItems.Num();
-		Ar<<EditableItemNum;
-		for(int i=0;i<EditableItemNum;i++)
-		{
-			double val = EditableItems[i];
-			Ar<<val;
-		}
-		
-		key = -1;
-		Ar<<key;
+		Ar<<KuruSerializeUtil::St;
+		KuruSerializeUtil::WriteToSerialize(Ar,'0',Number,false);
+		KuruSerializeUtil::WriteToSerialize(Ar,'1',Texture2D,false);
+		KuruSerializeUtil::WriteToSerialize(Ar,'2',Teller,false);
+		KuruSerializeUtil::WriteToSerialize(Ar,'3',SimpleContent,false);
+		KuruSerializeUtil::WriteToSerialize(Ar,'4',EditableItems,false);
+		Ar<<KuruSerializeUtil::Et;
 	
 	}else if (Ar.IsLoading())
 	{
-		int key=-1;
-		Ar<<key;
-		float placeholder[10];
-		
-		for (int i=0;i<=114514;i++)
+		char pls = '?';
+		Ar<<pls;
+		check(pls=='<');
+
+		while(true)
 		{
-			Ar<<key;
-			if (key==-1)
+			Ar<<pls;
+			if (pls=='>')
 			{
 				break;
 			}
-			switch (key)
+
+			check(pls=='<');
+			char mark='$';
+			Ar<<mark;
+			int ret=0;
+			ret|=KuruSerializeUtil::ReadFromSerial(Ar,mark,'0',Number,false);
+			ret|=KuruSerializeUtil::ReadFromSerial(Ar,mark,'1',Texture2D,false);
+			ret|=KuruSerializeUtil::ReadFromSerial(Ar,mark,'2',Teller,false);
+			ret|=KuruSerializeUtil::ReadFromSerial(Ar,mark,'3',SimpleContent,false);
+			ret|=KuruSerializeUtil::ReadFromSerial(Ar,mark,'4',EditableItems,false);
+			if (ret==0)
 			{
-			case 0:
-				Ar<<Number;
-				break;
-			case 1:
-				Ar<<Texture2D;
-				break;
-			case 2:
-				Ar <<Teller;
-				break;
-			case 3:
-				Ar<<SimpleContent;
-				break;
-			case 4:
-				Ar<<placeholder[0]<<placeholder[1];
-				ViewRange = FAnimatedRange(placeholder[0],placeholder[1]);
-				break;
-			case 5:
-				Ar<<placeholder[0]<<placeholder[1];
-				PlayRange = FAnimatedRange(placeholder[0],placeholder[1]);
-				break;
-			case 6:
-				Ar<<placeholder[0]<<placeholder[1];
-				WorkingRange = FAnimatedRange(placeholder[0],placeholder[1]);
-				break;
-			case 7:
-				int num;
-				Ar<<num;
-				for(int idx=0;idx<num;idx++)
+				int stk = 1;
+				//废弃数据
+				while(true)
 				{
-					Ar<<placeholder[0];
-					EditableItems.Emplace(placeholder[0]);
+					Ar<<pls;
+					if (pls=='<')stk++;
+					if(pls=='>')stk--;
+					if(stk==0)break;
 				}
-				break;
+			}else
+			{
+				Ar<<pls;
+				check(pls=='>')
 			}
 		}
+		
+		
 	}
 }
 

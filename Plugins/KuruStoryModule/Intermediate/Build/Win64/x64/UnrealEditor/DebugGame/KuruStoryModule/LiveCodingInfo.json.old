@@ -9,7 +9,11 @@
 			"KuruStorySectionData.gen.cpp.obj",
 			"KuruStorySectionData_AssetDefinition.gen.cpp.obj",
 			"KuruStorySectionData_Factory.gen.cpp.obj",
+			"KuruTimeSliderController.cpp.obj",
+			"SClipTimelineWidget.cpp.obj",
 			"SImageSelectorWidget.cpp.obj",
+			"SKuruTimelineContainer.cpp.obj",
+			"SSectionClipRowWidget.cpp.obj",
 			"SSectionEditorWidget.cpp.obj",
 			"KuruStoryClipData_AssetDefinition.cpp.obj",
 			"KuruStoryClipData_EditorTool.cpp.obj",
@@ -20,11 +24,8 @@
 			"KuruStorySectionData_Factory.cpp.obj",
 			"KuruStoryModule.cpp.obj",
 			"ColorStores.cpp.obj",
-			"KuruTimeSliderController.cpp.obj",
-			"SClipTimelineWidget.cpp.obj",
-			"SKuruTimelineContainer.cpp.obj",
-			"SSectionClipRowWidget.cpp.obj",
-			"KuruStoryClipData.cpp.obj"
+			"KuruStoryClipData.cpp.obj",
+			"KuruSerializeUtil.cpp.obj"
 		]
 	}
 }

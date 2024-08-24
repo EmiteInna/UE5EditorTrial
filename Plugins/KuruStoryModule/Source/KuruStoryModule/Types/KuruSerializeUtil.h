@@ -13,13 +13,13 @@ public:
 		if (InputMark == Mark)
 		{
 			Ar<<Content;
-			return 0;
+			return 1;
 		}
-		return -1;
+		return 0;
 	}
 	
 	template<typename T>
-	static int ReadFromSerial(FArchive& Ar,char InputMark, char Mark, T* Content, bool bSerializeFunc)
+	static int ReadFromSerial(FArchive& Ar,char InputMark, char Mark, T*& Content, bool bSerializeFunc)
 	{
 		if (InputMark == Mark)
 		{
@@ -31,9 +31,9 @@ public:
 				Content = NewObject<T>();
 				Content->Serialize(Ar);
 			}
-			return 0;
+			return 1;
 		}
-		return -1;
+		return 0;
 	}
 
 	template<typename T>
@@ -50,9 +50,9 @@ public:
 				Ar<<c;
 				Content.Emplace(c);
 			}
-			return 0;
+			return 1;
 		}
-		return -1;
+		return 0;
 	}
 
 	template<typename T>
@@ -76,15 +76,16 @@ public:
 					Content.Emplace(c);
 				}
 			}
-			return 0;
+			return 1;
 		}
-		return -1;
+		return 0;
 	}
 
 	template <typename T>
 	static void WriteToSerialize(FArchive& Ar, char Mark, T Val, bool bSerializeFunc)
 	{
 		Ar<<St;
+		Ar<<Mark;
 		Ar<<Val;
 		Ar<<Et;
 	}
@@ -92,6 +93,7 @@ public:
 	static void WriteToSerialize(FArchive& Ar, char Mark, TArray<T> Val, bool bSerializeFunc)
 	{
 		Ar<<St;
+		Ar<<Mark;
 		int num = Val.Num();
 		Ar<<num;
 		for(int i=0;i<num;i++)
@@ -104,6 +106,7 @@ public:
 	static void WriteToSerialize(FArchive& Ar, char Mark, T* Val, bool bSerializeFunc)
 	{
 		Ar<<St;
+		Ar<<Mark;
 		if(bSerializeFunc)
 		{
 			Val->Serialize(Ar);
@@ -119,6 +122,7 @@ public:
 	static void WriteToSerialize(FArchive& Ar, char Mark, TArray<T*> Val, bool bSerializeFunc)
 	{
 		Ar<<St;
+		Ar<<Mark;
 		int num = Val.Num();
 		Ar<<num;
 		for(int i=0;i<num;i++)

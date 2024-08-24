@@ -4,58 +4,57 @@
 #include "KuruStorySectionData.h"
 
 #include "KuruStoryClipData.h"
+#include "KuruStoryModule/Types/KuruSerializeUtil.h"
 
 void UKuruStorySectionData::Serialize(FArchive& Ar)
 {
 	if (Ar.IsSaving())
 	{
-		int key=-1;
-		Ar<<key;
-		
-		key=0;
-		Ar<<key;
-		Ar<<Title;
-		
-		key = 1;
-		Ar<<key;
-		int ClipDataNum = ClipDatas.Num();
-		Ar<<ClipDataNum;
-		for(int i=0;i<ClipDataNum;i++)
-		{
-			ClipDatas[i]->Serialize(Ar);
-		}
+		Ar<<KuruSerializeUtil::St;
+		KuruSerializeUtil::WriteToSerialize(Ar,'0',Title,false);
+		KuruSerializeUtil::WriteToSerialize(Ar,'1',ClipDatas,true);
 
-		key = -1;
-		Ar<<key;
+		Ar<<KuruSerializeUtil::Et;
+	
 	}else if (Ar.IsLoading())
 	{
-		int key=-1;
-		Ar<<key;
-		for (int i=0;i<=114514;i++)
+		char pls = '?';
+		Ar<<pls;
+		check(pls=='<');
+
+		while(true)
 		{
-			Ar<<key;
-			if (key==-1)
+			Ar<<pls;
+			if (pls=='>')
 			{
 				break;
 			}
-			
-			switch (key)
+
+			check(pls=='<');
+			char mark='$';
+			Ar<<mark;
+			int ret=0;
+			ret|=KuruSerializeUtil::ReadFromSerial(Ar,mark,'0',Title,false);
+			ret|=KuruSerializeUtil::ReadFromSerial(Ar,mark,'1',ClipDatas,true);
+
+			if (ret==0)
 			{
-			case 0:
-				Ar<<Title;
-				break;
-			case 1:
-				int ClipDataNum = -1;
-				Ar<<ClipDataNum;
-				ClipDatas.Empty();
-				for (int j=0;j<ClipDataNum;j++)
+				int stk = 1;
+				//废弃数据
+				while(true)
 				{
-					UKuruStoryClipData* NewObj = NewObject<UKuruStoryClipData>();
-					NewObj->Serialize(Ar);
-					ClipDatas.Emplace(NewObj);
+					Ar<<pls;
+					if (pls=='<')stk++;
+					if(pls=='>')stk--;
+					if(stk==0)break;
 				}
-				break;
+			}else
+			{
+				Ar<<pls;
+				check(pls=='>')
 			}
 		}
+		
+		
 	}
 }
