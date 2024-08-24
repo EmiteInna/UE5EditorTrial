@@ -1,5 +1,6 @@
 ﻿#include "SClipTimelineWidget.h"
 
+#include "SKuruTimelineContainer.h"
 #include "KuruStoryModule/Data/KuruStoryClipData.h"
 #include "KuruStoryModule/Types/ColorStores.h"
 
@@ -106,7 +107,8 @@ TSharedRef<SDockTab> SClipTimelineWidget::SpawnTimelineTab(const FSpawnTabArgs& 
 	return SNew(SDockTab)
 		   .TabRole(ETabRole::PanelTab)
 		   [
-			   SNew(STextBlock).Text(FText::FromString("Spawn Timeline Tab Content"))
+		//	   SNew(STextBlock).Text(FText::FromString("Spawn Timeline Tab Content"))
+				SNew(SKuruTimelineContainer).EditingData(mEditingData)
 		   ];
 }
 

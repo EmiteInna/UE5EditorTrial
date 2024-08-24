@@ -52,6 +52,7 @@ protected:
 	FSlateImageBrush* ImageBrush = nullptr;
 	bool bOpenedAssetPicker = false;
 
+	bool bOpenedTimePanel = false;
 public:
 	UKuruStoryClipData* GetEditingData()const{return mEditingData;};
 };

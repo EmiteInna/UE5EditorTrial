@@ -318,6 +318,11 @@ FReply SSectionClipRowWidget::BindButton_OnClickDelete()
 
 FReply SSectionClipRowWidget::BindButton_OnClickOpenTimelinePanel()
 {
+	if (bOpenedTimePanel)
+	{
+		return FReply::Handled();
+	}
+	bOpenedTimePanel = true;
 	TSharedRef<SWindow> NewWindow = SNew(SWindow)
 	.Title(FTF("TimeEvent Editor"))
 	.ClientSize(FVector2D(1600,1280))
@@ -338,8 +343,9 @@ FReply SSectionClipRowWidget::BindButton_OnClickOpenTimelinePanel()
 			{
 				mChildTimelineWidget->OnUnregisterTabs();
 			}
+			bOpenedTimePanel =false;
 		}));
-	FSlateApplication::Get().AddModalWindow(NewWindow,AsShared());
+	FSlateApplication::Get().AddWindow(NewWindow);
 
 	return FReply::Handled();
 }
@@ -386,10 +392,10 @@ void SSectionClipRowWidget::OnImageSelected(const FAssetData& AssetData)
 		ImageBrush->SetResourceObject(SelectedTexture);
 		ImageBrush->TintColor = KuruColorStores::KawaiiWhite;
 		SW_Image->SetImage(ImageBrush);
-		if (mEditingData)
+		if (mEditingData && mEditingData->Parent)
 		{
 			const FScopedTransaction AddTaskTransaction(FText::FromString("Change Image"));
-			mEditingData->Modify();
+			mEditingData->Parent->Modify();
 			mEditingData->Texture2D = SelectedTexture;
 		}
 	}

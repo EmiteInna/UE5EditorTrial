@@ -18,6 +18,7 @@ public class KuruStoryModule : ModuleRules
 		PrivateIncludePaths.AddRange(
 			new string[] {
 				// ... add other private include paths required here ...
+				"Persona/Private"
 			}
 			);
 			
@@ -29,7 +30,9 @@ public class KuruStoryModule : ModuleRules
 				"UnrealEd",
 				"AssetDefinition",
 				"Kismet",
-				"ContentBrowser"
+				"ContentBrowser", 
+				"SequencerWidgets",
+				"TimeManagement",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
@@ -43,7 +46,7 @@ public class KuruStoryModule : ModuleRules
 				"Slate",
 				"SlateCore",
 				"AssetTools",
-				"PropertyEditor"
+				"PropertyEditor", "Persona", "EditorWidgets"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
