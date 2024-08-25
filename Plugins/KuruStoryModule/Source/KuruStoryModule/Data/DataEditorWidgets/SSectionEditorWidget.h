@@ -14,7 +14,7 @@ public:
 	SLATE_BEGIN_ARGS(SSectionEditorWidget){}
 	SLATE_END_ARGS()
 
-	void Construct(const FArguments& InArgs);
+	void Construct(const FArguments& InArgs,const TSharedPtr<FKuruStorySectionData_EditorTool>& InEditorToolkit);
 
 	FKuruStorySectionData_EditorTool* ToolPtr = nullptr;
 
@@ -46,6 +46,8 @@ public:
 	FReply ChildMoveDown(SSectionClipRowWidget* ChildWidget);
 	FReply ChildDelete(SSectionClipRowWidget* ChildWidget);
 	int GetChildClipIndex(UKuruStoryClipData* ChildClip);
+
+	TWeakPtr<FKuruStorySectionData_EditorTool> EditorTool;
 };
 
 

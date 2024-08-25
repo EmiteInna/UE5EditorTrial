@@ -13,8 +13,9 @@
 #define FTF(a) FText::FromString(TEXT(a))
 #define FTFs(a) FText::FromString(a)
 
-void SSectionClipRowWidget::Construct(const FArguments& InArgs)
+void SSectionClipRowWidget::Construct(const FArguments& InArgs,const TSharedPtr<FKuruStorySectionData_EditorTool>& InEditorToolkit)
 {
+	EditorToolkit = InEditorToolkit;
 	KuruColorStores::InitializeKuruStores();
 	FSlateFontInfo IndexTextFont = FCoreStyle::Get().GetFontStyle(FName("NormalBold"));
 	IndexTextFont.Size = 20;
@@ -330,7 +331,7 @@ FReply SSectionClipRowWidget::BindButton_OnClickOpenTimelinePanel()
 	.SupportsMinimize(false)
 	;
 
-	mChildTimelineWidget = SNew(SClipTimelineWidget).EditingData(mEditingData)
+	mChildTimelineWidget = SNew(SClipTimelineWidget,EditorToolkit.Pin().ToSharedRef()).EditingData(mEditingData)
 		.ParentWidget(this);
 	NewWindow->SetContent(
 		mChildTimelineWidget.ToSharedRef()

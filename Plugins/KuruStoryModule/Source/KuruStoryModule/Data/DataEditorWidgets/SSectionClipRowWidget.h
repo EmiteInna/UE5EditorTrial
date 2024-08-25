@@ -1,5 +1,6 @@
 ﻿#pragma once
 
+class FKuruStorySectionData_EditorTool;
 class SClipTimelineWidget;
 class SSectionEditorWidget;
 class SAssetView;
@@ -14,7 +15,7 @@ public:
 		SLATE_ARGUMENT(SSectionEditorWidget*, SectionEditorWidget)
 	SLATE_END_ARGS()
 
-	void Construct(const FArguments& InArgs);
+	void Construct(const FArguments& InArgs,const TSharedPtr<FKuruStorySectionData_EditorTool>& InEditorToolkit);
 	~SSectionClipRowWidget();
 
 public:
@@ -29,12 +30,14 @@ public:
 	TSharedPtr<SButton> SW_ButtonDelete;
 	TSharedPtr<SButton> SW_ButtonOpenTimelinePanel;
 
+	
 	void BindRefreshProperty();
 
 protected:
 	UKuruStoryClipData* mEditingData=nullptr;
 	SSectionEditorWidget* mSectionEditorWidget=nullptr;
 	TSharedPtr<SClipTimelineWidget> mChildTimelineWidget=nullptr;
+	TWeakPtr<FKuruStorySectionData_EditorTool> EditorToolkit;
 	
 	FString GetAttributeName(FName AttributeType);
 	

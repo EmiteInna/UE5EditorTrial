@@ -30,6 +30,7 @@
 #include "FrameNumberDisplayFormat.h"
 #include "KuruTimeSliderController.h"
 #include "SequencerWidgetsDelegates.h"
+#include "SKuruTimelineControlPanel.h"
 #include "TimeSliderArgs.h"
 #include "KuruStoryModule/Data/KuruStoryClipData.h"
 #include "Preferences/PersonaOptions.h"
@@ -69,19 +70,18 @@ void SKuruTimelineContainer::Construct(const FArguments& InArg)
 
 	FTimeSliderArgs TimeSliderArgs;
 	{
-	//	TimeSliderArgs.ScrubPosition = MakeAttributeLambda([WeakModel](){ return WeakModel.IsValid() ? WeakModel.Pin()->GetScrubPosition() : FFrameTime(0); });
 		TimeSliderArgs.ScrubPosition = MakeAttributeLambda([this]()
-			{ return mEditingClipData?mEditingClipData->GetScrubPosition():FFrameTime(0); });
+			{ return mEditingClipData?FFrameTime(
+				mEditingClipData->GetScrubPosition()):FFrameTime(0); });
 		TimeSliderArgs.ViewRange = ViewRange;
 		TimeSliderArgs.PlaybackRange = MakeAttributeLambda([this]()
 			{ return mEditingClipData?mEditingClipData->GetPlaybackRange():TRange<FFrameNumber>(0, 0); });
-	//	TimeSliderArgs.ClampRange = MakeAttributeLambda([WeakModel](){ return WeakModel.IsValid() ? WeakModel.Pin()->GetWorkingRange() : FAnimatedRange(0.0, 0.0); });
 		TimeSliderArgs.ClampRange = MakeAttributeLambda([this]()
 			{ return mEditingClipData?mEditingClipData->WorkingRange:FAnimatedRange(0,0); });
 
 		TimeSliderArgs.DisplayRate = DisplayRate;
 		TimeSliderArgs.TickResolution = TickResolution;
-	TimeSliderArgs.OnViewRangeChanged = FOnViewRangeChanged::CreateSP(this,
+		TimeSliderArgs.OnViewRangeChanged = FOnViewRangeChanged::CreateSP(this,
 		&SKuruTimelineContainer::HandleViewRangeChanged);
 		TimeSliderArgs.OnClampRangeChanged = FOnTimeRangeChanged::CreateSP(this,
 			&SKuruTimelineContainer::HandleWorkingRangeChanged);
@@ -251,13 +251,13 @@ void SKuruTimelineContainer::Construct(const FArguments& InArg)
 						]
 					]
 
-					/*// Transport controls
+					// Transport controls
 					+SGridPanel::Slot(Column0, Row3, SGridPanel::Layer(10))
 					.VAlign(VAlign_Center)
 					.HAlign(HAlign_Center)
 					[
-						SNew(SAnimTimelineTransportControls, InModel->GetPreviewScene(), InModel->GetAnimSequenceBase())
-					]*/
+						SNew(SKuruTimelineControlPanel, TimeSliderController)
+					]
 
 					// Second column
 					+SGridPanel::Slot(Column1, Row0)
@@ -838,14 +838,14 @@ void SKuruTimelineContainer::HandleScrubPositionChanged(FFrameTime NewScrubPosit
 	}
 
 	Model.Pin()->SetScrubPosition(NewScrubPosition);*/
-	FFrameNumber Num  =FMath::RoundToInt32(static_cast<float>(NewScrubPosition.AsDecimal() /
-		static_cast<double>(mEditingClipData->GetTickResolution())));
-	mEditingClipData->SetScrubPosition(Num);
+
+	mEditingClipData->SetScrubPosition(NewScrubPosition);
 }
 
 double SKuruTimelineContainer::GetSpinboxDelta() const
 {
-	return FFrameRate(60, 1).AsDecimal() * FFrameRate(60, 1).AsInterval();
+	return FFrameRate(mEditingClipData->GetTickResolution(),1).AsDecimal()
+	* mEditingClipData->GetFrameRate().AsInterval();
 }
 
 void SKuruTimelineContainer::SetPlayTime(double InFrameTime)

@@ -2,6 +2,8 @@
 
 #include "SKuruTimelineContainer.h"
 #include "KuruStoryModule/Data/KuruStoryClipData.h"
+#include "KuruStoryModule/Data/EditorEg/SStoryClipEditorViewport.h"
+#include "KuruStoryModule/Data/EditorEg/StoryClipPreviewScene.h"
 #include "KuruStoryModule/Types/ColorStores.h"
 
 FName SClipTimelineWidget::FirstTabName = "ToolTab";
@@ -20,8 +22,9 @@ void SClipTimelineWidget::OnUnregisterTabs()
 	FGlobalTabmanager::Get()->UnregisterTabSpawner(FifthTabName);
 }
 
-void SClipTimelineWidget::Construct(const FArguments& InArgs)
+void SClipTimelineWidget::Construct(const FArguments& InArgs,const TSharedPtr<FKuruStorySectionData_EditorTool>& InEditorToolkit)
 {
+	EditorTool = InEditorToolkit;
 	mEditingData = InArgs._EditingData;
 	mParentWidget = InArgs._ParentWidget;
 	FSlateBrush* MyBackgroundBrush = new FSlateBrush();
@@ -114,10 +117,15 @@ TSharedRef<SDockTab> SClipTimelineWidget::SpawnTimelineTab(const FSpawnTabArgs& 
 
 TSharedRef<SDockTab> SClipTimelineWidget::SpawnPreviewTab(const FSpawnTabArgs& Args)
 {
+	TSharedPtr<FStoryClipPreviewScene> PreviewScene =
+		MakeShareable(new FStoryClipPreviewScene(FPreviewScene::ConstructionValues().
+			AllowAudioPlayback(true).ShouldSimulatePhysics(true),0));
+	FStoryClipEditorViewportRequireArgs Arg(PreviewScene.ToSharedRef(),EditorTool.Pin().ToSharedRef());
 	return SNew(SDockTab)
 		   .TabRole(ETabRole::PanelTab)
 		   [
-			   SNew(STextBlock).Text(FText::FromString("Spawn Preview Tab Content"))
+	//		   SNew(STextBlock).Text(FText::FromString("Spawn Preview Tab Content"))
+				SNew(SStoryClipEditorViewport, Arg)
 		   ];
 }
 

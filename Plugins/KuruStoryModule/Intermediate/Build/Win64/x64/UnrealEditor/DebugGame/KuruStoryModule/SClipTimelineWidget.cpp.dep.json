@@ -12,6 +12,11 @@
             "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\sequencerwidgets\\public\\viewrangeinterpolation.h",
             "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\kurustoryclipdata.h",
             "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\intermediate\\build\\win64\\unrealeditor\\inc\\kurustorymodule\\uht\\kurustoryclipdata.generated.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\editoreg\\sstoryclipeditorviewport.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\unrealed\\public\\seditorviewport.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\runtime\\slate\\public\\widgets\\sviewport.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\editoreg\\storyclippreviewscene.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\advancedpreviewscene\\public\\advancedpreviewscene.h",
             "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\types\\colorstores.h"
         ],
         "ImportedModules": [],

@@ -65,7 +65,7 @@ void UKuruStoryClipData::Serialize(FArchive& Ar)
 
 int UKuruStoryClipData::GetTickResolution() const
 {
-	return FMath::RoundToInt32(GetFrameRate().AsDecimal());
+	return FMath::RoundToInt32(TickResolution.AsDecimal()*GetFrameRate().AsDecimal());
 }
 
 TRange<FFrameNumber> UKuruStoryClipData::GetPlaybackRange() const

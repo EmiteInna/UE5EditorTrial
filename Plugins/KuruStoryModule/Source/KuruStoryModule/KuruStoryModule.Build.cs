@@ -18,7 +18,6 @@ public class KuruStoryModule : ModuleRules
 		PrivateIncludePaths.AddRange(
 			new string[] {
 				// ... add other private include paths required here ...
-				"Persona/Private"
 			}
 			);
 			
@@ -33,6 +32,7 @@ public class KuruStoryModule : ModuleRules
 				"ContentBrowser", 
 				"SequencerWidgets",
 				"TimeManagement",
+				"AdvancedPreviewScene"
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);

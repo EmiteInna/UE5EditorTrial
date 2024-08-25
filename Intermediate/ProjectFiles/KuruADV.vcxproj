@@ -404,8 +404,12 @@
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SKuruTimelineContainer.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SClipTimelineWidget.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SImageSelectorWidget.cpp" />
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SKuruTimelineControlPanel.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SSectionClipRowWidget.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SSectionEditorWidget.cpp" />
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\SStoryClipEditorViewport.cpp" />
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\StoryClipPreviewScene.cpp" />
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\StoryClipViewportClient.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\KuruStoryClipData.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\KuruStoryClipData_AssetDefinition.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\KuruStoryClipData_EditorTool.cpp" />
@@ -427,8 +431,12 @@
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SKuruTimelineContainer.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SClipTimelineWidget.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SImageSelectorWidget.h" />
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SKuruTimelineControlPanel.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SSectionClipRowWidget.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SSectionEditorWidget.h" />
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\SStoryClipEditorViewport.h" />
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\StoryClipPreviewScene.h" />
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\StoryClipViewportClient.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\KuruStoryClipData.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\KuruStoryClipData_AssetDefinition.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\KuruStoryClipData_EditorTool.h" />

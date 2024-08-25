@@ -10,9 +10,10 @@
 #define FTFs(a) FText::FromString(a)
 
 
-void SSectionEditorWidget::Construct(const FArguments& InArgs)
+void SSectionEditorWidget::Construct(const FArguments& InArgs,const TSharedPtr<FKuruStorySectionData_EditorTool>& InEditorToolkit)
 {
 	KuruColorStores::InitializeKuruStores();
+	EditorTool = InEditorToolkit;
 	
 	FSlateFontInfo TitleTextFont = FCoreStyle::Get().GetFontStyle(FName("EnbossedText"));
 	TitleTextFont.Size = 25;
@@ -100,7 +101,7 @@ TSharedRef<ITableRow> SSectionEditorWidget::OnGenerateRowForClip(UKuruStoryClipD
 {
 	ensure(Data);
 	TSharedRef<SSectionClipRowWidget> ChildWidget =
-		SNew(SSectionClipRowWidget)
+		SNew(SSectionClipRowWidget,EditorTool.Pin().ToSharedRef())
 			.EditingData(Data)
 			.SectionEditorWidget(this);
 	
