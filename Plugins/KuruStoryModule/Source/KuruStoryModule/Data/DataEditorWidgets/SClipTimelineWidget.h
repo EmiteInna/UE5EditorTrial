@@ -24,7 +24,7 @@ public:
 	UKuruStoryClipData* mEditingData;
 	SSectionClipRowWidget* mParentWidget;
 
-	void Construct(const FArguments& InArgs,const TSharedPtr<FKuruStorySectionData_EditorTool>& InEditorToolkit);
+	void Construct(const FArguments& InArgs,const TSharedPtr<FKuruStorySectionData_EditorTool>& InEditorToolkit,const TSharedRef<SDockTab>& InParentDockTab);
 
 	TSharedRef<SDockTab> SpawnToolTab(const FSpawnTabArgs& Args);
 	TSharedRef<SDockTab> SpawnTimelineTab(const FSpawnTabArgs& Args);
@@ -35,4 +35,6 @@ public:
 	TWeakPtr<FKuruStorySectionData_EditorTool> EditorTool;
 
 	TSharedPtr<FStoryClipPreviewScene> PreviewScene;
+	
+	TSharedPtr<FTabManager> WidgetTabManager; 
 };

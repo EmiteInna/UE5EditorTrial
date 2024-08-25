@@ -3,15 +3,22 @@
 	{
 		"Module.KuruStoryModule.cpp.obj": [
 			"KuruStoryClipData.gen.cpp.obj",
+			"KuruStoryClipDataInstance.gen.cpp.obj",
 			"KuruStoryClipData_AssetDefinition.gen.cpp.obj",
 			"KuruStoryClipData_Factory.gen.cpp.obj",
+			"KuruStoryClipEditorExecutor.gen.cpp.obj",
+			"KuruStoryModule.init.gen.cpp.obj",
 			"KuruStorySectionData.gen.cpp.obj",
 			"KuruStorySectionData_AssetDefinition.gen.cpp.obj",
 			"KuruStorySectionData_Factory.gen.cpp.obj",
+			"KuruTimeSliderController.cpp.obj",
 			"SImageSelectorWidget.cpp.obj",
+			"SKuruTimelineContainer.cpp.obj",
+			"SKuruTimelineControlPanel.cpp.obj",
 			"SSectionClipRowWidget.cpp.obj",
 			"SSectionEditorWidget.cpp.obj",
 			"SStoryClipEditorViewport.cpp.obj",
+			"StoryClipPreviewScene.cpp.obj",
 			"StoryClipViewportClient.cpp.obj",
 			"KuruStoryClipData_AssetDefinition.cpp.obj",
 			"KuruStoryClipData_EditorTool.cpp.obj",
@@ -20,20 +27,13 @@
 			"KuruStorySectionData_AssetDefinition.cpp.obj",
 			"KuruStorySectionData_EditorTool.cpp.obj",
 			"KuruStorySectionData_Factory.cpp.obj",
+			"KuruStoryClipDataInstance.cpp.obj",
+			"KuruStoryClipEditorExecutor.cpp.obj",
 			"KuruStoryModule.cpp.obj",
 			"ColorStores.cpp.obj",
 			"KuruSerializeUtil.cpp.obj",
-			"KuruStoryClipDataInstance.gen.cpp.obj",
-			"KuruStoryClipEditorExecutor.gen.cpp.obj",
-			"KuruStoryModule.init.gen.cpp.obj",
-			"KuruTimeSliderController.cpp.obj",
 			"SClipTimelineWidget.cpp.obj",
-			"SKuruTimelineContainer.cpp.obj",
-			"SKuruTimelineControlPanel.cpp.obj",
-			"StoryClipPreviewScene.cpp.obj",
-			"KuruStoryClipData.cpp.obj",
-			"KuruStoryClipDataInstance.cpp.obj",
-			"KuruStoryClipEditorExecutor.cpp.obj"
+			"KuruStoryClipData.cpp.obj"
 		]
 	}
 }

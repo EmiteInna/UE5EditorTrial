@@ -95,7 +95,9 @@ void UKuruStoryClipData::SetScrubPosition(const FFrameTime& InputFrameNumber)
 {
 	if (UKuruStoryClipDataInstance* Instance = GetPreviewInstance())
 	{
-		Instance->CurrentPlayingPosition = InputFrameNumber.AsDecimal()/GetTickResolution();
+		double inFrame = InputFrameNumber.AsDecimal();
+		double tickReso = GetTickResolution();
+		Instance->CurrentPlayingPosition = inFrame/tickReso;
 	}
 }
 

@@ -457,6 +457,7 @@
     <None Include="..\..\Source\KuruADV\KuruADV.Build.cs"/>
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Types\ColorStores.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Types\KuruSerializeUtil.cpp" />
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Types\KuruTabUtil.cpp" />
     <ClCompile Include="..\..\Source\KuruADV\KuruADV.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_2)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
@@ -464,6 +465,7 @@
     </ClCompile>
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Types\ColorStores.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Types\KuruSerializeUtil.h" />
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Types\KuruTabUtil.h" />
     <ClInclude Include="..\..\Source\KuruADV\KuruADV.h"/>
     <ClCompile Include="..\..\Source\KuruADV\TestObj.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_2)</AdditionalIncludeDirectories>

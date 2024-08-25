@@ -7,6 +7,7 @@
 #include "KuruStoryModule/Data/KuruStoryClipData.h"
 #include "KuruStoryModule/Data/KuruStorySectionData.h"
 #include "KuruStoryModule/Types/ColorStores.h"
+#include "KuruStoryModule/Types/KuruTabUtil.h"
 #include "Widgets/Input/SMultiLineEditableTextBox.h"
 #include "Widgets/Layout/SConstraintCanvas.h"
 
@@ -330,12 +331,14 @@ FReply SSectionClipRowWidget::BindButton_OnClickOpenTimelinePanel()
 	.SupportsMaximize(false)
 	.SupportsMinimize(false)
 	;
+	const TSharedPtr<SDockTab> ParentDockTab = KuruTabUtil::FindDockTabFromWidget(SharedThis(this));
 
-	mChildTimelineWidget = SNew(SClipTimelineWidget,EditorToolkit.Pin().ToSharedRef()).EditingData(mEditingData)
+	mChildTimelineWidget = SNew(SClipTimelineWidget,EditorToolkit.Pin().ToSharedRef(),ParentDockTab.ToSharedRef()).EditingData(mEditingData)
 		.ParentWidget(this);
 	NewWindow->SetContent(
 		mChildTimelineWidget.ToSharedRef()
 		);
+
 
 	NewWindow->SetOnWindowClosed(FOnWindowClosed::CreateLambda(
 		[this](const TSharedRef<SWindow>& InWindow)

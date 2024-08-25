@@ -12,17 +12,16 @@ FName SClipTimelineWidget::ThirdTabName = "PreviewTab";
 FName SClipTimelineWidget::FourthTabName = "EventDetailTab";
 FName SClipTimelineWidget::FifthTabName = "DetailTab";
 
-
 void SClipTimelineWidget::OnUnregisterTabs()
 {
-	FGlobalTabmanager::Get()->UnregisterTabSpawner(FirstTabName);
-	FGlobalTabmanager::Get()->UnregisterTabSpawner(SecondTabName);
-	FGlobalTabmanager::Get()->UnregisterTabSpawner(ThirdTabName);
-	FGlobalTabmanager::Get()->UnregisterTabSpawner(FourthTabName);
-	FGlobalTabmanager::Get()->UnregisterTabSpawner(FifthTabName);
+	WidgetTabManager->UnregisterTabSpawner(FirstTabName);
+	WidgetTabManager->UnregisterTabSpawner(SecondTabName);
+	WidgetTabManager->UnregisterTabSpawner(ThirdTabName);
+	WidgetTabManager->UnregisterTabSpawner(FourthTabName);
+	WidgetTabManager->UnregisterTabSpawner(FifthTabName);
 }
 
-void SClipTimelineWidget::Construct(const FArguments& InArgs,const TSharedPtr<FKuruStorySectionData_EditorTool>& InEditorToolkit)
+void SClipTimelineWidget::Construct(const FArguments& InArgs,const TSharedPtr<FKuruStorySectionData_EditorTool>& InEditorToolkit,const TSharedRef<SDockTab>& InParentDockTab)
 {
 	EditorTool = InEditorToolkit;
 	mEditingData = InArgs._EditingData;
@@ -35,12 +34,16 @@ void SClipTimelineWidget::Construct(const FArguments& InArgs,const TSharedPtr<FK
 				AllowAudioPlayback(true).ShouldSimulatePhysics(true),0));
 	PreviewScene->CreatePreviewInstance(mEditingData);
 	mEditingData->CurrentPreviewScene = PreviewScene.Get();
+
 	
-	FGlobalTabmanager::Get()->RegisterTabSpawner(FirstTabName, FOnSpawnTab::CreateRaw(this, &SClipTimelineWidget::SpawnToolTab));
-	FGlobalTabmanager::Get()->RegisterTabSpawner(SecondTabName, FOnSpawnTab::CreateRaw(this, &SClipTimelineWidget::SpawnTimelineTab));
-	FGlobalTabmanager::Get()->RegisterTabSpawner(ThirdTabName, FOnSpawnTab::CreateRaw(this, &SClipTimelineWidget::SpawnPreviewTab));
-	FGlobalTabmanager::Get()->RegisterTabSpawner(FourthTabName, FOnSpawnTab::CreateRaw(this, &SClipTimelineWidget::SpawnEventDetailTab));
-	FGlobalTabmanager::Get()->RegisterTabSpawner(FifthTabName, FOnSpawnTab::CreateRaw(this, &SClipTimelineWidget::SpawnDetailTab));
+	WidgetTabManager = FGlobalTabmanager::Get()->NewTabManager(
+		InParentDockTab).ToSharedPtr(); 
+	
+	WidgetTabManager->RegisterTabSpawner(FirstTabName, FOnSpawnTab::CreateRaw(this, &SClipTimelineWidget::SpawnToolTab));
+	WidgetTabManager->RegisterTabSpawner(SecondTabName, FOnSpawnTab::CreateRaw(this, &SClipTimelineWidget::SpawnTimelineTab));
+	WidgetTabManager->RegisterTabSpawner(ThirdTabName, FOnSpawnTab::CreateRaw(this, &SClipTimelineWidget::SpawnPreviewTab));
+	WidgetTabManager->RegisterTabSpawner(FourthTabName, FOnSpawnTab::CreateRaw(this, &SClipTimelineWidget::SpawnEventDetailTab));
+	WidgetTabManager->RegisterTabSpawner(FifthTabName, FOnSpawnTab::CreateRaw(this, &SClipTimelineWidget::SpawnDetailTab));
 
     TSharedRef<FTabManager::FLayout> Layout = FTabManager::NewLayout("ClipTimelineLayout")
         ->AddArea(
@@ -95,7 +98,7 @@ void SClipTimelineWidget::Construct(const FArguments& InArgs,const TSharedPtr<FK
 		+
 		SOverlay::Slot().Padding(0)
 		[
-			FGlobalTabmanager::Get()->RestoreFrom(Layout, TSharedPtr<SWindow>()).ToSharedRef()
+			WidgetTabManager->RestoreFrom(Layout, TSharedPtr<SWindow>()).ToSharedRef()
 		]
 	];
 	
