@@ -33,6 +33,9 @@
 #include "SKuruTimelineControlPanel.h"
 #include "TimeSliderArgs.h"
 #include "KuruStoryModule/Data/KuruStoryClipData.h"
+#include "KuruStoryModule/Data/EditorEg/StoryClipPreviewScene.h"
+#include "KuruStoryModule/Data/Runtime/KuruStoryClipDataInstance.h"
+#include "KuruStoryModule/Data/Runtime/KuruStoryClipEditorExecutor.h"
 #include "Preferences/PersonaOptions.h"
 
 #define FTF(a) FText::FromString(TEXT(a))
@@ -41,6 +44,7 @@
 void SKuruTimelineContainer::Construct(const FArguments& InArg)
 {
 	mEditingClipData = InArg._EditingData.Get();
+	mPreviewScene = InArg._PreviewScene.Get();
 	OnReceivedFocus = InArg._OnReceivedFocus;
 	ViewRange = MakeAttributeLambda([this]()
 		{ return mEditingClipData ?mEditingClipData->ViewRange : FAnimatedRange(0.0, 0.0); });
@@ -804,6 +808,8 @@ void SKuruTimelineContainer::HandleKeyComplete()
 //	Model.Pin()->RefreshTracks();
 }
 
+
+
 void SKuruTimelineContainer::HandleViewRangeChanged(TRange<double> InRange, EViewRangeInterpolation InInterpolation)
 {
 	if (mEditingClipData)
@@ -820,13 +826,24 @@ void SKuruTimelineContainer::HandleWorkingRangeChanged(TRange<double> InRange)
 	}
 }
 
-class UAnimSingleNodeInstance* SKuruTimelineContainer::GetPreviewInstance() const
+AKuruStoryClipEditorExecutor* SKuruTimelineContainer::GetPreviewInstanceExecutor() const
 {
+	if (mPreviewScene)
+	{
+		return mPreviewScene->GetPreviewInstance();
+	}
 //	UDebugSkelMeshComponent* PreviewMeshComponent = Model.Pin()->GetPreviewScene()->GetPreviewMeshComponent();
 //	return PreviewMeshComponent && PreviewMeshComponent->IsPreviewOn()? PreviewMeshComponent->PreviewInstance : nullptr;
 	return nullptr;
 }
-
+UKuruStoryClipDataInstance* SKuruTimelineContainer::GetPreviewInstance() const
+{
+	if (AKuruStoryClipEditorExecutor* Exe = GetPreviewInstanceExecutor())
+	{
+		return Exe->PlayingInstance;
+	}
+	return nullptr;
+}
 void SKuruTimelineContainer::HandleScrubPositionChanged(FFrameTime NewScrubPosition, bool bIsScrubbing, bool bEvaluate) const
 {
 	/*if (UAnimSingleNodeInstance* PreviewInstance = GetPreviewInstance())
@@ -839,7 +856,11 @@ void SKuruTimelineContainer::HandleScrubPositionChanged(FFrameTime NewScrubPosit
 
 	Model.Pin()->SetScrubPosition(NewScrubPosition);*/
 
-	mEditingClipData->SetScrubPosition(NewScrubPosition);
+	if(mEditingClipData)
+	{
+		mEditingClipData->SetScrubPosition(NewScrubPosition);
+	}
+	
 }
 
 double SKuruTimelineContainer::GetSpinboxDelta() const

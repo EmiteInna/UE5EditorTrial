@@ -30,7 +30,12 @@ void SClipTimelineWidget::Construct(const FArguments& InArgs,const TSharedPtr<FK
 	FSlateBrush* MyBackgroundBrush = new FSlateBrush();
     	MyBackgroundBrush->TintColor = KuruColorStores::KawaiiOrange;
 
-
+	
+	PreviewScene =MakeShareable(new FStoryClipPreviewScene(FPreviewScene::ConstructionValues().
+				AllowAudioPlayback(true).ShouldSimulatePhysics(true),0));
+	PreviewScene->CreatePreviewInstance(mEditingData);
+	mEditingData->CurrentPreviewScene = PreviewScene.Get();
+	
 	FGlobalTabmanager::Get()->RegisterTabSpawner(FirstTabName, FOnSpawnTab::CreateRaw(this, &SClipTimelineWidget::SpawnToolTab));
 	FGlobalTabmanager::Get()->RegisterTabSpawner(SecondTabName, FOnSpawnTab::CreateRaw(this, &SClipTimelineWidget::SpawnTimelineTab));
 	FGlobalTabmanager::Get()->RegisterTabSpawner(ThirdTabName, FOnSpawnTab::CreateRaw(this, &SClipTimelineWidget::SpawnPreviewTab));
@@ -111,15 +116,12 @@ TSharedRef<SDockTab> SClipTimelineWidget::SpawnTimelineTab(const FSpawnTabArgs& 
 		   .TabRole(ETabRole::PanelTab)
 		   [
 		//	   SNew(STextBlock).Text(FText::FromString("Spawn Timeline Tab Content"))
-				SNew(SKuruTimelineContainer).EditingData(mEditingData)
+				SNew(SKuruTimelineContainer).EditingData(mEditingData).PreviewScene(PreviewScene.Get())
 		   ];
 }
 
 TSharedRef<SDockTab> SClipTimelineWidget::SpawnPreviewTab(const FSpawnTabArgs& Args)
 {
-	TSharedPtr<FStoryClipPreviewScene> PreviewScene =
-		MakeShareable(new FStoryClipPreviewScene(FPreviewScene::ConstructionValues().
-			AllowAudioPlayback(true).ShouldSimulatePhysics(true),0));
 	FStoryClipEditorViewportRequireArgs Arg(PreviewScene.ToSharedRef(),EditorTool.Pin().ToSharedRef());
 	return SNew(SDockTab)
 		   .TabRole(ETabRole::PanelTab)

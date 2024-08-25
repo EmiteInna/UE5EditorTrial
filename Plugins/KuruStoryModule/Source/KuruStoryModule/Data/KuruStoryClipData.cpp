@@ -3,8 +3,11 @@
 
 #include "KuruStoryClipData.h"
 
+#include "EditorEg/StoryClipPreviewScene.h"
 #include "KuruStoryModule/Types/KuruSerializeUtil.h"
 #include "Preferences/PersonaOptions.h"
+#include "Runtime/KuruStoryClipDataInstance.h"
+#include "Runtime/KuruStoryClipEditorExecutor.h"
 
 void UKuruStoryClipData::Serialize(FArchive& Ar)
 {
@@ -16,6 +19,7 @@ void UKuruStoryClipData::Serialize(FArchive& Ar)
 		KuruSerializeUtil::WriteToSerialize(Ar,'2',Teller,false);
 		KuruSerializeUtil::WriteToSerialize(Ar,'3',SimpleContent,false);
 		KuruSerializeUtil::WriteToSerialize(Ar,'4',EditableItems,false);
+		KuruSerializeUtil::WriteToSerialize(Ar,'5',TotalLength,false);
 		Ar<<KuruSerializeUtil::Et;
 	
 	}else if (Ar.IsLoading())
@@ -41,6 +45,7 @@ void UKuruStoryClipData::Serialize(FArchive& Ar)
 			ret|=KuruSerializeUtil::ReadFromSerial(Ar,mark,'2',Teller,false);
 			ret|=KuruSerializeUtil::ReadFromSerial(Ar,mark,'3',SimpleContent,false);
 			ret|=KuruSerializeUtil::ReadFromSerial(Ar,mark,'4',EditableItems,false);
+			ret|=KuruSerializeUtil::ReadFromSerial(Ar,mark,'5',TotalLength,false);
 			if (ret==0)
 			{
 				int stk = 1;
@@ -68,10 +73,48 @@ int UKuruStoryClipData::GetTickResolution() const
 	return FMath::RoundToInt32(TickResolution.AsDecimal()*GetFrameRate().AsDecimal());
 }
 
+FFrameNumber UKuruStoryClipData::GetScrubPosition() const
+{
+	if (UKuruStoryClipDataInstance* Instance = GetPreviewInstance())
+	{
+		return FFrameNumber(FMath::RoundToInt32(Instance->CurrentPlayingPosition*GetTickResolution()));
+	}
+	return FFrameNumber(0);
+}
+
+double UKuruStoryClipData::GetScrubTime() const
+{
+	if (UKuruStoryClipDataInstance* Instance = GetPreviewInstance())
+	{
+		return Instance->CurrentPlayingPosition;
+	}
+	return 0.;
+}
+
+void UKuruStoryClipData::SetScrubPosition(const FFrameTime& InputFrameNumber)
+{
+	if (UKuruStoryClipDataInstance* Instance = GetPreviewInstance())
+	{
+		Instance->CurrentPlayingPosition = InputFrameNumber.AsDecimal()/GetTickResolution();
+	}
+}
+
 TRange<FFrameNumber> UKuruStoryClipData::GetPlaybackRange() const
 {
 	const int32 Resolution = GetTickResolution();
 	return TRange<FFrameNumber>(FFrameNumber(FMath::RoundToInt32(
 		PlayRange.GetLowerBoundValue() * (double)Resolution)),
 		FFrameNumber(FMath::RoundToInt32(PlayRange.GetUpperBoundValue() * (double)Resolution)));
+}
+
+UKuruStoryClipDataInstance* UKuruStoryClipData::GetPreviewInstance()const
+{
+	if (CurrentPreviewScene)
+	{
+		if (AKuruStoryClipEditorExecutor* Exe = CurrentPreviewScene->GetPreviewInstance())
+		{
+			return Exe->PlayingInstance;
+		}
+	}
+	return nullptr;
 }

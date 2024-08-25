@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\intermediate\\build\\win64\\unrealeditor\\inc\\kurustorymodule\\uht\\kurustoryclipeditorexecutor.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\04unreal\\unrealengine\\source\\engine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\unrealed\\sharedpch.unrealed.nonoptimized.cpp20.h.pch",
+        "Includes": [
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\kurustorymodule\\definitions.kurustorymodule.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\runtime\\kurustoryclipeditorexecutor.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\intermediate\\build\\win64\\unrealeditor\\inc\\kurustorymodule\\uht\\kurustoryclipeditorexecutor.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -47,6 +47,15 @@ void EmptyLinkFunctionForGeneratedCodeKuruStoryClipData() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_SimpleContent_MetaData[];
 #endif
 		static const UECodeGen_Private::FNamePropertyParams NewProp_SimpleContent;
+		static const UECodeGen_Private::FDoublePropertyParams NewProp_EditableItems_Inner;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_EditableItems_MetaData[];
+#endif
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_EditableItems;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_TotalLength_MetaData[];
+#endif
+		static const UECodeGen_Private::FDoublePropertyParams NewProp_TotalLength;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_Parent_MetaData[];
 #endif
@@ -124,6 +133,33 @@ void EmptyLinkFunctionForGeneratedCodeKuruStoryClipData() {}
 	};
 #endif
 	const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_SimpleContent = { "SimpleContent", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKuruStoryClipData, SimpleContent), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_SimpleContent_MetaData), Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_SimpleContent_MetaData) };
+	const UECodeGen_Private::FDoublePropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_EditableItems_Inner = { "EditableItems", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Double, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_EditableItems_MetaData[] = {
+		{ "Category", "Story" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//4\n" },
+#endif
+		{ "ModuleRelativePath", "Data/KuruStoryClipData.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "4" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_EditableItems = { "EditableItems", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKuruStoryClipData, EditableItems), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_EditableItems_MetaData), Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_EditableItems_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_TotalLength_MetaData[] = {
+		{ "Category", "Story" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//5\n" },
+#endif
+		{ "ModuleRelativePath", "Data/KuruStoryClipData.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "5" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FDoublePropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_TotalLength = { "TotalLength", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Double, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKuruStoryClipData, TotalLength), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_TotalLength_MetaData), Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_TotalLength_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Parent_MetaData[] = {
 		{ "Category", "Hide" },
@@ -144,6 +180,9 @@ void EmptyLinkFunctionForGeneratedCodeKuruStoryClipData() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Texture2D,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Teller,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_SimpleContent,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_EditableItems_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_EditableItems,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_TotalLength,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Parent,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UKuruStoryClipData_Statics::StaticCppClassTypeInfo = {
@@ -185,9 +224,9 @@ void EmptyLinkFunctionForGeneratedCodeKuruStoryClipData() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UKuruStoryClipData, UKuruStoryClipData::StaticClass, TEXT("UKuruStoryClipData"), &Z_Registration_Info_UClass_UKuruStoryClipData, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UKuruStoryClipData), 2331710139U) },
+		{ Z_Construct_UClass_UKuruStoryClipData, UKuruStoryClipData::StaticClass, TEXT("UKuruStoryClipData"), &Z_Registration_Info_UClass_UKuruStoryClipData, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UKuruStoryClipData), 1794041305U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_4018168924(TEXT("/Script/KuruStoryModule"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_3674603088(TEXT("/Script/KuruStoryModule"),
 		Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

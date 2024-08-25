@@ -164,10 +164,10 @@ private:
 
 private:
 	UKuruStoryClipData* mEditingData=nullptr;
-
+public:
 	/** Pointer back to the timeline */
 	TWeakPtr<SKuruTimelineContainer> WeakTimeline;
-
+private:
 	FTimeSliderArgs TimeSliderArgs;
 
 	/** Brush for drawing the fill area on the scrubber */

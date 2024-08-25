@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "ITransportControl.h"
 
+class UKuruStoryClipDataInstance;
 class FKuruTimeSliderController;
 
 class SKuruTimelineControlPanel : public SCompoundWidget
@@ -14,6 +15,8 @@ public:
 
 
 	TSharedPtr<FKuruTimeSliderController> Controller;
+
+	UKuruStoryClipDataInstance* GetEditingInstance()const;
 
 	FReply OnClick_Forward_Step();
 

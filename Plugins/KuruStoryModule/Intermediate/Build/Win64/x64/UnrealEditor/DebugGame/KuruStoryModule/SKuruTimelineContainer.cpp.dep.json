@@ -51,7 +51,12 @@
             "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\dataeditorwidgets\\skurutimelinecontrolpanel.h",
             "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\editorwidgets\\public\\itransportcontrol.h",
             "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\kurustoryclipdata.h",
-            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\intermediate\\build\\win64\\unrealeditor\\inc\\kurustorymodule\\uht\\kurustoryclipdata.generated.h"
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\intermediate\\build\\win64\\unrealeditor\\inc\\kurustorymodule\\uht\\kurustoryclipdata.generated.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\editoreg\\storyclippreviewscene.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\runtime\\kurustoryclipdatainstance.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\intermediate\\build\\win64\\unrealeditor\\inc\\kurustorymodule\\uht\\kurustoryclipdatainstance.generated.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\runtime\\kurustoryclipeditorexecutor.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\intermediate\\build\\win64\\unrealeditor\\inc\\kurustorymodule\\uht\\kurustoryclipeditorexecutor.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

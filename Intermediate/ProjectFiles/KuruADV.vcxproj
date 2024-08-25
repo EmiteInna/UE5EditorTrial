@@ -418,6 +418,8 @@
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\KuruStorySectionData_AssetDefinition.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\KuruStorySectionData_EditorTool.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\KuruStorySectionData_Factory.cpp" />
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Runtime\KuruStoryClipDataInstance.cpp" />
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Runtime\KuruStoryClipEditorExecutor.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\KuruStorySection.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\KuruStorySection_AssetDefinition.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\KuruStorySection_EditorTool.cpp" />
@@ -445,6 +447,8 @@
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\KuruStorySectionData_AssetDefinition.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\KuruStorySectionData_EditorTool.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\KuruStorySectionData_Factory.h" />
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Runtime\KuruStoryClipDataInstance.h" />
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Runtime\KuruStoryClipEditorExecutor.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\KuruStorySection.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\KuruStorySection_AssetDefinition.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\KuruStorySection_EditorTool.h" />

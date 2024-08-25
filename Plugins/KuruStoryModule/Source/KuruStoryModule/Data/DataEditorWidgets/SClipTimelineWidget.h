@@ -1,5 +1,6 @@
 ﻿#pragma once
 
+class FStoryClipPreviewScene;
 class FKuruStorySectionData_EditorTool;
 class UKuruStoryClipData;
 class SSectionClipRowWidget;
@@ -32,4 +33,6 @@ public:
 	TSharedRef<SDockTab> SpawnDetailTab(const FSpawnTabArgs& Args);
 
 	TWeakPtr<FKuruStorySectionData_EditorTool> EditorTool;
+
+	TSharedPtr<FStoryClipPreviewScene> PreviewScene;
 };

@@ -2,6 +2,9 @@
 #include "AnimatedRange.h"
 #include "ViewRangeInterpolation.h"
 
+class UKuruStoryClipDataInstance;
+class AKuruStoryClipEditorExecutor;
+class FStoryClipPreviewScene;
 class FKuruTimeSliderController;
 class ITimeSlider;
 class UKuruStoryClipData;
@@ -13,6 +16,7 @@ public:
 		/** The current total range of frame indices */
 		SLATE_ATTRIBUTE( FInt32Interval, ViewIndices )
 		SLATE_ATTRIBUTE( UKuruStoryClipData*, EditingData )
+		SLATE_ATTRIBUTE( FStoryClipPreviewScene*, PreviewScene )
 				
 		/** Called when any widget contained within the anim timeline has received focus */
 		SLATE_EVENT( FSimpleDelegate, OnReceivedFocus )
@@ -50,9 +54,11 @@ private:
 
 	/** Handles an additive layer key being set */
 	void HandleKeyComplete();
-
-	UAnimSingleNodeInstance* GetPreviewInstance() const;
-
+public:
+	
+	AKuruStoryClipEditorExecutor* GetPreviewInstanceExecutor() const;
+	UKuruStoryClipDataInstance* GetPreviewInstance() const;
+private:
 	/** Handle the view range being changed */
 	void HandleViewRangeChanged(TRange<double> InRange, EViewRangeInterpolation InInterpolation);
 
@@ -79,6 +85,8 @@ private:
 
 private:
 	UKuruStoryClipData* mEditingClipData=nullptr;
+
+	FStoryClipPreviewScene* mPreviewScene=nullptr;
 
 	/** The time slider controller */
 	TSharedPtr<FKuruTimeSliderController> TimeSliderController;
