@@ -407,6 +407,13 @@
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SKuruTimelineControlPanel.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SSectionClipRowWidget.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SSectionEditorWidget.cpp" />
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SKuruTimelineOverlay.cpp" />
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SKuruTimelineSplitterOverlay.cpp" />
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SStoryEventTrack.cpp" />
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SStoryEventTrackArea.cpp" />
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SStoryTrackOutliner.cpp" />
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SStoryTrackOutlinerItem.cpp" />
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\StoryTimelineTrack.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\SStoryClipEditorViewport.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\StoryClipPreviewScene.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\StoryClipViewportClient.cpp" />
@@ -436,6 +443,13 @@
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SKuruTimelineControlPanel.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SSectionClipRowWidget.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SSectionEditorWidget.h" />
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SKuruTimelineOverlay.h" />
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SKuruTimelineSplitterOverlay.h" />
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SStoryEventTrack.h" />
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SStoryEventTrackArea.h" />
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SStoryTrackOutliner.h" />
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SStoryTrackOutlinerItem.h" />
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\StoryTimelineTrack.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\SStoryClipEditorViewport.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\StoryClipPreviewScene.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\StoryClipViewportClient.h" />
@@ -453,8 +467,8 @@
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\KuruStorySection_AssetDefinition.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\KuruStorySection_EditorTool.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\KuruStorySection_Factory.h" />
-    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Public\KuruStoryModule.h"/>
-    <None Include="..\..\Source\KuruADV\KuruADV.Build.cs"/>
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Public\KuruStoryModule.h" />
+    <None Include="..\..\Source\KuruADV\KuruADV.Build.cs" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Types\ColorStores.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Types\KuruSerializeUtil.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Types\KuruTabUtil.cpp" />
@@ -466,31 +480,31 @@
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Types\ColorStores.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Types\KuruSerializeUtil.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Types\KuruTabUtil.h" />
-    <ClInclude Include="..\..\Source\KuruADV\KuruADV.h"/>
+    <ClInclude Include="..\..\Source\KuruADV\KuruADV.h" />
     <ClCompile Include="..\..\Source\KuruADV\TestObj.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_2)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
-    <ClInclude Include="..\..\Source\KuruADV\TestObj.h"/>
+    <ClInclude Include="..\..\Source\KuruADV\TestObj.h" />
     <ClCompile Include="..\..\Source\KuruADV\TestObj_AssetDefinition.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_2)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
-    <ClInclude Include="..\..\Source\KuruADV\TestObj_AssetDefinition.h"/>
+    <ClInclude Include="..\..\Source\KuruADV\TestObj_AssetDefinition.h" />
     <ClCompile Include="..\..\Source\KuruADV\TestObj_EditorTool.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_2)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
-    <ClInclude Include="..\..\Source\KuruADV\TestObj_EditorTool.h"/>
+    <ClInclude Include="..\..\Source\KuruADV\TestObj_EditorTool.h" />
     <ClCompile Include="..\..\Source\KuruADV\TestObj_Factory.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_2)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
-    <ClInclude Include="..\..\Source\KuruADV\TestObj_Factory.h"/>
+    <ClInclude Include="..\..\Source\KuruADV\TestObj_Factory.h" />
   </ItemGroup>
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>

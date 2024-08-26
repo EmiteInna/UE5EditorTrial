@@ -2,6 +2,8 @@
 #include "AnimatedRange.h"
 #include "ViewRangeInterpolation.h"
 
+class SStoryTrackOutliner;
+class SStoryEventTrackArea;
 class UKuruStoryClipDataInstance;
 class AKuruStoryClipEditorExecutor;
 class FStoryClipPreviewScene;
@@ -87,6 +89,10 @@ private:
 	UKuruStoryClipData* mEditingClipData=nullptr;
 
 	FStoryClipPreviewScene* mPreviewScene=nullptr;
+
+	TSharedPtr<SStoryEventTrackArea> TrackArea;
+	
+	TSharedPtr<SStoryTrackOutliner> Outliner;
 
 	/** The time slider controller */
 	TSharedPtr<FKuruTimeSliderController> TimeSliderController;

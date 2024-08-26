@@ -3,11 +3,24 @@
 
 #include "KuruStoryClipData.h"
 
+#include "DataEditorWidgets/TimelineTrack/StoryTimelineTrack.h"
 #include "EditorEg/StoryClipPreviewScene.h"
 #include "KuruStoryModule/Types/KuruSerializeUtil.h"
 #include "Preferences/PersonaOptions.h"
 #include "Runtime/KuruStoryClipDataInstance.h"
 #include "Runtime/KuruStoryClipEditorExecutor.h"
+
+UKuruStoryClipData::UKuruStoryClipData()
+{
+	TSharedRef<FStoryTimelineTrack> NewTrackA = MakeShared<FStoryTimelineTrack>(FText::FromString("A"),FText::FromString("A是Anna的A"),this,true);
+	TSharedRef<FStoryTimelineTrack> NewTrackB =  MakeShared<FStoryTimelineTrack>(FText::FromString("B"),FText::FromString("B是Bruchi的B"),this,true);
+	TSharedRef<FStoryTimelineTrack> NewTrackC =  MakeShared<FStoryTimelineTrack>(FText::FromString("C"),FText::FromString("C是Carmin的C"),this,true);
+	TSharedRef<FStoryTimelineTrack> NewTrackD =  MakeShared<FStoryTimelineTrack>(FText::FromString("D"),FText::FromString("D是Dear的D"),this,true);
+	NewTrackC->AddChild(NewTrackD);
+	RootTracks.Emplace(NewTrackA);
+	RootTracks.Emplace(NewTrackB);
+	RootTracks.Emplace(NewTrackC);
+}
 
 void UKuruStoryClipData::Serialize(FArchive& Ar)
 {
@@ -119,4 +132,12 @@ UKuruStoryClipDataInstance* UKuruStoryClipData::GetPreviewInstance()const
 		}
 	}
 	return nullptr;
+}
+
+void UKuruStoryClipData::ForEachRootTrack(TFunctionRef<void(FStoryTimelineTrack&)> InFunction)
+{
+	for (TSharedRef<FStoryTimelineTrack>& Track : RootTracks)
+	{
+		InFunction(Track.Get());
+	}
 }

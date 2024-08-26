@@ -37,6 +37,10 @@
 #include "KuruStoryModule/Data/Runtime/KuruStoryClipDataInstance.h"
 #include "KuruStoryModule/Data/Runtime/KuruStoryClipEditorExecutor.h"
 #include "Preferences/PersonaOptions.h"
+#include "TimelineTrack/SKuruTimelineOverlay.h"
+#include "TimelineTrack/SKuruTimelineSplitterOverlay.h"
+#include "TimelineTrack/SStoryEventTrackArea.h"
+#include "TimelineTrack/SStoryTrackOutliner.h"
 
 #define FTF(a) FText::FromString(TEXT(a))
 #define FTFs(a) FText::FromString(a)
@@ -121,14 +125,13 @@ void SKuruTimelineContainer::Construct(const FArguments& InArg)
 
 	//这里InModel刷新了一次Track
 
-	/*TrackArea = SNew(SAnimTrackArea, InModel, TimeSliderControllerRef);
-	Outliner = SNew(SAnimOutliner, InModel, TrackArea.ToSharedRef())
+	TrackArea = SNew(SStoryEventTrackArea, mEditingClipData, TimeSliderControllerRef);
+	Outliner = SNew(SStoryTrackOutliner, mEditingClipData, TrackArea.ToSharedRef())
 		.ExternalScrollbar(ScrollBar)
 		.Clipping(EWidgetClipping::ClipToBounds)
 		.FilterText_Lambda([this](){ return FilterText; });
 
 	TrackArea->SetOutliner(Outliner);
-	*/
 
 	ColumnFillCoefficients[0] = 0.2f;
 	ColumnFillCoefficients[1] = 0.8f;
@@ -212,7 +215,7 @@ void SKuruTimelineContainer::Construct(const FArguments& InArg)
 						+SHorizontalBox::Slot()
 						[
 							SNew(SOverlay)
-							/*+SOverlay::Slot()
+							+SOverlay::Slot()
 							[
 								SNew(SVerticalBox)
 								+ SVerticalBox::Slot()
@@ -245,7 +248,7 @@ void SKuruTimelineContainer::Construct(const FArguments& InArg)
 										]
 									]
 								]
-							]*/
+							]
 
 							+SOverlay::Slot()
 							.HAlign(HAlign_Right)
@@ -289,27 +292,27 @@ void SKuruTimelineContainer::Construct(const FArguments& InArg)
 					]
 
 					// Overlay that draws the tick lines
-					/*+SGridPanel::Slot(Column1, Row1, SGridPanel::Layer(10))
+					+SGridPanel::Slot(Column1, Row1, SGridPanel::Layer(10))
 					.Padding(ResizeBarPadding)
 					[
-						SNew(SKuruTimelineContainerOverlay, TimeSliderControllerRef)
+						SNew(SKuruTimelineOverlay, TimeSliderControllerRef)
 						.Visibility( EVisibility::HitTestInvisible )
 						.DisplayScrubPosition( false )
 						.DisplayTickLines( true )
 						.Clipping(EWidgetClipping::ClipToBounds)
 						.PaintPlaybackRangeArgs(FPaintPlaybackRangeArgs(FAppStyle::GetBrush("Sequencer.Timeline.PlayRange_L"), FAppStyle::GetBrush("Sequencer.Timeline.PlayRange_R"), 6.f))
-					]*/
+					]
 
 					// Overlay that draws the scrub position
-					/*+SGridPanel::Slot(Column1, Row1, SGridPanel::Layer(20))
+					+SGridPanel::Slot(Column1, Row1, SGridPanel::Layer(20))
 					.Padding(ResizeBarPadding)
 					[
-						SNew(SKuruTimelineContainerOverlay, TimeSliderControllerRef)
+						SNew(SKuruTimelineOverlay, TimeSliderControllerRef)
 						.Visibility( EVisibility::HitTestInvisible )
 						.DisplayScrubPosition( true )
 						.DisplayTickLines( false )
 						.Clipping(EWidgetClipping::ClipToBounds)
-					]*/
+					]
 
 					// play range slider
 					+SGridPanel::Slot(Column1, Row3, SGridPanel::Layer(10))
@@ -325,10 +328,10 @@ void SKuruTimelineContainer::Construct(const FArguments& InArg)
 						]
 					]
 				]
-				/*+SOverlay::Slot()
+				+SOverlay::Slot()
 				[
 					// track area virtual splitter overlay
-					SNew(SKuruTimelineContainerSplitterOverlay)
+					SNew(SKuruTimelineSplitterOverlay)
 					.Style(FAppStyle::Get(), "AnimTimeline.Outliner.Splitter")
 					.Visibility(EVisibility::SelfHitTestInvisible)
 
@@ -345,7 +348,7 @@ void SKuruTimelineContainer::Construct(const FArguments& InArg)
 					[
 						SNew(SSpacer)
 					]
-				]*/
+				]
 			]
 		]
 	];

@@ -2,19 +2,18 @@
 	"RemapUnityFiles": 
 	{
 		"Module.KuruStoryModule.cpp.obj": [
-			"KuruStoryClipData.gen.cpp.obj",
 			"KuruStoryClipDataInstance.gen.cpp.obj",
 			"KuruStoryClipData_AssetDefinition.gen.cpp.obj",
 			"KuruStoryClipData_Factory.gen.cpp.obj",
 			"KuruStoryClipEditorExecutor.gen.cpp.obj",
-			"KuruStoryModule.init.gen.cpp.obj",
 			"KuruStorySectionData.gen.cpp.obj",
 			"KuruStorySectionData_AssetDefinition.gen.cpp.obj",
 			"KuruStorySectionData_Factory.gen.cpp.obj",
 			"KuruTimeSliderController.cpp.obj",
+			"SClipTimelineWidget.cpp.obj",
 			"SImageSelectorWidget.cpp.obj",
-			"SKuruTimelineContainer.cpp.obj",
 			"SKuruTimelineControlPanel.cpp.obj",
+			"SSectionClipRowWidget.cpp.obj",
 			"SSectionEditorWidget.cpp.obj",
 			"SStoryClipEditorViewport.cpp.obj",
 			"StoryClipPreviewScene.cpp.obj",
@@ -31,10 +30,18 @@
 			"KuruStoryModule.cpp.obj",
 			"ColorStores.cpp.obj",
 			"KuruSerializeUtil.cpp.obj",
-			"SClipTimelineWidget.cpp.obj",
-			"SSectionClipRowWidget.cpp.obj",
-			"KuruStoryClipData.cpp.obj",
-			"KuruTabUtil.cpp.obj"
+			"KuruTabUtil.cpp.obj",
+			"KuruStoryClipData.gen.cpp.obj",
+			"KuruStoryModule.init.gen.cpp.obj",
+			"SKuruTimelineContainer.cpp.obj",
+			"SKuruTimelineOverlay.cpp.obj",
+			"SKuruTimelineSplitterOverlay.cpp.obj",
+			"SStoryEventTrack.cpp.obj",
+			"SStoryEventTrackArea.cpp.obj",
+			"SStoryTrackOutliner.cpp.obj",
+			"SStoryTrackOutlinerItem.cpp.obj",
+			"StoryTimelineTrack.cpp.obj",
+			"KuruStoryClipData.cpp.obj"
 		]
 	}
 }

@@ -164,13 +164,13 @@ void EmptyLinkFunctionForGeneratedCodeKuruStoryClipData() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Parent_MetaData[] = {
 		{ "Category", "Hide" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "//no need to serialize\n" },
+		{ "Comment", "//no need to serialize\n//UPROPERTY(EditAnywhere,Category=\"Story\")\n" },
 #endif
 		{ "EditCondition", "false" },
 		{ "EditConditionHides", "" },
 		{ "ModuleRelativePath", "Data/KuruStoryClipData.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "no need to serialize" },
+		{ "ToolTip", "no need to serialize\nUPROPERTY(EditAnywhere,Category=\"Story\")" },
 #endif
 	};
 #endif
@@ -224,9 +224,9 @@ void EmptyLinkFunctionForGeneratedCodeKuruStoryClipData() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UKuruStoryClipData, UKuruStoryClipData::StaticClass, TEXT("UKuruStoryClipData"), &Z_Registration_Info_UClass_UKuruStoryClipData, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UKuruStoryClipData), 1794041305U) },
+		{ Z_Construct_UClass_UKuruStoryClipData, UKuruStoryClipData::StaticClass, TEXT("UKuruStoryClipData"), &Z_Registration_Info_UClass_UKuruStoryClipData, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UKuruStoryClipData), 1320995896U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_3674603088(TEXT("/Script/KuruStoryModule"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_1358911700(TEXT("/Script/KuruStoryModule"),
 		Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
