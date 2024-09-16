@@ -506,6 +506,9 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\KuruADV\TestObj_Factory.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\TimelineTrackNode\" />
+  </ItemGroup>
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
