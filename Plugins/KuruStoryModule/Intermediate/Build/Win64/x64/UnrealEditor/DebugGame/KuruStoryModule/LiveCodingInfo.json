@@ -20,7 +20,6 @@
 			"SSectionEditorWidget.cpp.obj",
 			"SKuruTimelineOverlay.cpp.obj",
 			"SKuruTimelineSplitterOverlay.cpp.obj",
-			"SStoryEventTrack.cpp.obj",
 			"SStoryEventTrackArea.cpp.obj",
 			"SStoryTrackOutliner.cpp.obj",
 			"SStoryTrackOutlinerItem.cpp.obj",
@@ -41,7 +40,9 @@
 			"KuruStoryModule.cpp.obj",
 			"ColorStores.cpp.obj",
 			"KuruSerializeUtil.cpp.obj",
-			"KuruTabUtil.cpp.obj"
+			"KuruTabUtil.cpp.obj",
+			"SStoryEventTrack.cpp.obj",
+			"SKuruTimelineNode.cpp.obj"
 		]
 	}
 }

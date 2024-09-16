@@ -9,7 +9,8 @@
             "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\dataeditorwidgets\\timelinetrack\\sstoryeventtrack.h",
             "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\sequencerwidgets\\public\\animatedrange.h",
             "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\dataeditorwidgets\\timelinetrack\\sstorytrackoutliner.h",
-            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\dataeditorwidgets\\timelinetrack\\storytimelinetrack.h"
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\dataeditorwidgets\\timelinetrack\\storytimelinetrack.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\dataeditorwidgets\\timelinetrack\\timelinetracknode\\skurutimelinenode.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

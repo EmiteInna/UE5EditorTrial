@@ -17,7 +17,6 @@
 #include "H:/KuruEditors/KuruADV/Plugins/KuruStoryModule/Source/KuruStoryModule/Data/DataEditorWidgets/SSectionEditorWidget.cpp"
 #include "H:/KuruEditors/KuruADV/Plugins/KuruStoryModule/Source/KuruStoryModule/Data/DataEditorWidgets/TimelineTrack/SKuruTimelineOverlay.cpp"
 #include "H:/KuruEditors/KuruADV/Plugins/KuruStoryModule/Source/KuruStoryModule/Data/DataEditorWidgets/TimelineTrack/SKuruTimelineSplitterOverlay.cpp"
-#include "H:/KuruEditors/KuruADV/Plugins/KuruStoryModule/Source/KuruStoryModule/Data/DataEditorWidgets/TimelineTrack/SStoryEventTrack.cpp"
 #include "H:/KuruEditors/KuruADV/Plugins/KuruStoryModule/Source/KuruStoryModule/Data/DataEditorWidgets/TimelineTrack/SStoryEventTrackArea.cpp"
 #include "H:/KuruEditors/KuruADV/Plugins/KuruStoryModule/Source/KuruStoryModule/Data/DataEditorWidgets/TimelineTrack/SStoryTrackOutliner.cpp"
 #include "H:/KuruEditors/KuruADV/Plugins/KuruStoryModule/Source/KuruStoryModule/Data/DataEditorWidgets/TimelineTrack/SStoryTrackOutlinerItem.cpp"

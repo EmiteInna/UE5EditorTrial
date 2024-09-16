@@ -2,6 +2,7 @@
 
 #include "SStoryTrackOutliner.h"
 #include "StoryTimelineTrack.h"
+#include "TimelineTrackNode/SKuruTimelineNode.h"
 
 void SStoryEventTrack::Construct(const FArguments& InArgs, const TSharedRef<FStoryTimelineTrack>& InTrack,
                                  const TSharedRef<SStoryTrackOutliner>& InOutliner)
@@ -18,6 +19,10 @@ void SStoryEventTrack::Construct(const FArguments& InArgs, const TSharedRef<FSto
 		+SOverlay::Slot()
 		[
 			InArgs._Content.Widget
+		]
+		+SOverlay::Slot()
+		[
+			SNew(SKuruTimelineNode)	
 		]
 	];
 }

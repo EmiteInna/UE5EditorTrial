@@ -414,6 +414,7 @@
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SStoryTrackOutliner.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SStoryTrackOutlinerItem.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\StoryTimelineTrack.cpp" />
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\TimelineTrackNode\SKuruTimelineNode.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\SStoryClipEditorViewport.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\StoryClipPreviewScene.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\StoryClipViewportClient.cpp" />
@@ -450,6 +451,7 @@
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SStoryTrackOutliner.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SStoryTrackOutlinerItem.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\StoryTimelineTrack.h" />
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\TimelineTrackNode\SKuruTimelineNode.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\SStoryClipEditorViewport.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\StoryClipPreviewScene.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\StoryClipViewportClient.h" />
@@ -505,9 +507,6 @@
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClInclude Include="..\..\Source\KuruADV\TestObj_Factory.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\TimelineTrackNode\" />
   </ItemGroup>
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>
