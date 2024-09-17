@@ -1,5 +1,7 @@
 ﻿#pragma once
 
+class SKuruStoryTimelineTopWidget;
+class FKuruStoryTimelinerCore;
 class FKuruStorySectionData_EditorTool;
 class SClipTimelineWidget;
 class SSectionEditorWidget;
@@ -36,7 +38,6 @@ public:
 protected:
 	UKuruStoryClipData* mEditingData=nullptr;
 	SSectionEditorWidget* mSectionEditorWidget=nullptr;
-	TSharedPtr<SClipTimelineWidget> mChildTimelineWidget=nullptr;
 	TWeakPtr<FKuruStorySectionData_EditorTool> EditorToolkit;
 	
 	FString GetAttributeName(FName AttributeType);
@@ -58,6 +59,9 @@ protected:
 	bool bOpenedTimePanel = false;
 public:
 	UKuruStoryClipData* GetEditingData()const{return mEditingData;};
+
+	TSharedPtr<FKuruStoryTimelinerCore> Core;
+	TSharedPtr<SKuruStoryTimelineTopWidget> TimelineWidget;
 };
 
 

@@ -73,3 +73,16 @@
 ⑦ 可继承的Model，可扩展的PreviewScene，可继承的Notify。  
 ⑧ 可自由扩展的工具。  
 ⑨ 可自由排布的版面结构。  
+⑩ 通过工具栏添加、选中、重命名、删除轨道。  
+⑩① 显示轨道的Notify，每个轨道只有一个Notify。  
+⑩② Notify可以进行拖拽、拉伸等操作。  
+⑩③ 单击Notify后可以将其选中，并展示Notify的详细信息。
+⑩④ 将播放、暂停、前进后退一帧等功能预设好放在Model里
+目前锐意制作中，进度大概到一半，有待迭代。  
+大概设计如下（其实就是UE的设计）  
+![Alt Text](./MAIJIAXIU/Chap4/p2.png)  
+具体的用法是继承SEITimelinerTopWidgetBase（用于调整Widget位置），和FEITimelinerCoreBase（用于替换组件），然后在后者中通过重载来替换组件，每一个替换的组件都必须继承原本的组件，除此之外可以自由组合。
+
+想要编辑的东西只需要创建好资产UObject，然后继承FEITimelineEditingModel新建Model，在里面实现一些方法即可。
+
+然后要在PreviewScene里看到想看的东西则是继承FEIPreviewScene，同时替换Core里的PreviewScene即可，如果想要更改PreviewScene的显示属性，则是从FEIViewportClient下手，这是组件都是可以换的。

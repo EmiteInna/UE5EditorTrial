@@ -36,6 +36,10 @@
 /FUNCTIONPADMIN:6
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\UnrealEd\SharedPCH.UnrealEd.NonOptimized.Cpp20.h.obj"
 "H:\KuruEditors\KuruADV\Plugins\KuruStoryModule\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\KuruStoryModule\Module.KuruStoryModule.cpp.obj"
+"H:\KuruEditors\KuruADV\Plugins\KuruStoryModule\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\KuruStoryModule\SSectionClipRowWidget.cpp.obj"
+"H:\KuruEditors\KuruADV\Plugins\KuruStoryModule\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\KuruStoryModule\KuruSotryTimelinerCore.cpp.obj"
+"H:\KuruEditors\KuruADV\Plugins\KuruStoryModule\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\KuruStoryModule\KuruStoryClipData_Model.cpp.obj"
+"H:\KuruEditors\KuruADV\Plugins\KuruStoryModule\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\KuruStoryModule\KuruStoryTimelineTopWidget.cpp.obj"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Default.rc2.res"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUObject\UnrealEditor-CoreUObject.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Engine\UnrealEditor-Engine.lib"
@@ -54,6 +58,7 @@
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\SequencerWidgets\UnrealEditor-SequencerWidgets.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\TimeManagement\UnrealEditor-TimeManagement.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\AdvancedPreviewScene\UnrealEditor-AdvancedPreviewScene.lib"
+"H:\KuruEditors\KuruADV\Plugins\EITimeliner\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\EITimeliner\UnrealEditor-EITimeliner-Win64-DebugGame.lib"
 "delayimp.lib"
 "wininet.lib"
 "rpcrt4.lib"

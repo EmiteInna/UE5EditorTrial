@@ -6,6 +6,8 @@
 #include "SSectionEditorWidget.h"
 #include "KuruStoryModule/Data/KuruStoryClipData.h"
 #include "KuruStoryModule/Data/KuruStorySectionData.h"
+#include "KuruStoryModule/Data/Timeline/KuruSotryTimelinerCore.h"
+#include "KuruStoryModule/Data/Timeline/KuruStoryTimelineTopWidget.h"
 #include "KuruStoryModule/Types/ColorStores.h"
 #include "KuruStoryModule/Types/KuruTabUtil.h"
 #include "Widgets/Input/SMultiLineEditableTextBox.h"
@@ -332,20 +334,26 @@ FReply SSectionClipRowWidget::BindButton_OnClickOpenTimelinePanel()
 	.SupportsMinimize(false)
 	;
 	const TSharedPtr<SDockTab> ParentDockTab = KuruTabUtil::FindDockTabFromWidget(SharedThis(this));
+//在这里！
 
-	mChildTimelineWidget = SNew(SClipTimelineWidget,EditorToolkit.Pin().ToSharedRef(),ParentDockTab.ToSharedRef()).EditingData(mEditingData)
-		.ParentWidget(this);
+	Core = MakeShareable(new FKuruStoryTimelinerCore);
+	TimelineWidget = SNew(SKuruStoryTimelineTopWidget,
+		EditorToolkit.Pin(),
+		ParentDockTab.ToSharedRef(),
+		Core.ToSharedRef(),
+		mEditingData);
+
 	NewWindow->SetContent(
-		mChildTimelineWidget.ToSharedRef()
+		TimelineWidget.ToSharedRef()
 		);
 
 
 	NewWindow->SetOnWindowClosed(FOnWindowClosed::CreateLambda(
 		[this](const TSharedRef<SWindow>& InWindow)
 		{
-			if (mChildTimelineWidget)
+			if (TimelineWidget)
 			{
-				mChildTimelineWidget->OnUnregisterTabs();
+				TimelineWidget->OnUnregisterTabs();
 			}
 			bOpenedTimePanel =false;
 		}));

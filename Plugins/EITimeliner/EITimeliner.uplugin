@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "EITimeliner",
+	"Description": "An Editor Plugin that provides simple universal timeline-based editor widget to support timeline-based data editing.",
+	"Category": "Other",
+	"CreatedBy": "EmiteInna",
+	"CreatedByURL": "https://github.com/EmiteInna/UE5EditorTrial",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": false,
+	"IsBetaVersion": true,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "EITimeliner",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		}
+	]
+}

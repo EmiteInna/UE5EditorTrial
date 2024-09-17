@@ -25,6 +25,7 @@
 			"SStoryTrackOutliner.cpp.obj",
 			"SStoryTrackOutlinerItem.cpp.obj",
 			"StoryTimelineTrack.cpp.obj",
+			"SKuruTimelineNode.cpp.obj",
 			"SStoryClipEditorViewport.cpp.obj",
 			"StoryClipPreviewScene.cpp.obj",
 			"StoryClipViewportClient.cpp.obj",

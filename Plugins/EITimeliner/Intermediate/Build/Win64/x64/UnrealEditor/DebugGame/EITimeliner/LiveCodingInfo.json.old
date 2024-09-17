@@ -1,0 +1,17 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.EITimeliner.cpp.obj": [
+			"EITimeliner.init.gen.cpp.obj",
+			"EITimelinerEditorMode.gen.cpp.obj",
+			"EITimelinerInteractiveTool.gen.cpp.obj",
+			"EITimelinerSimpleTool.gen.cpp.obj",
+			"EITimelinerEditorMode.cpp.obj",
+			"EITimelinerEditorModeCommands.cpp.obj",
+			"EITimelinerEditorModeToolkit.cpp.obj",
+			"EITimelinerModule.cpp.obj",
+			"EITimelinerInteractiveTool.cpp.obj",
+			"EITimelinerSimpleTool.cpp.obj"
+		]
+	}
+}

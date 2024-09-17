@@ -16,14 +16,15 @@
 			"SImageSelectorWidget.cpp.obj",
 			"SKuruTimelineContainer.cpp.obj",
 			"SKuruTimelineControlPanel.cpp.obj",
-			"SSectionClipRowWidget.cpp.obj",
 			"SSectionEditorWidget.cpp.obj",
 			"SKuruTimelineOverlay.cpp.obj",
 			"SKuruTimelineSplitterOverlay.cpp.obj",
+			"SStoryEventTrack.cpp.obj",
 			"SStoryEventTrackArea.cpp.obj",
 			"SStoryTrackOutliner.cpp.obj",
 			"SStoryTrackOutlinerItem.cpp.obj",
 			"StoryTimelineTrack.cpp.obj",
+			"SKuruTimelineNode.cpp.obj",
 			"SStoryClipEditorViewport.cpp.obj",
 			"StoryClipPreviewScene.cpp.obj",
 			"StoryClipViewportClient.cpp.obj",
@@ -41,8 +42,10 @@
 			"ColorStores.cpp.obj",
 			"KuruSerializeUtil.cpp.obj",
 			"KuruTabUtil.cpp.obj",
-			"SStoryEventTrack.cpp.obj",
-			"SKuruTimelineNode.cpp.obj"
+			"SSectionClipRowWidget.cpp.obj",
+			"KuruSotryTimelinerCore.cpp.obj",
+			"KuruStoryClipData_Model.cpp.obj",
+			"KuruStoryTimelineTopWidget.cpp.obj"
 		]
 	}
 }

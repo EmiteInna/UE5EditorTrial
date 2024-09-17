@@ -1,6 +1,7 @@
 {
 	"SourceFiles": [
 		"H:\\KuruEditors\\KuruADV\\Source\\KuruADV\\KuruADV.Build.cs",
+		"H:\\KuruEditors\\KuruADV\\Plugins\\EITimeliner\\Source\\EITimeliner\\EITimeliner.Build.cs",
 		"H:\\KuruEditors\\KuruADV\\Plugins\\KuruEditorToolMaker\\Source\\KuruEditorToolMaker\\KuruEditorToolMaker.Build.cs",
 		"H:\\KuruEditors\\KuruADV\\Plugins\\KuruStoryModule\\Source\\KuruStoryModule\\KuruStoryModule.Build.cs",
 		"H:\\KuruEditors\\KuruADV\\Source\\KuruADV.Target.cs",

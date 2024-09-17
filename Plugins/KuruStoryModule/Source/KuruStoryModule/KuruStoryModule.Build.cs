@@ -32,7 +32,8 @@ public class KuruStoryModule : ModuleRules
 				"ContentBrowser", 
 				"SequencerWidgets",
 				"TimeManagement",
-				"AdvancedPreviewScene"
+				"AdvancedPreviewScene",
+				"EITimeliner"
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
@@ -46,7 +47,8 @@ public class KuruStoryModule : ModuleRules
 				"Slate",
 				"SlateCore",
 				"AssetTools",
-				"PropertyEditor", "Persona", "EditorWidgets"
+				"PropertyEditor", "Persona", "EditorWidgets",
+				"EITimeliner"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);

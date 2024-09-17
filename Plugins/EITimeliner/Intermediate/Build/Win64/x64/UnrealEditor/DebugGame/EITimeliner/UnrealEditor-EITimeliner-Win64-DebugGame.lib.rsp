@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-EITimeliner-Win64-DebugGame.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"..\Intermediate\Build\Win64\x64\UnrealEditor\Development\UnrealEd\SharedPCH.UnrealEd.NonOptimized.Cpp20.h.obj"
+"H:\KuruEditors\KuruADV\Plugins\EITimeliner\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\EITimeliner\Module.EITimeliner.cpp.obj"
+"..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Default.rc2.res"
+/OUT:"H:\KuruEditors\KuruADV\Plugins\EITimeliner\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\EITimeliner\UnrealEditor-EITimeliner-Win64-DebugGame.lib"

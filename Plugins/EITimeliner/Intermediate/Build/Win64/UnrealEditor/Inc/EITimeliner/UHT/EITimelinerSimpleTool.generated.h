@@ -1,0 +1,152 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+// IWYU pragma: private, include "Tools/EITimelinerSimpleTool.h"
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+#ifdef EITIMELINER_EITimelinerSimpleTool_generated_h
+#error "EITimelinerSimpleTool.generated.h already included, missing '#pragma once' in EITimelinerSimpleTool.h"
+#endif
+#define EITIMELINER_EITimelinerSimpleTool_generated_h
+
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_17_SPARSE_DATA
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_17_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_17_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_17_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_17_ACCESSORS
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_17_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUEITimelinerSimpleToolBuilder(); \
+	friend struct Z_Construct_UClass_UEITimelinerSimpleToolBuilder_Statics; \
+public: \
+	DECLARE_CLASS(UEITimelinerSimpleToolBuilder, UInteractiveToolBuilder, COMPILED_IN_FLAGS(0 | CLASS_Transient), CASTCLASS_None, TEXT("/Script/EITimeliner"), NO_API) \
+	DECLARE_SERIALIZER(UEITimelinerSimpleToolBuilder)
+
+
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_17_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UEITimelinerSimpleToolBuilder(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UEITimelinerSimpleToolBuilder(UEITimelinerSimpleToolBuilder&&); \
+	NO_API UEITimelinerSimpleToolBuilder(const UEITimelinerSimpleToolBuilder&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UEITimelinerSimpleToolBuilder); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UEITimelinerSimpleToolBuilder); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UEITimelinerSimpleToolBuilder) \
+	NO_API virtual ~UEITimelinerSimpleToolBuilder();
+
+
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_14_PROLOG
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_17_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_17_SPARSE_DATA \
+	FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_17_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_17_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_17_ACCESSORS \
+	FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_17_INCLASS_NO_PURE_DECLS \
+	FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_17_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> EITIMELINER_API UClass* StaticClass<class UEITimelinerSimpleToolBuilder>();
+
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_33_SPARSE_DATA
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_33_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_33_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_33_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_33_ACCESSORS
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_33_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUEITimelinerSimpleToolProperties(); \
+	friend struct Z_Construct_UClass_UEITimelinerSimpleToolProperties_Statics; \
+public: \
+	DECLARE_CLASS(UEITimelinerSimpleToolProperties, UInteractiveToolPropertySet, COMPILED_IN_FLAGS(0 | CLASS_Transient), CASTCLASS_None, TEXT("/Script/EITimeliner"), NO_API) \
+	DECLARE_SERIALIZER(UEITimelinerSimpleToolProperties)
+
+
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_33_ENHANCED_CONSTRUCTORS \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UEITimelinerSimpleToolProperties(UEITimelinerSimpleToolProperties&&); \
+	NO_API UEITimelinerSimpleToolProperties(const UEITimelinerSimpleToolProperties&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UEITimelinerSimpleToolProperties); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UEITimelinerSimpleToolProperties); \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UEITimelinerSimpleToolProperties) \
+	NO_API virtual ~UEITimelinerSimpleToolProperties();
+
+
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_30_PROLOG
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_33_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_33_SPARSE_DATA \
+	FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_33_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_33_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_33_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_33_ACCESSORS \
+	FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_33_INCLASS_NO_PURE_DECLS \
+	FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_33_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> EITIMELINER_API UClass* StaticClass<class UEITimelinerSimpleToolProperties>();
+
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_52_SPARSE_DATA
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_52_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_52_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_52_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_52_ACCESSORS
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_52_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUEITimelinerSimpleTool(); \
+	friend struct Z_Construct_UClass_UEITimelinerSimpleTool_Statics; \
+public: \
+	DECLARE_CLASS(UEITimelinerSimpleTool, USingleClickTool, COMPILED_IN_FLAGS(0 | CLASS_Transient), CASTCLASS_None, TEXT("/Script/EITimeliner"), NO_API) \
+	DECLARE_SERIALIZER(UEITimelinerSimpleTool)
+
+
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_52_ENHANCED_CONSTRUCTORS \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UEITimelinerSimpleTool(UEITimelinerSimpleTool&&); \
+	NO_API UEITimelinerSimpleTool(const UEITimelinerSimpleTool&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UEITimelinerSimpleTool); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UEITimelinerSimpleTool); \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UEITimelinerSimpleTool) \
+	NO_API virtual ~UEITimelinerSimpleTool();
+
+
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_49_PROLOG
+#define FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_52_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_52_SPARSE_DATA \
+	FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_52_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_52_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_52_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_52_ACCESSORS \
+	FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_52_INCLASS_NO_PURE_DECLS \
+	FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h_52_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> EITIMELINER_API UClass* StaticClass<class UEITimelinerSimpleTool>();
+
+#undef CURRENT_FILE_ID
+#define CURRENT_FILE_ID FID_KuruADV_Plugins_EITimeliner_Source_EITimeliner_Private_Tools_EITimelinerSimpleTool_h
+
+
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
