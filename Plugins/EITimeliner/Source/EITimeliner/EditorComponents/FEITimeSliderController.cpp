@@ -37,32 +37,7 @@ namespace ScrubConstants
 	const double SnapMarginInPixels = 5.0;
 }
 
-/** Utility struct for converting between scrub range space and local/absolute screen space */
-struct FEITimeSliderController::FScrubRangeToScreen
-{
-	double ViewStart;
-	float  PixelsPerInput;
 
-	FScrubRangeToScreen(const TRange<double>& InViewInput, const FVector2D& InWidgetSize )
-	{
-		const double ViewInputRange = InViewInput.Size<double>();
-
-		ViewStart      = InViewInput.GetLowerBoundValue();
-		PixelsPerInput = ViewInputRange > 0 ? static_cast<float>( InWidgetSize.X / ViewInputRange ) : 0;
-	}
-
-	/** Local Widget Space -> Curve Input domain. */
-	double LocalXToInput(float ScreenX) const
-	{
-		return PixelsPerInput > 0 ? (ScreenX/PixelsPerInput) + ViewStart : ViewStart;
-	}
-
-	/** Curve Input domain -> local Widget Space */
-	float InputToLocalX(double Input) const
-	{
-		return static_cast<float>((Input - ViewStart) * PixelsPerInput);
-	}
-};
 
 
 /**

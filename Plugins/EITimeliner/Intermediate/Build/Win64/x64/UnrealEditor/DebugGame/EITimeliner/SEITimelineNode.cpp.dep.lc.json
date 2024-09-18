@@ -1,0 +1,30 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\kurueditors\\kuruadv\\plugins\\eitimeliner\\source\\eitimeliner\\editorcomponents\\widgets\\seitimelinenode.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\04unreal\\unrealengine\\source\\engine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\unrealed\\sharedpch.unrealed.nonoptimized.cpp20.h.pch",
+        "Includes": [
+            "h:\\kurueditors\\kuruadv\\plugins\\eitimeliner\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\eitimeliner\\definitions.eitimeliner.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\eitimeliner\\source\\eitimeliner\\editorcomponents\\widgets\\seitimelinenode.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\eitimeliner\\source\\eitimeliner\\controllerinterface\\eitimelinercontext.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\eitimeliner\\source\\eitimeliner\\datainterface\\eitimelineeditingmodel.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\sequencerwidgets\\public\\animatedrange.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\sequencerwidgets\\public\\viewrangeinterpolation.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\eitimeliner\\source\\eitimeliner\\editorcomponents\\feitimeslidercontroller.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\sequencerwidgets\\public\\itimeslider.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\sequencercore\\public\\isequencerinputhandler.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\sequencerwidgets\\public\\timesliderargs.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\runtime\\moviescene\\public\\moviescenemarkedframe.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\moviescene\\uht\\moviescenemarkedframe.generated.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\runtime\\moviescene\\public\\moviescenesequenceid.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\runtime\\moviescene\\public\\entitysystem\\moviescenecomponentdebug.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\runtime\\moviescene\\public\\entitysystem\\moviesceneentitysystemtypes.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\runtime\\moviescene\\public\\entitysystem\\moviesceneentityids.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\moviescene\\uht\\moviescenesequenceid.generated.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\sequencerwidgets\\public\\sequencerwidgetsdelegates.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

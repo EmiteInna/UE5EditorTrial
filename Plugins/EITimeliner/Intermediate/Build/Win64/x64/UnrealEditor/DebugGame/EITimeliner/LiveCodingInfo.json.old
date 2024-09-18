@@ -19,7 +19,6 @@
 			"SEIEditorViewport.cpp.obj",
 			"SEITimelineContainer.cpp.obj",
 			"SEITimelineControlPanel.cpp.obj",
-			"SEITimelineNode.cpp.obj",
 			"SEITimelineOverlay.cpp.obj",
 			"SEITimelineSplitterOverlay.cpp.obj",
 			"SEITrack.cpp.obj",
@@ -31,7 +30,8 @@
 			"EITimelinerEditorModeToolkit.cpp.obj",
 			"EITimelinerModule.cpp.obj",
 			"EITimelinerInteractiveTool.cpp.obj",
-			"EITimelinerSimpleTool.cpp.obj"
+			"EITimelinerSimpleTool.cpp.obj",
+			"SEITimelineNode.cpp.obj"
 		]
 	}
 }

@@ -234,4 +234,7 @@ protected:
 
 	/** Whether this is a header track */
 	bool bIsHeaderTrack : 1;
+public:
+//用于索引的编号，每次修改完都要重新排序赋值。
+	int trackIndex = 0;
 };

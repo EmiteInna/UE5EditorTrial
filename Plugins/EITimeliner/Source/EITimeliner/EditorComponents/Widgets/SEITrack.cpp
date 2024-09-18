@@ -14,6 +14,7 @@ void SEITrack::Construct(const FArguments& InArgs,
 	WeakOutliner = InOutliner;
 	ViewRange = InArgs._ViewRange;
 	Context = InContext;
+	trackId = InArgs._TrackId.Get();
 	
 	ChildSlot
 	.HAlign(HAlign_Fill)
@@ -26,7 +27,7 @@ void SEITrack::Construct(const FArguments& InArgs,
 		]
 		+SOverlay::Slot()
 		[
-			Context.Pin()->SpawnCore.Pin()->CreateTimelineNode(Context.Pin().ToSharedRef())
+			Context.Pin()->SpawnCore.Pin()->CreateTimelineNode(Context.Pin().ToSharedRef(),trackId)
 			//SNew(SEITimelineNode,Context.Pin().ToSharedRef())	
 		]
 	];

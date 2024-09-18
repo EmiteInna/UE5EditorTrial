@@ -97,15 +97,15 @@ TSharedRef<SEITimelineSplitterOverlay> FEITimelinerCoreBase::CreateTimelineSplit
 }
 
 TSharedRef<SEITimelineNode> FEITimelinerCoreBase::CreateTimelineNode(
-	const TSharedRef<FEITimelinerContext>& InContext)
+	const TSharedRef<FEITimelinerContext>& InContext, int trackIndex)
 {
-	return SNew(SEITimelineNode,InContext);
+	return SNew(SEITimelineNode,InContext).TrackId(trackIndex);
 }
 
 TSharedRef<SEITrack> FEITimelinerCoreBase::CreateTrack(const TSharedRef<FEITimelineTrack> InTrack,
-	const TSharedRef<SEITrackOutliner> InOutLiner, const TSharedRef<FEITimelinerContext>& InContext)
+	const TSharedRef<SEITrackOutliner> InOutLiner, const TSharedRef<FEITimelinerContext>& InContext,int trackId)
 {
-	return SNew(SEITrack,InTrack,InOutLiner,InContext).ViewRange(TAttribute<FAnimatedRange>::CreateLambda([=]()
+	return SNew(SEITrack,InTrack,InOutLiner,InContext).TrackId(trackId).ViewRange(TAttribute<FAnimatedRange>::CreateLambda([=]()
 			{
 				return InContext->EditingModel.Pin()->GetViewRange();
 			}))

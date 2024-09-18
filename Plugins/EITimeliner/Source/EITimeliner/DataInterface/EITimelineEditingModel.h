@@ -105,4 +105,11 @@ public:
 
 	int CurrentChosenTrackId = 0;
 	int CurrentTrackCnt = 0;
+
+	virtual float GetTrackStartTime(int trackId){return 0;};
+	virtual float GetTrackEndTime(int trackId){return 20;};
+
+	virtual void OnTrackNodeMoved(float DeltaMoveTime,int trackId){};
+
+	virtual void OnTrackNodeStretched(float NewStartTime, float NewEndTime,int trackId){};
 };

@@ -27,6 +27,32 @@ public:
 		TSharedPtr<INumericTypeInterface<double>> InSecondaryNumericTypeInterface,
 		const TSharedPtr<FEITimelinerContext>& Context);
 
+	/** Utility struct for converting between scrub range space and local/absolute screen space */
+	struct FScrubRangeToScreen
+	{
+		double ViewStart;
+		float  PixelsPerInput;
+
+		FScrubRangeToScreen(const TRange<double>& InViewInput, const FVector2D& InWidgetSize )
+		{
+			const double ViewInputRange = InViewInput.Size<double>();
+
+			ViewStart      = InViewInput.GetLowerBoundValue();
+			PixelsPerInput = ViewInputRange > 0 ? static_cast<float>( InWidgetSize.X / ViewInputRange ) : 0;
+		}
+
+		/** Local Widget Space -> Curve Input domain. */
+		double LocalXToInput(float ScreenX) const
+		{
+			return PixelsPerInput > 0 ? (ScreenX/PixelsPerInput) + ViewStart : ViewStart;
+		}
+
+		/** Curve Input domain -> local Widget Space */
+		float InputToLocalX(double Input) const
+		{
+			return static_cast<float>((Input - ViewStart) * PixelsPerInput);
+		}
+	};
 	/**
 	* Determines the optimal spacing between tick marks in the slider for a given pixel density
 	* Increments until a minimum amount of slate units specified by MinTick is reached
@@ -174,8 +200,10 @@ private:
 public:
 	/** Pointer back to the timeline */
 	TWeakPtr<SEITimelineContainer> WeakTimeline;
-private:
+
 	FTimeSliderArgs TimeSliderArgs;
+
+private:
 
 	/** Brush for drawing the fill area on the scrubber */
 	const FSlateBrush* ScrubFillBrush;

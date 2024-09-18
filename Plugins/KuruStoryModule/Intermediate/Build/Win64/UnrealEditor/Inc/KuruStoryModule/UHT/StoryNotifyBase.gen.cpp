@@ -10,6 +10,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeStoryNotifyBase() {}
 // Cross Module References
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject_NoRegister();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FFrameRate();
 	KURUSTORYMODULE_API UScriptStruct* Z_Construct_UScriptStruct_FStoryNotifyBase();
 	UPackage* Z_Construct_UPackage__Script_KuruStoryModule();
 // End Cross Module References
@@ -32,6 +33,10 @@ template<> KURUSTORYMODULE_API UScriptStruct* StaticStruct<FStoryNotifyBase>()
 		static const UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
 #endif
 		static void* NewStructOps();
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_BaseFrameRate_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_BaseFrameRate;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_ObjectOwner_MetaData[];
 #endif
@@ -75,6 +80,13 @@ template<> KURUSTORYMODULE_API UScriptStruct* StaticStruct<FStoryNotifyBase>()
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FStoryNotifyBase>();
 	}
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FStoryNotifyBase_Statics::NewProp_BaseFrameRate_MetaData[] = {
+		{ "Category", "StoryNotifyBase" },
+		{ "ModuleRelativePath", "Data/StoryNotifies/StoryNotifyBase.h" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FStoryNotifyBase_Statics::NewProp_BaseFrameRate = { "BaseFrameRate", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FStoryNotifyBase, BaseFrameRate), Z_Construct_UScriptStruct_FFrameRate, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FStoryNotifyBase_Statics::NewProp_BaseFrameRate_MetaData), Z_Construct_UScriptStruct_FStoryNotifyBase_Statics::NewProp_BaseFrameRate_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FStoryNotifyBase_Statics::NewProp_ObjectOwner_MetaData[] = {
 		{ "Category", "StoryNotifyBase" },
 		{ "ModuleRelativePath", "Data/StoryNotifies/StoryNotifyBase.h" },
@@ -117,6 +129,7 @@ template<> KURUSTORYMODULE_API UScriptStruct* StaticStruct<FStoryNotifyBase>()
 #endif
 	const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FStoryNotifyBase_Statics::NewProp_Name = { "Name", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FStoryNotifyBase, Name), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FStoryNotifyBase_Statics::NewProp_Name_MetaData), Z_Construct_UScriptStruct_FStoryNotifyBase_Statics::NewProp_Name_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FStoryNotifyBase_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FStoryNotifyBase_Statics::NewProp_BaseFrameRate,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FStoryNotifyBase_Statics::NewProp_ObjectOwner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FStoryNotifyBase_Statics::NewProp_StartTime,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FStoryNotifyBase_Statics::NewProp_EndTime,
@@ -151,9 +164,9 @@ template<> KURUSTORYMODULE_API UScriptStruct* StaticStruct<FStoryNotifyBase>()
 		static const FStructRegisterCompiledInInfo ScriptStructInfo[];
 	};
 	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_StoryNotifies_StoryNotifyBase_h_Statics::ScriptStructInfo[] = {
-		{ FStoryNotifyBase::StaticStruct, Z_Construct_UScriptStruct_FStoryNotifyBase_Statics::NewStructOps, TEXT("StoryNotifyBase"), &Z_Registration_Info_UScriptStruct_StoryNotifyBase, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FStoryNotifyBase), 2916659103U) },
+		{ FStoryNotifyBase::StaticStruct, Z_Construct_UScriptStruct_FStoryNotifyBase_Statics::NewStructOps, TEXT("StoryNotifyBase"), &Z_Registration_Info_UScriptStruct_StoryNotifyBase, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FStoryNotifyBase), 3913863963U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_StoryNotifies_StoryNotifyBase_h_3963676234(TEXT("/Script/KuruStoryModule"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_StoryNotifies_StoryNotifyBase_h_1147354548(TEXT("/Script/KuruStoryModule"),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_StoryNotifies_StoryNotifyBase_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_StoryNotifies_StoryNotifyBase_h_Statics::ScriptStructInfo),
 		nullptr, 0);

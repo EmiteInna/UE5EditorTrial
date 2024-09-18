@@ -16,7 +16,6 @@
 #include "H:/KuruEditors/KuruADV/Plugins/EITimeliner/Source/EITimeliner/EditorComponents/Widgets/SEIEditorViewport.cpp"
 #include "H:/KuruEditors/KuruADV/Plugins/EITimeliner/Source/EITimeliner/EditorComponents/Widgets/SEITimelineContainer.cpp"
 #include "H:/KuruEditors/KuruADV/Plugins/EITimeliner/Source/EITimeliner/EditorComponents/Widgets/SEITimelineControlPanel.cpp"
-#include "H:/KuruEditors/KuruADV/Plugins/EITimeliner/Source/EITimeliner/EditorComponents/Widgets/SEITimelineNode.cpp"
 #include "H:/KuruEditors/KuruADV/Plugins/EITimeliner/Source/EITimeliner/EditorComponents/Widgets/SEITimelineOverlay.cpp"
 #include "H:/KuruEditors/KuruADV/Plugins/EITimeliner/Source/EITimeliner/EditorComponents/Widgets/SEITimelineSplitterOverlay.cpp"
 #include "H:/KuruEditors/KuruADV/Plugins/EITimeliner/Source/EITimeliner/EditorComponents/Widgets/SEITrack.cpp"

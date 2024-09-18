@@ -224,26 +224,14 @@ TSharedRef<ITableRow> SEITrackOutliner::HandleGenerateRow(TSharedRef<FEITimeline
 {
 	TSharedRef<SEITrackOutlinerItem> Row =
 		Context.Pin()->SpawnCore.Pin()->CreateTrackOutlinerItem(this,InTrack,OwnerTable);
-		
+
 
 	// Ensure the track area is kept up to date with the virtualized scroll of the tree view
 	TSharedPtr<SEITrack> TrackWidget = TrackArea->FindTrackSlot(InTrack);
 
 	if (!TrackWidget.IsValid())
 	{
-		// Add a track slot for the row
-		/*TrackWidget = SNew(SEITrack,
-			InTrack,
-			SharedThis(this),
-			Context.Pin().ToSharedRef()).ViewRange(TAttribute<FAnimatedRange>::CreateLambda([this]()
-			{
-				return Context.Pin()->EditingModel.Pin()->GetViewRange();
-			}))
-		[
-			 InTrack->GenerateContainerWidgetForTimeline()
-		];*/
-
-		TrackWidget = Context.Pin()->SpawnCore.Pin()->CreateTrack(InTrack,SharedThis(this),Context.Pin().ToSharedRef());
+		TrackWidget = Context.Pin()->SpawnCore.Pin()->CreateTrack(InTrack,SharedThis(this),Context.Pin().ToSharedRef(),InTrack->trackIndex);
 
 		TrackArea->AddTrackSlot(InTrack, TrackWidget);
 	}

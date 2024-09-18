@@ -13,7 +13,8 @@ struct KURUSTORYMODULE_API FStoryNotifyBase
 public:
 	GENERATED_BODY()
 
-	FFrameRate BaseFrameRate = FFrameRate(1,60);
+	UPROPERTY(VisibleAnywhere)
+	FFrameRate BaseFrameRate = FFrameRate(60,1);
 	
 	UPROPERTY(VisibleAnywhere)
 	UObject* ObjectOwner = nullptr;

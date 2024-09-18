@@ -46,10 +46,10 @@ public:
 	//由于这个不能和+直接兼容，暂不可用
 	virtual TSharedRef<SEITimelineSplitterOverlay> CreateTimelineSplitterOverlay(SEITimelineContainer* Container);
 
-	virtual TSharedRef<SEITimelineNode> CreateTimelineNode(const TSharedRef<FEITimelinerContext>& InContext);
+	virtual TSharedRef<SEITimelineNode> CreateTimelineNode(const TSharedRef<FEITimelinerContext>& InContext, int trackIndex);
 
 	virtual TSharedRef<SEITrack> CreateTrack(const TSharedRef<FEITimelineTrack> InTrack,
-		const TSharedRef<SEITrackOutliner> InOutLiner, const TSharedRef<FEITimelinerContext>& InContext);
+		const TSharedRef<SEITrackOutliner> InOutLiner, const TSharedRef<FEITimelinerContext>& InContext,int trackId);
 
 	virtual TSharedPtr<FEIViewportClient> CreateViewportClient(SEIEditorViewport* Viewport);
 

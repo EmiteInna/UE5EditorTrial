@@ -15,6 +15,12 @@ UKuruStoryClipData::UKuruStoryClipData()
 	Notifies.Emplace(FStoryNotifyBase());
 	Notifies.Emplace(FStoryNotifyBase());
 	Notifies.Emplace(FStoryNotifyBase());
+	Notifies[0].SetStartTime(0);
+	Notifies[0].SetEndTime(2.5);
+	Notifies[1].SetStartTime(1.5);
+	Notifies[1].SetEndTime(4);
+	Notifies[2].SetStartTime(3);
+	Notifies[2].SetEndTime(5.5);
 }
 
 void UKuruStoryClipData::Serialize(FArchive& Ar)

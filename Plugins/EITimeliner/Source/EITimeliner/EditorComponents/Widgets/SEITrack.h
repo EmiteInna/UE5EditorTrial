@@ -14,6 +14,7 @@ public:
 	SLATE_DEFAULT_SLOT(FArguments, Content)
 
 	SLATE_ATTRIBUTE(FAnimatedRange, ViewRange)
+	SLATE_ATTRIBUTE(int, TrackId)
 	
 	SLATE_END_ARGS()
 
@@ -53,4 +54,6 @@ private:
 	TAttribute<FInt32Interval> ViewIndices;
 
 	TWeakPtr<FEITimelinerContext> Context;
+
+	int trackId = 0;
 };

@@ -16,6 +16,15 @@ public:
 	virtual void RemoveTrack(int trackId) override;
 
 	virtual void ReconcileTracks() override;
+
+	virtual float GetTrackStartTime(int trackId) override;
+
+	virtual float GetTrackEndTime(int trackId) override;
+
+	virtual void OnTrackNodeMoved(float DeltaMoveTime,int trackId) override;
+
+	virtual void OnTrackNodeStretched(float NewStartTime, float NewEndTime,int trackId) override;
 };
+
 
 
