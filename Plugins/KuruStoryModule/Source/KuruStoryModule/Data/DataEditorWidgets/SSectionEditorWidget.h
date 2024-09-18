@@ -16,7 +16,6 @@ public:
 
 	void Construct(const FArguments& InArgs,const TSharedPtr<FKuruStorySectionData_EditorTool>& InEditorToolkit);
 
-	FKuruStorySectionData_EditorTool* ToolPtr = nullptr;
 
 	UKuruStorySectionData* EditingData = nullptr;
 	TArray<UKuruStoryClipData*> Editing_ClipDatas;

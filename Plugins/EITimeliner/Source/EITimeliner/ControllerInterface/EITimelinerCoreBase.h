@@ -60,7 +60,7 @@ public:
 
 	virtual TSharedRef<FEIPreviewScene> CreatePreviewScene();
 
-	virtual TSharedPtr<FEITimelineEditingModel> CreateModel(UObject* Object);
+	virtual TSharedPtr<FEITimelineEditingModel> CreateModel(UObject* Object,const TSharedRef<FEITimelinerContext>& Context);
 };
 
 

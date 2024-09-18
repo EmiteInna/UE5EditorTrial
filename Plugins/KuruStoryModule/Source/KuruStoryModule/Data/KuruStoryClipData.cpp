@@ -6,20 +6,15 @@
 #include "DataEditorWidgets/TimelineTrack/StoryTimelineTrack.h"
 #include "EditorEg/StoryClipPreviewScene.h"
 #include "KuruStoryModule/Types/KuruSerializeUtil.h"
-#include "Preferences/PersonaOptions.h"
 #include "Runtime/KuruStoryClipDataInstance.h"
 #include "Runtime/KuruStoryClipEditorExecutor.h"
+#include "StoryNotifies/StoryNotifyBase.h"
 
 UKuruStoryClipData::UKuruStoryClipData()
 {
-	TSharedRef<FStoryTimelineTrack> NewTrackA = MakeShared<FStoryTimelineTrack>(FText::FromString("A"),FText::FromString("A是Anna的A"),this,true);
-	TSharedRef<FStoryTimelineTrack> NewTrackB =  MakeShared<FStoryTimelineTrack>(FText::FromString("B"),FText::FromString("B是Bruchi的B"),this,true);
-	TSharedRef<FStoryTimelineTrack> NewTrackC =  MakeShared<FStoryTimelineTrack>(FText::FromString("C"),FText::FromString("C是Carmin的C"),this,true);
-	TSharedRef<FStoryTimelineTrack> NewTrackD =  MakeShared<FStoryTimelineTrack>(FText::FromString("D"),FText::FromString("D是Dear的D"),this,true);
-	NewTrackC->AddChild(NewTrackD);
-	RootTracks.Emplace(NewTrackA);
-	RootTracks.Emplace(NewTrackB);
-	RootTracks.Emplace(NewTrackC);
+	Notifies.Emplace(FStoryNotifyBase());
+	Notifies.Emplace(FStoryNotifyBase());
+	Notifies.Emplace(FStoryNotifyBase());
 }
 
 void UKuruStoryClipData::Serialize(FArchive& Ar)
@@ -33,6 +28,7 @@ void UKuruStoryClipData::Serialize(FArchive& Ar)
 		KuruSerializeUtil::WriteToSerialize(Ar,'3',SimpleContent,false);
 		KuruSerializeUtil::WriteToSerialize(Ar,'4',EditableItems,false);
 		KuruSerializeUtil::WriteToSerialize(Ar,'5',TotalLength,false);
+	//	KuruSerializeUtil::WriteToSerialize(Ar,'6',Notifies,false);
 		Ar<<KuruSerializeUtil::Et;
 	
 	}else if (Ar.IsLoading())
@@ -59,6 +55,7 @@ void UKuruStoryClipData::Serialize(FArchive& Ar)
 			ret|=KuruSerializeUtil::ReadFromSerial(Ar,mark,'3',SimpleContent,false);
 			ret|=KuruSerializeUtil::ReadFromSerial(Ar,mark,'4',EditableItems,false);
 			ret|=KuruSerializeUtil::ReadFromSerial(Ar,mark,'5',TotalLength,false);
+		//	ret|=KuruSerializeUtil::ReadFromSerial(Ar,mark,'6',Notifies,false);
 			if (ret==0)
 			{
 				int stk = 1;

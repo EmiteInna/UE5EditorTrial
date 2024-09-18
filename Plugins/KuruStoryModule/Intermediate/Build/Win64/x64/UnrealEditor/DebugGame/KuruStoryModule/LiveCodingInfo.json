@@ -2,12 +2,10 @@
 	"RemapUnityFiles": 
 	{
 		"Module.KuruStoryModule.cpp.obj": [
-			"KuruStoryClipData.gen.cpp.obj",
 			"KuruStoryClipDataInstance.gen.cpp.obj",
 			"KuruStoryClipData_AssetDefinition.gen.cpp.obj",
 			"KuruStoryClipData_Factory.gen.cpp.obj",
 			"KuruStoryClipEditorExecutor.gen.cpp.obj",
-			"KuruStoryModule.init.gen.cpp.obj",
 			"KuruStorySectionData.gen.cpp.obj",
 			"KuruStorySectionData_AssetDefinition.gen.cpp.obj",
 			"KuruStorySectionData_Factory.gen.cpp.obj",
@@ -16,7 +14,7 @@
 			"SImageSelectorWidget.cpp.obj",
 			"SKuruTimelineContainer.cpp.obj",
 			"SKuruTimelineControlPanel.cpp.obj",
-			"SSectionEditorWidget.cpp.obj",
+			"SSectionClipRowWidget.cpp.obj",
 			"SKuruTimelineOverlay.cpp.obj",
 			"SKuruTimelineSplitterOverlay.cpp.obj",
 			"SStoryEventTrack.cpp.obj",
@@ -28,24 +26,30 @@
 			"SStoryClipEditorViewport.cpp.obj",
 			"StoryClipPreviewScene.cpp.obj",
 			"StoryClipViewportClient.cpp.obj",
-			"KuruStoryClipData.cpp.obj",
 			"KuruStoryClipData_AssetDefinition.cpp.obj",
 			"KuruStoryClipData_EditorTool.cpp.obj",
 			"KuruStoryClipData_Factory.cpp.obj",
 			"KuruStorySectionData.cpp.obj",
 			"KuruStorySectionData_AssetDefinition.cpp.obj",
-			"KuruStorySectionData_EditorTool.cpp.obj",
 			"KuruStorySectionData_Factory.cpp.obj",
 			"KuruStoryClipDataInstance.cpp.obj",
 			"KuruStoryClipEditorExecutor.cpp.obj",
+			"KuruStoryTimelineTopWidget.cpp.obj",
 			"KuruStoryModule.cpp.obj",
 			"ColorStores.cpp.obj",
 			"KuruSerializeUtil.cpp.obj",
 			"KuruTabUtil.cpp.obj",
-			"SSectionClipRowWidget.cpp.obj",
+			"KuruStoryClipData.gen.cpp.obj",
+			"KuruStoryModule.init.gen.cpp.obj",
+			"StoryNotifyBase.gen.cpp.obj",
+			"StoryNotifyEventBase.gen.cpp.obj",
+			"SSectionEditorWidget.cpp.obj",
+			"KuruStoryClipData.cpp.obj",
+			"KuruStorySectionData_EditorTool.cpp.obj",
+			"StoryNotifyBase.cpp.obj",
+			"StoryNotifyEventBase.cpp.obj",
 			"KuruSotryTimelinerCore.cpp.obj",
-			"KuruStoryClipData_Model.cpp.obj",
-			"KuruStoryTimelineTopWidget.cpp.obj"
+			"KuruStoryClipData_Model.cpp.obj"
 		]
 	}
 }

@@ -2,6 +2,8 @@
 #include "AnimatedRange.h"
 #include "ViewRangeInterpolation.h"
 
+class FEITimelinerContext;
+class FEITimelinerCoreBase;
 class FEITimelineTrack;
 /*
  * 这个类的作用是在编辑器域下扩展原有数据来实现一系列方法，因此很多方法都可以重载，也必须重载。
@@ -14,6 +16,8 @@ public:
 	UObject* EditingInstacne = nullptr;
 	
 public:
+	TWeakPtr<FEITimelinerContext> Context;
+	
 	virtual float GetTotalLength()
 	{
 		return 11.4514f;
@@ -93,4 +97,12 @@ public:
 		PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	}
 	void ForEachRootTrack(TFunctionRef<void(FEITimelineTrack&)> InFunction);
+
+	virtual void AddDefaultNewTrack(){};
+	virtual void RemoveTrack(int trackId){};
+
+	virtual void ReconcileTracks(){};
+
+	int CurrentChosenTrackId = 0;
+	int CurrentTrackCnt = 0;
 };

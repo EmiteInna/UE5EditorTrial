@@ -4,7 +4,7 @@
 class FKuruStoryTimelinerCore:public FEITimelinerCoreBase
 {
 public:
-	virtual TSharedPtr<FEITimelineEditingModel> CreateModel(UObject* Object) override;
+	virtual TSharedPtr<FEITimelineEditingModel> CreateModel(UObject* Object,const TSharedRef<FEITimelinerContext>& Context) override;
 };
 
 

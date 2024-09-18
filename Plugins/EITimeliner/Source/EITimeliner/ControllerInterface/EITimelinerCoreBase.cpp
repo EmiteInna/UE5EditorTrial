@@ -137,9 +137,11 @@ TSharedRef<FEIPreviewScene> FEITimelinerCoreBase::CreatePreviewScene()
 		AllowAudioPlayback(true).ShouldSimulatePhysics(true),0));
 }
 
-TSharedPtr<FEITimelineEditingModel> FEITimelinerCoreBase::CreateModel(UObject* Object)
+TSharedPtr<FEITimelineEditingModel> FEITimelinerCoreBase::CreateModel(UObject* Object,const TSharedRef<FEITimelinerContext>& Context)
 {
 	TSharedPtr<FEITimelineEditingModel> Model = MakeShareable(new FEITimelineEditingModel);
 	Model->EditingInstacne = Object;
+	Model->Context = Context;
+	Model->ReconcileTracks();
 	return Model;
 }

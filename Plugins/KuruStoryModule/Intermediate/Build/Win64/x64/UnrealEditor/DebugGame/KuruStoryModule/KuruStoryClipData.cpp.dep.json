@@ -14,12 +14,12 @@
             "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\editoreg\\storyclippreviewscene.h",
             "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\advancedpreviewscene\\public\\advancedpreviewscene.h",
             "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\types\\kuruserializeutil.h",
-            "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\unrealed\\classes\\preferences\\personaoptions.h",
-            "d:\\04unreal\\unrealengine\\source\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealed\\uht\\personaoptions.generated.h",
             "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\runtime\\kurustoryclipdatainstance.h",
             "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\intermediate\\build\\win64\\unrealeditor\\inc\\kurustorymodule\\uht\\kurustoryclipdatainstance.generated.h",
             "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\runtime\\kurustoryclipeditorexecutor.h",
-            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\intermediate\\build\\win64\\unrealeditor\\inc\\kurustorymodule\\uht\\kurustoryclipeditorexecutor.generated.h"
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\intermediate\\build\\win64\\unrealeditor\\inc\\kurustorymodule\\uht\\kurustoryclipeditorexecutor.generated.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\storynotifies\\storynotifybase.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\intermediate\\build\\win64\\unrealeditor\\inc\\kurustorymodule\\uht\\storynotifybase.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

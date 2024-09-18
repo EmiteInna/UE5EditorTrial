@@ -35,8 +35,10 @@ public:
 	TSharedPtr<FEITimelinerCoreBase> SpawnCore;
 
 	TSharedPtr<FEITimelinerContext> Context;
+
+	//这个不能share，因为是外面传进来的而非自己创建的，多注意这种坑哦
+	TWeakPtr<FAssetEditorToolkit> AssetEditorToolkit = nullptr;
 	
-	TSharedPtr<FAssetEditorToolkit> AssetEditorToolkit = nullptr;
 	TSharedPtr<FEITimelineEditingModel> EditingModel = nullptr;
 	TSharedPtr<FEITimeSliderController> TimeSliderController = nullptr;
 	TSharedPtr<FEIPreviewScene> PreviewScene = nullptr;

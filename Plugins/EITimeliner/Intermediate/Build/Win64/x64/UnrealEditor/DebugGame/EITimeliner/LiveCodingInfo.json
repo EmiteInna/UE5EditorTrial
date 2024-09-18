@@ -7,11 +7,8 @@
 			"EITimelinerInteractiveTool.gen.cpp.obj",
 			"EITimelinerSimpleTool.gen.cpp.obj",
 			"EITimelinerContext.cpp.obj",
-			"EITimelinerCoreBase.cpp.obj",
-			"EITimelinerTopWidgetBase.cpp.obj",
 			"EINotify.cpp.obj",
 			"EINotifyListContainer.cpp.obj",
-			"EITimelineEditingModel.cpp.obj",
 			"FEIPreviewScene.cpp.obj",
 			"FEITimelineTrack.cpp.obj",
 			"FEITimeSliderController.cpp.obj",
@@ -31,7 +28,10 @@
 			"EITimelinerEditorModeToolkit.cpp.obj",
 			"EITimelinerModule.cpp.obj",
 			"EITimelinerInteractiveTool.cpp.obj",
-			"EITimelinerSimpleTool.cpp.obj"
+			"EITimelinerSimpleTool.cpp.obj",
+			"EITimelinerCoreBase.cpp.obj",
+			"EITimelinerTopWidgetBase.cpp.obj",
+			"EITimelineEditingModel.cpp.obj"
 		]
 	}
 }

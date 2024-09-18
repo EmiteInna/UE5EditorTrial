@@ -28,20 +28,22 @@ void SEITimelinerTopWidgetBase::Construct(const FArguments& InArgs,
 	const TSharedRef<FEITimelinerCoreBase> InCore,
 		UObject* EditingObject)
 {
+	Context = MakeShareable(new FEITimelinerContext);
+
 	AssetEditorToolkit = InEditorToolkit;
 
 	SpawnCore = InCore;
 	
-	EditingModel = SpawnCore->CreateModel(EditingObject);
+	EditingModel = SpawnCore->CreateModel(EditingObject,Context.ToSharedRef());
 
 	PreviewScene =SpawnCore->CreatePreviewScene();
 	
 	
-	Context = MakeShareable(new FEITimelinerContext);
 	Context->SpawnCore = InCore;
 	Context->AssetEditorToolkit = AssetEditorToolkit;
 	Context->EditingModel = EditingModel;
 	Context->PreviewScene = PreviewScene;
+
 	//Controller是在Container里创建的。
 	
 	PreviewScene->CreatePreviewInstance(Context.ToSharedRef());
@@ -131,7 +133,7 @@ TSharedRef<SDockTab> SEITimelinerTopWidgetBase::SpawnTimelineTab(const FSpawnTab
 
 TSharedRef<SDockTab> SEITimelinerTopWidgetBase::SpawnPreviewTab(const FSpawnTabArgs& Args)
 {
-	FEIEditorViewportRequireArgs Arg(PreviewScene.ToSharedRef(),AssetEditorToolkit.ToSharedRef());
+	FEIEditorViewportRequireArgs Arg(PreviewScene.ToSharedRef(),AssetEditorToolkit.Pin().ToSharedRef());
 	return SNew(SDockTab)
 		   .TabRole(ETabRole::PanelTab)
 		   [
