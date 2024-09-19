@@ -73,7 +73,7 @@
 ⑦ 可继承的Model，可扩展的PreviewScene，可继承的Notify。  
 ⑧ 可自由扩展的工具。  
 ⑨ 可自由排布的版面结构。  
-⑩ 通过工具栏添加、选中、重命名、删除轨道。  
+⑩ 通过工具栏添加、选中、删除轨道，添加时通过一个工具框来进行。  
 ⑩① 显示轨道的Notify，每个轨道只有一个Notify。  
 ⑩② Notify可以进行拖拽、拉伸等操作。  
 ⑩③ 单击Notify后可以将其选中，并展示Notify的详细信息。
@@ -85,4 +85,7 @@
 
 想要编辑的东西只需要创建好资产UObject，然后继承FEITimelineEditingModel新建Model，在里面实现一些方法即可。
 
-然后要在PreviewScene里看到想看的东西则是继承FEIPreviewScene，同时替换Core里的PreviewScene即可，如果想要更改PreviewScene的显示属性，则是从FEIViewportClient下手，这是组件都是可以换的。
+然后要在PreviewScene里看到想看的东西则是继承FEIPreviewScene，同时替换Core里的PreviewScene即可，如果想要更改PreviewScene的显示属性，则是从FEIViewportClient下手，这是组件都是可以换的。  
+当然，我们还可以往Core里塞些东西，比如我这个对话编辑器，我在创建Model的时候需要知道自己是EditingData的Clip数组的哪个成员，我就可以在创建Core的时候去做这个事情。  
+勉强加上了NotifyPanel，功能还不齐，而且好丑，真的丑  
+![Alt Text](./MAIJIAXIU/Chap4/p3.png)  

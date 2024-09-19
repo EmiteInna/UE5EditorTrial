@@ -47,7 +47,7 @@ FReply SEITimelineNode::OnMouseMove(const FGeometry& MyGeometry, const FPointerE
 
 FReply SEITimelineNode::OnDragDetected(const FGeometry& MyGeometry, const FPointerEvent& MouseEvent)
 {
-	UE_LOG(LogInit,Error,TEXT("[EIEditor]DragDetected"))
+	//UE_LOG(LogInit,Error,TEXT("[EIEditor]DragDetected"))
 	TSharedRef<FDragDropOperation> DragDropOperation = MakeShareable(new FDragDropOperation);
 	return FReply::Handled().BeginDragDrop(DragDropOperation);
 }
@@ -64,7 +64,7 @@ FVector2D SEITimelineNode::ComputeDesiredSize(float X) const
 
 void SEITimelineNode::OnDragEnter(const FGeometry& MyGeometry, const FDragDropEvent& DragDropEvent)
 {
-	UE_LOG(LogInit,Error,TEXT("[EIEditor]DragEntered"))
+	//UE_LOG(LogInit,Error,TEXT("[EIEditor]DragEntered"))
 	float MouseLocalX = MyGeometry.AbsoluteToLocal(DragDropEvent.GetScreenSpacePosition()).X;
 	
 	if(DragDropEvent.IsMouseButtonDown(EKeys::LeftMouseButton))
@@ -78,14 +78,14 @@ void SEITimelineNode::OnDragEnter(const FGeometry& MyGeometry, const FDragDropEv
 
 void SEITimelineNode::OnDragLeave(const FDragDropEvent& DragDropEvent)
 {
-	UE_LOG(LogInit,Error,TEXT("[EIEditor]DragLeaved"))
+	//UE_LOG(LogInit,Error,TEXT("[EIEditor]DragLeaved"))
 	LeftButtonDown = false;
 	SCompoundWidget::OnDragLeave(DragDropEvent);
 }
 
 FReply SEITimelineNode::OnDragOver(const FGeometry& MyGeometry, const FDragDropEvent& DragDropEvent)
 {
-	UE_LOG(LogInit,Error,TEXT("[EIEditor]DragOver"))
+	//UE_LOG(LogInit,Error,TEXT("[EIEditor]DragOver"))
 	float MouseLocalX = MyGeometry.AbsoluteToLocal(DragDropEvent.GetScreenSpacePosition()).X;
 	
 	if(DragDropEvent.IsMouseButtonDown(EKeys::LeftMouseButton))
@@ -98,7 +98,7 @@ FReply SEITimelineNode::OnDragOver(const FGeometry& MyGeometry, const FDragDropE
 
 FReply SEITimelineNode::OnDrop(const FGeometry& MyGeometry, const FDragDropEvent& DragDropEvent)
 {
-	UE_LOG(LogInit,Error,TEXT("[EIEditor]DragDroped"))
+	//UE_LOG(LogInit,Error,TEXT("[EIEditor]DragDroped"))
 	float MouseLocalX = MyGeometry.AbsoluteToLocal(DragDropEvent.GetScreenSpacePosition()).X;
 
 	if(DragDropEvent.GetEffectingButton()==EKeys::LeftMouseButton)

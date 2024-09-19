@@ -16,7 +16,7 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	FFrameRate BaseFrameRate = FFrameRate(60,1);
 	
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY()
 	UObject* ObjectOwner = nullptr;
 
 	UPROPERTY(VisibleAnywhere)

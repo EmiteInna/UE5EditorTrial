@@ -1,0 +1,18 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\kurueditors\\kuruadv\\plugins\\eitimeliner\\source\\eitimeliner\\editorcomponents\\widgets\\seinotifypickerrow.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\04unreal\\unrealengine\\source\\engine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\unrealed\\sharedpch.unrealed.nonoptimized.cpp20.h.pch",
+        "Includes": [
+            "h:\\kurueditors\\kuruadv\\plugins\\eitimeliner\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\eitimeliner\\definitions.eitimeliner.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\eitimeliner\\source\\eitimeliner\\editorcomponents\\widgets\\seinotifypickerrow.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\eitimeliner\\source\\eitimeliner\\controllerinterface\\eitimelinercontext.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\eitimeliner\\source\\eitimeliner\\editorcomponents\\einotifyitem.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\eitimeliner\\source\\eitimeliner\\editorcomponents\\feinotifylibrary.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\eitimeliner\\source\\eitimeliner\\editorutils\\eiwidgetstore.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -3,13 +3,15 @@
 
 class UKuruStoryClipData;
 
-class FKuruStoryClipData_Model:public FEITimelineEditingModel
+class KURUSTORYMODULE_API FKuruStoryClipData_Model:public FEITimelineEditingModel
 {
 public:
 
 	FKuruStoryClipData_Model();
 	
 	UKuruStoryClipData* GetEditingObj()const;
+
+	virtual float GetTotalLength() override;
 	
 	virtual void AddDefaultNewTrack() override;
 

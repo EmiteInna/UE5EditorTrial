@@ -1,6 +1,7 @@
 ﻿#include "KuruStoryClipData_Model.h"
 
 #include "EITimeliner/EditorComponents/FEITimelineTrack.h"
+#include "EITimeliner/EditorComponents/Widgets/SEITrackOutliner.h"
 #include "KuruStoryModule/Data/KuruStoryClipData.h"
 #include "KuruStoryModule/Data/StoryNotifies/StoryNotifyBase.h"
 
@@ -11,6 +12,15 @@ FKuruStoryClipData_Model::FKuruStoryClipData_Model()
 UKuruStoryClipData* FKuruStoryClipData_Model::GetEditingObj() const
 {
 	return Cast<UKuruStoryClipData>(EditingInstacne);
+}
+
+float FKuruStoryClipData_Model::GetTotalLength()
+{
+	if (GetEditingObj())
+	{
+		return GetEditingObj()->TotalLength;
+	}
+	return 114514;
 }
 
 void FKuruStoryClipData_Model::AddDefaultNewTrack()
@@ -62,6 +72,14 @@ void FKuruStoryClipData_Model::ReconcileTracks()
 			NewTrack->trackIndex = i;
 			RootTracks.Emplace(NewTrack);
 			
+		}
+	}
+
+	if (Context.IsValid())
+	{
+		if (Context.Pin()->TrackOutliner.IsValid())
+		{
+			Context.Pin()->TrackOutliner.Pin()->HandleTracksChanged();
 		}
 	}
 }

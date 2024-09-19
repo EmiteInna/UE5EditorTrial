@@ -1,16 +1,19 @@
 ﻿#include "EITimelinerCoreBase.h"
 
 #include "EITimeliner/DataInterface/EITimelineEditingModel.h"
+#include "EITimeliner/EditorComponents/FEINotifyLibrary.h"
 #include "EITimeliner/EditorComponents/FEIPreviewScene.h"
 #include "EITimeliner/EditorComponents/FEITimelineTrack.h"
 #include "EITimeliner/EditorComponents/FEITimeSliderController.h"
 #include "EITimeliner/EditorComponents/FEIViewportClient.h"
 #include "EITimeliner/EditorComponents/Widgets/SEIEditorViewport.h"
+#include "EITimeliner/EditorComponents/Widgets/SEINotifyPickerRow.h"
 #include "EITimeliner/EditorComponents/Widgets/SEITimelineContainer.h"
 #include "EITimeliner/EditorComponents/Widgets/SEITimelineControlPanel.h"
 #include "EITimeliner/EditorComponents/Widgets/SEITimelineNode.h"
 #include "EITimeliner/EditorComponents/Widgets/SEITimelineOverlay.h"
 #include "EITimeliner/EditorComponents/Widgets/SEITimelineSplitterOverlay.h"
+#include "EITimeliner/EditorComponents/Widgets/SEIToolBox.h"
 #include "EITimeliner/EditorComponents/Widgets/SEITrack.h"
 #include "EITimeliner/EditorComponents/Widgets/SEITrackArea.h"
 #include "EITimeliner/EditorComponents/Widgets/SEITrackOutliner.h"
@@ -144,4 +147,22 @@ TSharedPtr<FEITimelineEditingModel> FEITimelinerCoreBase::CreateModel(UObject* O
 	Model->Context = Context;
 	Model->ReconcileTracks();
 	return Model;
+}
+
+TSharedPtr<FEINotifyLibrary> FEITimelinerCoreBase::CreateNotifyLibrary(const TSharedRef<FEITimelinerContext>& Context)
+{
+	TSharedPtr<FEINotifyLibrary> NotifyLibrary = MakeShareable(new FEINotifyLibrary);
+	NotifyLibrary->Context = Context;
+	NotifyLibrary->Initialize();
+	return NotifyLibrary;
+}
+TSharedRef<SEIToolBox> FEITimelinerCoreBase::CreateToolBox(const TSharedRef<FEITimelinerContext>& Context)
+{
+	return SNew(SEIToolBox,Context);
+}
+
+TSharedRef<SEINotifyPickerRow> FEITimelinerCoreBase::CreateNotifyPickerRow(
+	const TSharedRef<FEITimelinerContext>& Context, TSharedPtr<UEINotifyItem> Item)
+{
+	return SNew(SEINotifyPickerRow,Context,Item.ToSharedRef());
 }

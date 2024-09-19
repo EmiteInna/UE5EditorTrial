@@ -1,5 +1,9 @@
 ﻿#pragma once
 
+class UEINotifyItem;
+class SEINotifyPickerRow;
+class SEIToolBox;
+class FEINotifyLibrary;
 class FEITimelineEditingModel;
 struct FTimeSliderArgs;
 class FEITimeSliderController;
@@ -61,6 +65,12 @@ public:
 	virtual TSharedRef<FEIPreviewScene> CreatePreviewScene();
 
 	virtual TSharedPtr<FEITimelineEditingModel> CreateModel(UObject* Object,const TSharedRef<FEITimelinerContext>& Context);
+
+	virtual TSharedPtr<FEINotifyLibrary> CreateNotifyLibrary(const TSharedRef<FEITimelinerContext>& Context);
+
+	virtual TSharedRef<SEIToolBox> CreateToolBox(const TSharedRef<FEITimelinerContext>& Context);
+	
+	virtual TSharedRef<SEINotifyPickerRow> CreateNotifyPickerRow(const TSharedRef<FEITimelinerContext>& Context,TSharedPtr<UEINotifyItem> Item);
 };
 
 

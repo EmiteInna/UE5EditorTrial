@@ -83,10 +83,10 @@ private:
 
 	/** Handle context menu */
 	TSharedPtr<SWidget> HandleContextMenuOpening();
-
+public:
 	/** Handle tracks changing */
 	void HandleTracksChanged();
-public:
+
 	/** Generate a widget for the specified column */
 	TSharedRef<SWidget> GenerateWidgetForColumn(const TSharedRef<FEITimelineTrack>& InTrack,
 		const FName& ColumnId,

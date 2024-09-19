@@ -22,6 +22,8 @@ void SEITrackOutliner::Construct(const FArguments& InArgs,
 	FilterText = InArgs._FilterText;
 	bPhysicalTracksNeedUpdate = false;
 
+	Context.Pin()->TrackOutliner = SharedThis(this);
+
 	//委托
 	//TracksChangedDelegateHandle = InAnimModel->OnTracksChanged().AddSP(this, &SAnimOutliner::HandleTracksChanged);
 

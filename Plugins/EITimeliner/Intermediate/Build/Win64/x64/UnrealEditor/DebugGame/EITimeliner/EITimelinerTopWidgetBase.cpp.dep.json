@@ -12,6 +12,7 @@
             "h:\\kurueditors\\kuruadv\\plugins\\eitimeliner\\source\\eitimeliner\\datainterface\\eitimelineeditingmodel.h",
             "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\sequencerwidgets\\public\\animatedrange.h",
             "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\sequencerwidgets\\public\\viewrangeinterpolation.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\eitimeliner\\source\\eitimeliner\\editorcomponents\\feinotifylibrary.h",
             "h:\\kurueditors\\kuruadv\\plugins\\eitimeliner\\source\\eitimeliner\\editorcomponents\\feipreviewscene.h",
             "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\advancedpreviewscene\\public\\advancedpreviewscene.h",
             "h:\\kurueditors\\kuruadv\\plugins\\eitimeliner\\source\\eitimeliner\\editorcomponents\\widgets\\seieditorviewport.h",
@@ -19,7 +20,9 @@
             "d:\\04unreal\\unrealengine\\source\\engine\\source\\runtime\\slate\\public\\widgets\\sviewport.h",
             "h:\\kurueditors\\kuruadv\\plugins\\eitimeliner\\source\\eitimeliner\\editorcomponents\\widgets\\seitimelinecontainer.h",
             "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\sequencerwidgets\\public\\itimeslider.h",
-            "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\sequencercore\\public\\isequencerinputhandler.h"
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\sequencercore\\public\\isequencerinputhandler.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\eitimeliner\\source\\eitimeliner\\editorcomponents\\widgets\\seitoolbox.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\eitimeliner\\source\\eitimeliner\\editorutils\\eiwidgetstore.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

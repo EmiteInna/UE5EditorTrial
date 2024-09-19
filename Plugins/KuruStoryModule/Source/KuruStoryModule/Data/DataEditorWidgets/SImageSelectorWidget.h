@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-class SImageSelectorWidget:public  SImage
+class KURUSTORYMODULE_API SImageSelectorWidget:public  SImage
 {
 public:
 	SLATE_BEGIN_ARGS(SImageSelectorWidget){}
@@ -11,5 +11,4 @@ public:
 public:
 	UTexture2D* SelectedImage = nullptr;
 
-	virtual FReply OnMouseButtonDown(const FGeometry& MyGeometry, const FPointerEvent& MouseEvent) override;
 };

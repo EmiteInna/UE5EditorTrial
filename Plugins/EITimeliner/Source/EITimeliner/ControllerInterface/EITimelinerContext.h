@@ -1,5 +1,8 @@
 ﻿#pragma once
 
+class SEITrackOutliner;
+class FEINotifyLibrary;
+class SEITimelinerTopWidgetBase;
 class FEITimelinerCoreBase;
 class FEIPreviewScene;
 class FEITimeSliderController;
@@ -16,4 +19,8 @@ public:
 	TWeakPtr<FEITimelineEditingModel> EditingModel = nullptr;
 	TWeakPtr<FEITimeSliderController> TimeSliderController = nullptr;
 	TWeakPtr<FEIPreviewScene> PreviewScene = nullptr;
+	TWeakPtr<SEITimelinerTopWidgetBase> TopWidget = nullptr;
+	TWeakPtr<FEINotifyLibrary> NotifyLibrary = nullptr;
+	//它被放在这的理由只是为了刷新窗口
+	TWeakPtr<SEITrackOutliner> TrackOutliner = nullptr;
 };

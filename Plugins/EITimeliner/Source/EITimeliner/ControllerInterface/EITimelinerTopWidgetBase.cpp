@@ -3,9 +3,12 @@
 #include "EITimelinerContext.h"
 #include "EITimelinerCoreBase.h"
 #include "EITimeliner/DataInterface/EITimelineEditingModel.h"
+#include "EITimeliner/EditorComponents/FEINotifyLibrary.h"
 #include "EITimeliner/EditorComponents/FEIPreviewScene.h"
 #include "EITimeliner/EditorComponents/Widgets/SEIEditorViewport.h"
 #include "EITimeliner/EditorComponents/Widgets/SEITimelineContainer.h"
+#include "EITimeliner/EditorComponents/Widgets/SEIToolBox.h"
+#include "EITimeliner/EditorUtils/EIWidgetStore.h"
 
 FName SEITimelinerTopWidgetBase::FirstTabName = "ToolTab";
 FName SEITimelinerTopWidgetBase::SecondTabName = "TimelineTab";
@@ -28,6 +31,8 @@ void SEITimelinerTopWidgetBase::Construct(const FArguments& InArgs,
 	const TSharedRef<FEITimelinerCoreBase> InCore,
 		UObject* EditingObject)
 {
+	FEIWidgetStores::InitializeKuruStores();
+	
 	Context = MakeShareable(new FEITimelinerContext);
 
 	AssetEditorToolkit = InEditorToolkit;
@@ -37,12 +42,15 @@ void SEITimelinerTopWidgetBase::Construct(const FArguments& InArgs,
 	EditingModel = SpawnCore->CreateModel(EditingObject,Context.ToSharedRef());
 
 	PreviewScene =SpawnCore->CreatePreviewScene();
-	
-	
+
+	NotifyLibrary = SpawnCore->CreateNotifyLibrary(Context.ToSharedRef());
+
 	Context->SpawnCore = InCore;
 	Context->AssetEditorToolkit = AssetEditorToolkit;
 	Context->EditingModel = EditingModel;
 	Context->PreviewScene = PreviewScene;
+	Context->NotifyLibrary = NotifyLibrary;
+	Context->TopWidget = SharedThis(this);
 
 	//Controller是在Container里创建的。
 	
@@ -117,9 +125,9 @@ TSharedRef<SDockTab> SEITimelinerTopWidgetBase::SpawnToolTab(const FSpawnTabArgs
 {
 	return SNew(SDockTab)
 		   .TabRole(ETabRole::PanelTab)
-		   [
-			   SNew(STextBlock).Text(FText::FromString("Spawn Tool Tab Content"))
-		   ];
+			[
+				 SpawnCore->CreateToolBox(Context.ToSharedRef())
+			];
 }
 
 TSharedRef<SDockTab> SEITimelinerTopWidgetBase::SpawnTimelineTab(const FSpawnTabArgs& Args)

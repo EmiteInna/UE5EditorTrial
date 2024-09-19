@@ -390,10 +390,13 @@
     <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\DataInterface\EINotify.cpp" />
     <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\DataInterface\EINotifyListContainer.cpp" />
     <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\DataInterface\EITimelineEditingModel.cpp" />
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\EINotifyItem.cpp" />
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\FEINotifyLibrary.cpp" />
     <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\FEIPreviewScene.cpp" />
     <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\FEITimelineTrack.cpp" />
     <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\FEIViewportClient.cpp" />
     <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEIEditorViewport.cpp" />
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEINotifyPickerRow.cpp" />
     <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITimelineContainer.cpp">
       <AssemblerOutput>NoListing</AssemblerOutput>
       <AssemblerListingLocation>D:\04unreal\UnrealEngine\Source\Engine\Intermediate\Build\Unused\</AssemblerListingLocation>
@@ -468,11 +471,13 @@
     <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITimelineControlPanel.cpp" />
     <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITimelineOverlay.cpp" />
     <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITimelineSplitterOverlay.cpp" />
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEIToolBox.cpp" />
     <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITrack.cpp" />
     <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITrackArea.cpp" />
     <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITrackOutliner.cpp" />
     <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITrackOutlinerItem.cpp" />
     <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITimelineNode.cpp" />
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorUtils\EIWidgetStore.cpp" />
     <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\Private\EITimelinerEditorMode.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
@@ -504,19 +509,24 @@
     <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\DataInterface\EINotify.h" />
     <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\DataInterface\EINotifyListContainer.h" />
     <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\DataInterface\EITimelineEditingModel.h" />
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\EINotifyItem.h" />
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\FEINotifyLibrary.h" />
     <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\FEIPreviewScene.h" />
     <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\FEITimelineTrack.h" />
     <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\FEIViewportClient.h" />
     <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEIEditorViewport.h" />
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEINotifyPickerRow.h" />
     <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITimelineContainer.h" />
     <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITimelineControlPanel.h" />
     <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITimelineOverlay.h" />
     <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITimelineSplitterOverlay.h" />
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEIToolBox.h" />
     <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITrack.h" />
     <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITrackArea.h" />
     <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITrackOutliner.h" />
     <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITrackOutlinerItem.h" />
     <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITimelineNode.h" />
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorUtils\EIWidgetStore.h" />
     <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\Private\Tools\EITimelinerInteractiveTool.h" />
     <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\Private\Tools\EITimelinerSimpleTool.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -602,6 +612,7 @@
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\StoryNotifies\StoryNotifyEventBase.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline\KuruSotryTimelinerCore.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline\KuruStoryClipData_Model.cpp" />
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline\KuruStoryNotifyLibrary.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline\KuruStoryTimelineTopWidget.cpp" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Private\KuruStoryModule.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_2)</AdditionalIncludeDirectories>
@@ -612,6 +623,7 @@
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\StoryNotifies\StoryNotifyEventBase.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline\KuruSotryTimelinerCore.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline\KuruStoryClipData_Model.h" />
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline\KuruStoryNotifyLibrary.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline\KuruStoryTimelineTopWidget.h" />
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Public\KuruStoryModule.h" />
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Types\ColorStores.cpp">

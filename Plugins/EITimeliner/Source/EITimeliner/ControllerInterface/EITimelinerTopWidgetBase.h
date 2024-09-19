@@ -1,5 +1,6 @@
 ﻿#pragma once
 
+class FEINotifyLibrary;
 class FEITimelinerCoreBase;
 class FEITimelineEditingModel;
 class FEIPreviewScene;
@@ -42,6 +43,7 @@ public:
 	TSharedPtr<FEITimelineEditingModel> EditingModel = nullptr;
 	TSharedPtr<FEITimeSliderController> TimeSliderController = nullptr;
 	TSharedPtr<FEIPreviewScene> PreviewScene = nullptr;
+	TSharedPtr<FEINotifyLibrary> NotifyLibrary = nullptr;
 	
 	TSharedPtr<FTabManager> WidgetTabManager; 
 };

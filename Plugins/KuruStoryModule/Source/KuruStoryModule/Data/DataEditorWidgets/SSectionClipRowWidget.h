@@ -9,7 +9,7 @@ class SAssetView;
 class SMultiLineEditableTextBox;
 class UKuruStoryClipData;
 
-class SSectionClipRowWidget :public SCompoundWidget
+class KURUSTORYMODULE_API SSectionClipRowWidget :public SCompoundWidget
 {
 public:
 	SLATE_BEGIN_ARGS(SSectionClipRowWidget){}

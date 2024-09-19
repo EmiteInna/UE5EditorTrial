@@ -1,6 +1,7 @@
 ﻿#include "KuruSotryTimelinerCore.h"
 
 #include "KuruStoryClipData_Model.h"
+#include "KuruStoryNotifyLibrary.h"
 
 TSharedPtr<FEITimelineEditingModel> FKuruStoryTimelinerCore::CreateModel(UObject* Object,const TSharedRef<FEITimelinerContext>& Context)
 {
@@ -9,4 +10,12 @@ TSharedPtr<FEITimelineEditingModel> FKuruStoryTimelinerCore::CreateModel(UObject
 	Model->Context = Context;
 	Model->ReconcileTracks();
 	return Model;
+}
+TSharedPtr<FEINotifyLibrary> FKuruStoryTimelinerCore::CreateNotifyLibrary(
+	const TSharedRef<FEITimelinerContext>& Context)
+{
+	TSharedPtr<FEINotifyLibrary> NotifyLibrary = MakeShareable(new FKuruStoryNotifyLibrary);
+	NotifyLibrary->Context = Context;
+	NotifyLibrary->Initialize();
+	return NotifyLibrary;
 }
