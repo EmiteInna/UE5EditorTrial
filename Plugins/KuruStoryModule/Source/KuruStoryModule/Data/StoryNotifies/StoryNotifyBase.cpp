@@ -4,42 +4,37 @@
 #include "StoryNotifyBase.h"
 
 
-UObject* FStoryNotifyBase::GetOwner()
+UObject* UStoryNotifyBase::GetOwner()
 {
 	return ObjectOwner;
 }
 
-float FStoryNotifyBase::GetStartTime()
+float UStoryNotifyBase::GetStartTime()
 {
 	return StartTime;
 }
 
-float FStoryNotifyBase::GetEndTime()
+float UStoryNotifyBase::GetEndTime()
 {
 	return EndTime;
 }
 
-int FStoryNotifyBase::GetStartFrame()
+int UStoryNotifyBase::GetStartFrame()
 {
 	return StartTime * BaseFrameRate.AsDecimal();
 }
 
-int FStoryNotifyBase::GetEndFrame()
+int UStoryNotifyBase::GetEndFrame()
 {
 	return EndTime * BaseFrameRate.AsDecimal();
 }
 
-FName FStoryNotifyBase::GetName()
+FName UStoryNotifyBase::GetName()
 {
 	return Name;
 }
 
-void FStoryNotifyBase::RematchTimeByFrameRate(const FFrameRate& FrameRate)
+void UStoryNotifyBase::RematchTimeByFrameRate(const FFrameRate& FrameRate)
 {
 	BaseFrameRate = FrameRate;
-}
-
-FStoryNotifyBase::~FStoryNotifyBase()
-{
-	
 }

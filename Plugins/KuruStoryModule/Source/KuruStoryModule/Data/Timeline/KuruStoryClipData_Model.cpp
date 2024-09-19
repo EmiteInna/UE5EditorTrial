@@ -15,7 +15,7 @@ UKuruStoryClipData* FKuruStoryClipData_Model::GetEditingObj() const
 
 void FKuruStoryClipData_Model::AddDefaultNewTrack()
 {
-	FStoryNotifyBase NotifyBase;
+	UStoryNotifyBase* NotifyBase = NewObject<UStoryNotifyBase>(GetEditingObj());
 	if (GetEditingObj())
 	{
 		GetEditingObj()->Notifies.Emplace(NotifyBase);
@@ -48,11 +48,17 @@ void FKuruStoryClipData_Model::ReconcileTracks()
 	{
 		for (int i =0 ;i<GetEditingObj()->Notifies.Num();i++)
 		{
-			auto& n=GetEditingObj()->Notifies[i];
-			n.StartFrame=n.GetStartFrame();
-			n.EndFrame=n.GetEndFrame();
+			auto n=GetEditingObj()->Notifies[i];
+
+			if (n==nullptr)
+			{
+				continue;
+			}
+			
+			n->StartFrame=n->GetStartFrame();
+			n->EndFrame=n->GetEndFrame();
 			TSharedRef<FEITimelineTrack> NewTrack = MakeShared<FEITimelineTrack>
-			(FText::FromString(n.GetName().ToString()),FText::FromString(TEXT("新NotifyTrack")),Context.Pin().ToSharedRef(),true);
+			(FText::FromString(n->GetName().ToString()),FText::FromString(TEXT("新NotifyTrack")),Context.Pin().ToSharedRef(),true);
 			NewTrack->trackIndex = i;
 			RootTracks.Emplace(NewTrack);
 			
@@ -64,9 +70,9 @@ float FKuruStoryClipData_Model::GetTrackStartTime(int trackId)
 {
 	if (GetEditingObj())
 	{
-		if (GetEditingObj()->Notifies.Num()>trackId)
+		if (GetEditingObj()->Notifies.Num()>trackId && GetEditingObj()->Notifies[trackId])
 		{
-			return GetEditingObj()->Notifies[trackId].GetStartTime();
+			return GetEditingObj()->Notifies[trackId]->GetStartTime();
 		}
 	}
 	return FEITimelineEditingModel::GetTrackStartTime(trackId);
@@ -76,9 +82,9 @@ float FKuruStoryClipData_Model::GetTrackEndTime(int trackId)
 {
 	if (GetEditingObj())
 	{
-		if (GetEditingObj()->Notifies.Num()>trackId)
+		if (GetEditingObj()->Notifies.Num()>trackId && GetEditingObj()->Notifies[trackId])
 		{
-			return GetEditingObj()->Notifies[trackId].GetEndTime();
+			return GetEditingObj()->Notifies[trackId]->GetEndTime();
 		}
 	}
 	return FEITimelineEditingModel::GetTrackEndTime(trackId);
@@ -90,10 +96,16 @@ void FKuruStoryClipData_Model::OnTrackNodeMoved(float DeltaMoveTime,int trackId)
 	{
 		if (GetEditingObj()->Notifies.Num()>trackId)
 		{
-			auto& notify = GetEditingObj()->Notifies[trackId];
+			auto notify = GetEditingObj()->Notifies[trackId];
+
+			if (notify == nullptr)
+			{
+				return;
+			}
+			
 			float Total = GetEditingObj()->TotalLength;
-			float Start = notify.GetStartTime();
-			float End = notify.GetEndTime();
+			float Start = notify->GetStartTime();
+			float End = notify->GetEndTime();
 			float Delta = DeltaMoveTime;
 			if (Start+Delta < 0)
 			{
@@ -105,11 +117,11 @@ void FKuruStoryClipData_Model::OnTrackNodeMoved(float DeltaMoveTime,int trackId)
 				Delta = Total - End;
 			}
 			Delta = FMath::RoundToFloat(Delta*GetFrameRate().AsDecimal())/GetFrameRate().AsDecimal();
-			notify.SetStartTime(Start+Delta);
-			notify.SetEndTime(End+Delta);
-			notify.StartFrame=notify.GetStartFrame();
-			UE_LOG(LogInit,Error,TEXT("Decimal is %g, ret is %d"),notify.BaseFrameRate.AsDecimal(),notify.GetStartFrame());
-			notify.EndFrame=notify.GetEndFrame();
+			notify->SetStartTime(Start+Delta);
+			notify->SetEndTime(End+Delta);
+			notify->StartFrame=notify->GetStartFrame();
+			UE_LOG(LogInit,Error,TEXT("Decimal is %g, ret is %d"),notify->BaseFrameRate.AsDecimal(),notify->GetStartFrame());
+			notify->EndFrame=notify->GetEndFrame();
 		}
 	}
 }

@@ -2,8 +2,8 @@
 #include "StoryNotifyBase.h"
 #include "StoryNotifyEventBase.generated.h"
 
-USTRUCT()
-struct FStoryNotifyEventBase :public FStoryNotifyBase
+UCLASS()
+class UStoryNotifyEventBase :public UStoryNotifyBase
 {
 	GENERATED_BODY()
 public:

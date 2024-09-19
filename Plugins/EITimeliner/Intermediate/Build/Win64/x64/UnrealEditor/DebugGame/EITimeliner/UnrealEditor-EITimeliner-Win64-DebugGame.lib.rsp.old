@@ -8,6 +8,12 @@
 /NODEFAULTLIB
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\UnrealEd\SharedPCH.UnrealEd.NonOptimized.Cpp20.h.obj"
 "H:\KuruEditors\KuruADV\Plugins\EITimeliner\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\EITimeliner\Module.EITimeliner.cpp.obj"
+"H:\KuruEditors\KuruADV\Plugins\EITimeliner\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\EITimeliner\EITimelinerCoreBase.cpp.obj"
+"H:\KuruEditors\KuruADV\Plugins\EITimeliner\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\EITimeliner\EITimelineEditingModel.cpp.obj"
+"H:\KuruEditors\KuruADV\Plugins\EITimeliner\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\EITimeliner\FEITimelineTrack.cpp.obj"
+"H:\KuruEditors\KuruADV\Plugins\EITimeliner\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\EITimeliner\FEITimeSliderController.cpp.obj"
 "H:\KuruEditors\KuruADV\Plugins\EITimeliner\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\EITimeliner\SEITimelineNode.cpp.obj"
+"H:\KuruEditors\KuruADV\Plugins\EITimeliner\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\EITimeliner\SEITrack.cpp.obj"
+"H:\KuruEditors\KuruADV\Plugins\EITimeliner\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\EITimeliner\SEITrackOutliner.cpp.obj"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Default.rc2.res"
 /OUT:"H:\KuruEditors\KuruADV\Plugins\EITimeliner\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\EITimeliner\UnrealEditor-EITimeliner-Win64-DebugGame.lib"

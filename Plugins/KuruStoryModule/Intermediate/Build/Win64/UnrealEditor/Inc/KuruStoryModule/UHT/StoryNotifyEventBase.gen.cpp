@@ -9,73 +9,81 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeStoryNotifyEventBase() {}
 // Cross Module References
-	KURUSTORYMODULE_API UScriptStruct* Z_Construct_UScriptStruct_FStoryNotifyBase();
-	KURUSTORYMODULE_API UScriptStruct* Z_Construct_UScriptStruct_FStoryNotifyEventBase();
+	KURUSTORYMODULE_API UClass* Z_Construct_UClass_UStoryNotifyBase();
+	KURUSTORYMODULE_API UClass* Z_Construct_UClass_UStoryNotifyEventBase();
+	KURUSTORYMODULE_API UClass* Z_Construct_UClass_UStoryNotifyEventBase_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_KuruStoryModule();
 // End Cross Module References
-
-static_assert(std::is_polymorphic<FStoryNotifyEventBase>() == std::is_polymorphic<FStoryNotifyBase>(), "USTRUCT FStoryNotifyEventBase cannot be polymorphic unless super FStoryNotifyBase is polymorphic");
-
-	static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_StoryNotifyEventBase;
-class UScriptStruct* FStoryNotifyEventBase::StaticStruct()
-{
-	if (!Z_Registration_Info_UScriptStruct_StoryNotifyEventBase.OuterSingleton)
+	void UStoryNotifyEventBase::StaticRegisterNativesUStoryNotifyEventBase()
 	{
-		Z_Registration_Info_UScriptStruct_StoryNotifyEventBase.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FStoryNotifyEventBase, (UObject*)Z_Construct_UPackage__Script_KuruStoryModule(), TEXT("StoryNotifyEventBase"));
 	}
-	return Z_Registration_Info_UScriptStruct_StoryNotifyEventBase.OuterSingleton;
-}
-template<> KURUSTORYMODULE_API UScriptStruct* StaticStruct<FStoryNotifyEventBase>()
-{
-	return FStoryNotifyEventBase::StaticStruct();
-}
-	struct Z_Construct_UScriptStruct_FStoryNotifyEventBase_Statics
+	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UStoryNotifyEventBase);
+	UClass* Z_Construct_UClass_UStoryNotifyEventBase_NoRegister()
 	{
+		return UStoryNotifyEventBase::StaticClass();
+	}
+	struct Z_Construct_UClass_UStoryNotifyEventBase_Statics
+	{
+		static UObject* (*const DependentSingletons[])();
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
-		static void* NewStructOps();
-		static const UECodeGen_Private::FStructParams ReturnStructParams;
+		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+		static const UECodeGen_Private::FClassParams ClassParams;
 	};
+	UObject* (*const Z_Construct_UClass_UStoryNotifyEventBase_Statics::DependentSingletons[])() = {
+		(UObject* (*)())Z_Construct_UClass_UStoryNotifyBase,
+		(UObject* (*)())Z_Construct_UPackage__Script_KuruStoryModule,
+	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UStoryNotifyEventBase_Statics::DependentSingletons) < 16);
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FStoryNotifyEventBase_Statics::Struct_MetaDataParams[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UStoryNotifyEventBase_Statics::Class_MetaDataParams[] = {
+		{ "IncludePath", "Data/StoryNotifies/StoryNotifyEventBase.h" },
 		{ "ModuleRelativePath", "Data/StoryNotifies/StoryNotifyEventBase.h" },
 	};
 #endif
-	void* Z_Construct_UScriptStruct_FStoryNotifyEventBase_Statics::NewStructOps()
-	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FStoryNotifyEventBase>();
-	}
-	const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FStoryNotifyEventBase_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_KuruStoryModule,
-		Z_Construct_UScriptStruct_FStoryNotifyBase,
-		&NewStructOps,
-		"StoryNotifyEventBase",
-		nullptr,
-		0,
-		sizeof(FStoryNotifyEventBase),
-		alignof(FStoryNotifyEventBase),
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FStoryNotifyEventBase_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FStoryNotifyEventBase_Statics::Struct_MetaDataParams)
+	const FCppClassTypeInfoStatic Z_Construct_UClass_UStoryNotifyEventBase_Statics::StaticCppClassTypeInfo = {
+		TCppClassTypeTraits<UStoryNotifyEventBase>::IsAbstract,
 	};
-	UScriptStruct* Z_Construct_UScriptStruct_FStoryNotifyEventBase()
+	const UECodeGen_Private::FClassParams Z_Construct_UClass_UStoryNotifyEventBase_Statics::ClassParams = {
+		&UStoryNotifyEventBase::StaticClass,
+		nullptr,
+		&StaticCppClassTypeInfo,
+		DependentSingletons,
+		nullptr,
+		nullptr,
+		nullptr,
+		UE_ARRAY_COUNT(DependentSingletons),
+		0,
+		0,
+		0,
+		0x000000A0u,
+		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UStoryNotifyEventBase_Statics::Class_MetaDataParams), Z_Construct_UClass_UStoryNotifyEventBase_Statics::Class_MetaDataParams)
+	};
+	UClass* Z_Construct_UClass_UStoryNotifyEventBase()
 	{
-		if (!Z_Registration_Info_UScriptStruct_StoryNotifyEventBase.InnerSingleton)
+		if (!Z_Registration_Info_UClass_UStoryNotifyEventBase.OuterSingleton)
 		{
-			UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_StoryNotifyEventBase.InnerSingleton, Z_Construct_UScriptStruct_FStoryNotifyEventBase_Statics::ReturnStructParams);
+			UECodeGen_Private::ConstructUClass(Z_Registration_Info_UClass_UStoryNotifyEventBase.OuterSingleton, Z_Construct_UClass_UStoryNotifyEventBase_Statics::ClassParams);
 		}
-		return Z_Registration_Info_UScriptStruct_StoryNotifyEventBase.InnerSingleton;
+		return Z_Registration_Info_UClass_UStoryNotifyEventBase.OuterSingleton;
 	}
+	template<> KURUSTORYMODULE_API UClass* StaticClass<UStoryNotifyEventBase>()
+	{
+		return UStoryNotifyEventBase::StaticClass();
+	}
+	UStoryNotifyEventBase::UStoryNotifyEventBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
+	DEFINE_VTABLE_PTR_HELPER_CTOR(UStoryNotifyEventBase);
+	UStoryNotifyEventBase::~UStoryNotifyEventBase() {}
 	struct Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_StoryNotifies_StoryNotifyEventBase_h_Statics
 	{
-		static const FStructRegisterCompiledInInfo ScriptStructInfo[];
+		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_StoryNotifies_StoryNotifyEventBase_h_Statics::ScriptStructInfo[] = {
-		{ FStoryNotifyEventBase::StaticStruct, Z_Construct_UScriptStruct_FStoryNotifyEventBase_Statics::NewStructOps, TEXT("StoryNotifyEventBase"), &Z_Registration_Info_UScriptStruct_StoryNotifyEventBase, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FStoryNotifyEventBase), 3978862925U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_StoryNotifies_StoryNotifyEventBase_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_UStoryNotifyEventBase, UStoryNotifyEventBase::StaticClass, TEXT("UStoryNotifyEventBase"), &Z_Registration_Info_UClass_UStoryNotifyEventBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStoryNotifyEventBase), 413843683U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_StoryNotifies_StoryNotifyEventBase_h_2056891615(TEXT("/Script/KuruStoryModule"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_StoryNotifies_StoryNotifyEventBase_h_3672264532(TEXT("/Script/KuruStoryModule"),
+		Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_StoryNotifies_StoryNotifyEventBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_StoryNotifies_StoryNotifyEventBase_h_Statics::ClassInfo),
 		nullptr, 0,
-		Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_StoryNotifies_StoryNotifyEventBase_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_StoryNotifies_StoryNotifyEventBase_h_Statics::ScriptStructInfo),
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

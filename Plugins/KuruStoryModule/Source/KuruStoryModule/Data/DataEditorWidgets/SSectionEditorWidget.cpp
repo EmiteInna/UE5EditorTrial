@@ -163,7 +163,7 @@ FReply SSectionEditorWidget::Button_OnCreatingNewClip()
 {
 	if (EditingData)
 	{
-		UKuruStoryClipData* Clip = NewObject<UKuruStoryClipData>();
+		UKuruStoryClipData* Clip = NewObject<UKuruStoryClipData>(EditingData);
 		Clip->Parent = EditingData;
 		const FScopedTransaction AddTaskTransaction(FText::FromString("Create New Clip"));
 		EditingData->Modify();

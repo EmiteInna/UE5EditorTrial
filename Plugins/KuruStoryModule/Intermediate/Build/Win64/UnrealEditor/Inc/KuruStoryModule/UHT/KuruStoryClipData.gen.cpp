@@ -6,8 +6,6 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "KuruStoryModule/Data/KuruStoryClipData.h"
-#include "KuruStoryModule/Data/StoryNotifies/StoryNotifyBase.h"
-#include "Serialization/ArchiveUObjectFromStructuredArchive.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeKuruStoryClipData() {}
 // Cross Module References
@@ -16,7 +14,7 @@ void EmptyLinkFunctionForGeneratedCodeKuruStoryClipData() {}
 	KURUSTORYMODULE_API UClass* Z_Construct_UClass_UKuruStoryClipData();
 	KURUSTORYMODULE_API UClass* Z_Construct_UClass_UKuruStoryClipData_NoRegister();
 	KURUSTORYMODULE_API UClass* Z_Construct_UClass_UKuruStorySectionData_NoRegister();
-	KURUSTORYMODULE_API UScriptStruct* Z_Construct_UScriptStruct_FStoryNotifyBase();
+	KURUSTORYMODULE_API UClass* Z_Construct_UClass_UStoryNotifyBase_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_KuruStoryModule();
 // End Cross Module References
 	void UKuruStoryClipData::StaticRegisterNativesUKuruStoryClipData()
@@ -49,16 +47,14 @@ void EmptyLinkFunctionForGeneratedCodeKuruStoryClipData() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_SimpleContent_MetaData[];
 #endif
 		static const UECodeGen_Private::FNamePropertyParams NewProp_SimpleContent;
-		static const UECodeGen_Private::FDoublePropertyParams NewProp_EditableItems_Inner;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_EditableItems_MetaData[];
-#endif
-		static const UECodeGen_Private::FArrayPropertyParams NewProp_EditableItems;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_TotalLength_MetaData[];
 #endif
 		static const UECodeGen_Private::FDoublePropertyParams NewProp_TotalLength;
-		static const UECodeGen_Private::FStructPropertyParams NewProp_Notifies_Inner;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Notifies_Inner_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_Notifies_Inner;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_Notifies_MetaData[];
 #endif
@@ -91,108 +87,60 @@ void EmptyLinkFunctionForGeneratedCodeKuruStoryClipData() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Number_MetaData[] = {
 		{ "Category", "Story" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "//0\n" },
-#endif
 		{ "ModuleRelativePath", "Data/KuruStoryClipData.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "0" },
-#endif
 	};
 #endif
 	const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Number = { "Number", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKuruStoryClipData, Number), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Number_MetaData), Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Number_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Texture2D_MetaData[] = {
 		{ "Category", "Story" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "//1\n" },
-#endif
 		{ "ModuleRelativePath", "Data/KuruStoryClipData.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "1" },
-#endif
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Texture2D = { "Texture2D", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKuruStoryClipData, Texture2D), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Texture2D_MetaData), Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Texture2D_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Teller_MetaData[] = {
 		{ "Category", "Story" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "//2\n" },
-#endif
 		{ "ModuleRelativePath", "Data/KuruStoryClipData.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "2" },
-#endif
 	};
 #endif
 	const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Teller = { "Teller", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKuruStoryClipData, Teller), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Teller_MetaData), Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Teller_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_SimpleContent_MetaData[] = {
 		{ "Category", "Story" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "//3\n" },
-#endif
 		{ "ModuleRelativePath", "Data/KuruStoryClipData.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "3" },
-#endif
 	};
 #endif
 	const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_SimpleContent = { "SimpleContent", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKuruStoryClipData, SimpleContent), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_SimpleContent_MetaData), Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_SimpleContent_MetaData) };
-	const UECodeGen_Private::FDoublePropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_EditableItems_Inner = { "EditableItems", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Double, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_EditableItems_MetaData[] = {
-		{ "Category", "Story" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "//4\n" },
-#endif
-		{ "ModuleRelativePath", "Data/KuruStoryClipData.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "4" },
-#endif
-	};
-#endif
-	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_EditableItems = { "EditableItems", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKuruStoryClipData, EditableItems), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_EditableItems_MetaData), Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_EditableItems_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_TotalLength_MetaData[] = {
 		{ "Category", "Story" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "//5\n" },
-#endif
 		{ "ModuleRelativePath", "Data/KuruStoryClipData.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "5" },
-#endif
 	};
 #endif
 	const UECodeGen_Private::FDoublePropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_TotalLength = { "TotalLength", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Double, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKuruStoryClipData, TotalLength), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_TotalLength_MetaData), Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_TotalLength_MetaData) };
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Notifies_Inner = { "Notifies", nullptr, (EPropertyFlags)0x0000000000020000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FStoryNotifyBase, METADATA_PARAMS(0, nullptr) }; // 3913863963
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Notifies_Inner_MetaData[] = {
+		{ "Category", "Story" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Data/KuruStoryClipData.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Notifies_Inner = { "Notifies", nullptr, (EPropertyFlags)0x00020000000a0008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UStoryNotifyBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Notifies_Inner_MetaData), Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Notifies_Inner_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Notifies_MetaData[] = {
 		{ "Category", "Story" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "//6\n" },
-#endif
+		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Data/KuruStoryClipData.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "6" },
-#endif
 	};
 #endif
-	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Notifies = { "Notifies", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKuruStoryClipData, Notifies), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Notifies_MetaData), Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Notifies_MetaData) }; // 3913863963
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Notifies = { "Notifies", nullptr, (EPropertyFlags)0x0010008000020009, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKuruStoryClipData, Notifies), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Notifies_MetaData), Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Notifies_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Parent_MetaData[] = {
 		{ "Category", "Hide" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "//no need to serialize\n//UPROPERTY(EditAnywhere,Category=\"Story\")\n" },
-#endif
 		{ "EditCondition", "false" },
 		{ "EditConditionHides", "" },
 		{ "ModuleRelativePath", "Data/KuruStoryClipData.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "no need to serialize\nUPROPERTY(EditAnywhere,Category=\"Story\")" },
-#endif
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Parent = { "Parent", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKuruStoryClipData, Parent), Z_Construct_UClass_UKuruStorySectionData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Parent_MetaData), Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Parent_MetaData) };
@@ -201,8 +149,6 @@ void EmptyLinkFunctionForGeneratedCodeKuruStoryClipData() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Texture2D,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Teller,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_SimpleContent,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_EditableItems_Inner,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_EditableItems,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_TotalLength,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Notifies_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Notifies,
@@ -223,7 +169,7 @@ void EmptyLinkFunctionForGeneratedCodeKuruStoryClipData() {}
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::PropPointers),
 		0,
-		0x001000A0u,
+		0x009010A0u,
 		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::Class_MetaDataParams), Z_Construct_UClass_UKuruStoryClipData_Statics::Class_MetaDataParams)
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::PropPointers) < 2048);
@@ -241,15 +187,14 @@ void EmptyLinkFunctionForGeneratedCodeKuruStoryClipData() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UKuruStoryClipData);
 	UKuruStoryClipData::~UKuruStoryClipData() {}
-	IMPLEMENT_FSTRUCTUREDARCHIVE_SERIALIZER(UKuruStoryClipData)
 	struct Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UKuruStoryClipData, UKuruStoryClipData::StaticClass, TEXT("UKuruStoryClipData"), &Z_Registration_Info_UClass_UKuruStoryClipData, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UKuruStoryClipData), 1698451678U) },
+		{ Z_Construct_UClass_UKuruStoryClipData, UKuruStoryClipData::StaticClass, TEXT("UKuruStoryClipData"), &Z_Registration_Info_UClass_UKuruStoryClipData, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UKuruStoryClipData), 2952161278U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_1204130287(TEXT("/Script/KuruStoryModule"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_3580725764(TEXT("/Script/KuruStoryModule"),
 		Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

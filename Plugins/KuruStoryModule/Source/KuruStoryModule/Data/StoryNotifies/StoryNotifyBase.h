@@ -7,8 +7,8 @@
 /**
  * Story Notify的基类，约定了一些接口。
  */
-USTRUCT()
-struct KURUSTORYMODULE_API FStoryNotifyBase
+UCLASS()
+class KURUSTORYMODULE_API UStoryNotifyBase: public UObject
 {
 public:
 	GENERATED_BODY()
@@ -63,5 +63,4 @@ public:
 
 	virtual void RematchTimeByFrameRate(const FFrameRate& FrameRate);
 
-	virtual ~FStoryNotifyBase();
 };

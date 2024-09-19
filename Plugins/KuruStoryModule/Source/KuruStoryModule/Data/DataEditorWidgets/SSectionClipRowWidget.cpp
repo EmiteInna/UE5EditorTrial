@@ -2,7 +2,6 @@
 
 #include "ContentBrowserModule.h"
 #include "SAssetView.h"
-#include "SClipTimelineWidget.h"
 #include "SSectionEditorWidget.h"
 #include "KuruStoryModule/Data/KuruStoryClipData.h"
 #include "KuruStoryModule/Data/KuruStorySectionData.h"
