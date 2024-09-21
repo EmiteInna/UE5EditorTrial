@@ -3,6 +3,13 @@
 
 #include "StoryNotifyBase.h"
 
+#include "KuruStoryModule/Data/KuruStoryClipData.h"
+
+
+UStoryNotifyBase::UStoryNotifyBase()
+{
+	SetFlags(RF_Transactional);
+}
 
 UObject* UStoryNotifyBase::GetOwner()
 {
@@ -37,4 +44,18 @@ FName UStoryNotifyBase::GetName()
 void UStoryNotifyBase::RematchTimeByFrameRate(const FFrameRate& FrameRate)
 {
 	BaseFrameRate = FrameRate;
+}
+
+void UStoryNotifyBase::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
+{
+	StartTime = FMath::Max(0, StartTime);
+	
+	if (UKuruStoryClipData* ClipData = Cast<UKuruStoryClipData>(ObjectOwner))
+	{
+		EndTime = FMath::Min(EndTime,ClipData->TotalLength);
+	}
+	
+	StartFrame = GetStartFrame();
+	EndFrame = GetEndFrame();
+	UObject::PostEditChangeProperty(PropertyChangedEvent);
 }

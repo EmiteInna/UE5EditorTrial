@@ -5,6 +5,9 @@ class UEINotifyItem;
 /**
  * 会员制餐厅，靠UEINotifyItem的FName进行索引，触发调用的时候负责做出回调。
  * 必须重写的类之一。
+ *
+ * 其实和Model具有一定的重合度，不如说只是为了分层吧，负责添加(包含添加相关)、删除、移动Notify，除此之外不负责操纵特定Notify的数据。
+ * 虽然现在实际上操作了，对不起啊
  */
 class EITIMELINER_API  FEINotifyLibrary
 {
@@ -28,12 +31,18 @@ public:
 	//当前所选中的Track序号
 	int CurrentChosenTrackIndex = 0;
 
+	virtual FReply OnChooseTrack(int ChooseID);
+	virtual void OnClearTrackChoice(){CurrentChosenTrackIndex = -1;}
+	int GetChosenTrackID()const{return CurrentChosenTrackIndex;}
 	virtual float GetCurrentChosenTrackStartTime()const{return 0;};
 	virtual float GetCurrentChosenTrackEndTime()const{return 10;};
 	virtual void SetCurrentChosenTrackStartTime(float newValue){};
 	virtual void SetCurrentChosenTrackEndTime(float newValue){};
 	virtual void SetClipTotalDuration(float newValue){};
-	virtual FReply OnDeleteChosenNotify(){return FReply::Handled();};
+	virtual FReply OnDeleteChosenNotify();
+	virtual ~FEINotifyLibrary(){};
+
+	
 };
 
 

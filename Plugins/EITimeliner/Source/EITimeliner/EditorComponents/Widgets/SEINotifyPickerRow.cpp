@@ -10,7 +10,10 @@ void SEINotifyPickerRow::Construct(const FArguments& Arguments, const TSharedRef
 {
 	Context = InContext;
 	NotifyItem = InNotify;
-
+	
+	FSlateFontInfo TitleTextFont = FCoreStyle::Get().GetFontStyle(FName("EnbossedText"));
+	TitleTextFont.Size = 14;
+	
 	ChildSlot[
 		SNew(SHorizontalBox)
 		+

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KuruADVModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+273add41f9041657e61abbc15a8d3e1892dd8185")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7830bc7dfc38417021c16344a2e6090b6201b826")]
 [assembly: System.Reflection.AssemblyProductAttribute("KuruADVModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KuruADVModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

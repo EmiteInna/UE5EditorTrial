@@ -373,6 +373,8 @@
     <ClCompile_AdditionalOptions>$(AdditionalOptions) /Yu"D:\04unreal\UnrealEngine\Source\Engine\Intermediate\Build\Win64\x64\UnrealEditor\Development\UnrealEd\SharedPCH.UnrealEd.Cpp20.h"</ClCompile_AdditionalOptions>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\KuruADV\TestRawObject.cpp" />
+    <ClInclude Include="..\..\Source\KuruADV\TestRawObject.h" />
     <None Include="..\..\KuruADV.uproject"/>
     <None Include="..\..\Source\KuruADV.Target.cs"/>
     <None Include="..\..\Source\KuruADVEditor.Target.cs"/>

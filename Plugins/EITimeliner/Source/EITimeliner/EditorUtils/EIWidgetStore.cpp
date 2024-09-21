@@ -5,6 +5,8 @@ FSlateBrush* FEIWidgetStores::BlueBrush = nullptr;
 FSlateBrush* FEIWidgetStores::DeepPinkBrush = nullptr;
 FSlateBrush* FEIWidgetStores::OrangeBrush = nullptr;
 FSlateBrush* FEIWidgetStores::GrayBrush = nullptr;
+FSlateBrush* FEIWidgetStores::KawaiiDefaultTrackNodeBrush = nullptr;
+FSlateBrush* FEIWidgetStores::KawaiiChosenTrackNodeBrush = nullptr;
 FEditableTextBoxStyle* FEIWidgetStores::KawaiiTextBox = nullptr;
 FScrollBoxStyle* FEIWidgetStores::KawaiiScrollBox = nullptr;
 FScrollBarStyle* FEIWidgetStores::KawaiiScrollBar = nullptr;
@@ -14,19 +16,26 @@ void FEIWidgetStores::InitializeKuruStores()
 {
 	PinkBrush = new FSlateBrush();
 	PinkBrush->TintColor = KawaiiPink;
-	SetKawaiiRounded(PinkBrush);
+	SetKawaiiRounded(PinkBrush,15);
 	BlueBrush = new FSlateBrush();
 	BlueBrush->TintColor = KawaiiBlue;
-	SetKawaiiRounded(BlueBrush);
+	SetKawaiiRounded(BlueBrush,15);
 	DeepPinkBrush = new FSlateBrush();
 	DeepPinkBrush->TintColor = DeepPink;
-	SetKawaiiRounded(DeepPinkBrush);
+	SetKawaiiRounded(DeepPinkBrush,15);
 	OrangeBrush = new FSlateBrush();
 	OrangeBrush->TintColor = KawaiiOrange;
-	SetKawaiiRounded(OrangeBrush);
+	SetKawaiiRounded(OrangeBrush,15);
 	GrayBrush = new FSlateBrush();
 	GrayBrush->TintColor = KawaiiGray;
-	SetKawaiiRounded(GrayBrush);
+	SetKawaiiRounded(GrayBrush,15);
+
+	KawaiiDefaultTrackNodeBrush = new FSlateBrush();
+	KawaiiDefaultTrackNodeBrush->TintColor = KawaiiPink;
+	SetKawaiiRounded(KawaiiDefaultTrackNodeBrush, 3);
+	KawaiiChosenTrackNodeBrush = new FSlateBrush();
+	KawaiiChosenTrackNodeBrush->TintColor = KawaiiOrange;
+	SetKawaiiRounded(KawaiiChosenTrackNodeBrush, 3);
 
 	KawaiiTextBox = new FEditableTextBoxStyle();
 	
@@ -94,11 +103,11 @@ FButtonStyle FEIWidgetStores::GetButtonStyleFromColor(FLinearColor NormalColor, 
 	return Style;
 }
 
-void FEIWidgetStores::SetKawaiiRounded(FSlateBrush* Brush)
+void FEIWidgetStores::SetKawaiiRounded(FSlateBrush* Brush, float Radius)
 {
 	check(Brush)
 	Brush->DrawAs = ESlateBrushDrawType::RoundedBox;
 	Brush->OutlineSettings.Width=1;
-	Brush->OutlineSettings.CornerRadii=FVector4(15,15,15,15);
+	Brush->OutlineSettings.CornerRadii=FVector4(Radius,Radius,Radius,Radius);
 	Brush->OutlineSettings.RoundingType=ESlateBrushRoundingType::FixedRadius;
 }

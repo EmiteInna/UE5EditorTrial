@@ -45,7 +45,6 @@
             "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\contentbrowser\\public\\sourcesdata.h",
             "d:\\04unreal\\unrealengine\\source\\engine\\source\\developer\\collectionmanager\\public\\icollectionmanager.h",
             "d:\\04unreal\\unrealengine\\source\\engine\\source\\developer\\collectionmanager\\public\\collectionmanagermodule.h",
-            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\dataeditorwidgets\\scliptimelinewidget.h",
             "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\dataeditorwidgets\\ssectioneditorwidget.h",
             "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\kurustoryclipdata.h",
             "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\sequencerwidgets\\public\\animatedrange.h",
@@ -53,14 +52,16 @@
             "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\intermediate\\build\\win64\\unrealeditor\\inc\\kurustorymodule\\uht\\kurustoryclipdata.generated.h",
             "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\kurustorysectiondata.h",
             "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\intermediate\\build\\win64\\unrealeditor\\inc\\kurustorymodule\\uht\\kurustorysectiondata.generated.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\kurustorysectiondata_editortool.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\timeline\\kurusotrytimelinercore.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\eitimeliner\\source\\eitimeliner\\controllerinterface\\eitimelinercorebase.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\timeline\\kurustorytimelinetopwidget.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\eitimeliner\\source\\eitimeliner\\controllerinterface\\eitimelinertopwidgetbase.h",
             "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\types\\colorstores.h",
             "d:\\04unreal\\unrealengine\\source\\engine\\source\\runtime\\slate\\public\\widgets\\input\\smultilineeditabletextbox.h",
             "d:\\04unreal\\unrealengine\\source\\engine\\source\\runtime\\slate\\public\\widgets\\text\\smultilineeditabletext.h",
             "d:\\04unreal\\unrealengine\\source\\engine\\source\\runtime\\slate\\public\\framework\\text\\slatetextlayoutfactory.h",
-            "d:\\04unreal\\unrealengine\\source\\engine\\source\\runtime\\slate\\public\\framework\\text\\slatetextlayout.h",
-            "d:\\04unreal\\unrealengine\\source\\engine\\source\\runtime\\slate\\public\\widgets\\layout\\sconstraintcanvas.h",
-            "d:\\04unreal\\unrealengine\\source\\engine\\source\\runtime\\slate\\public\\widgets\\layout\\anchors.h",
-            "d:\\04unreal\\unrealengine\\source\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\slate\\uht\\anchors.generated.h"
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\runtime\\slate\\public\\framework\\text\\slatetextlayout.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

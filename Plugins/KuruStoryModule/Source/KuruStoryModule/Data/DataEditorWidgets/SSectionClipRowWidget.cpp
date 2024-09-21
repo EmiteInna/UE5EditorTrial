@@ -5,12 +5,11 @@
 #include "SSectionEditorWidget.h"
 #include "KuruStoryModule/Data/KuruStoryClipData.h"
 #include "KuruStoryModule/Data/KuruStorySectionData.h"
+#include "KuruStoryModule/Data/KuruStorySectionData_EditorTool.h"
 #include "KuruStoryModule/Data/Timeline/KuruSotryTimelinerCore.h"
 #include "KuruStoryModule/Data/Timeline/KuruStoryTimelineTopWidget.h"
 #include "KuruStoryModule/Types/ColorStores.h"
-#include "KuruStoryModule/Types/KuruTabUtil.h"
 #include "Widgets/Input/SMultiLineEditableTextBox.h"
-#include "Widgets/Layout/SConstraintCanvas.h"
 
 #define FTF(a) FText::FromString(TEXT(a))
 #define FTFs(a) FText::FromString(a)
@@ -99,7 +98,10 @@ void SSectionClipRowWidget::Construct(const FArguments& InArgs,const TSharedPtr<
 						.HAlign(HAlign_Fill)
 						.VAlign(VAlign_Fill)
 						[
-							SAssignNew(SW_Teller,SEditableTextBox).Text(FTFs(GetAttributeName(FName("Teller"))))
+						SAssignNew(SW_Teller,SEditableTextBox).Text(MakeAttributeLambda([this]()
+						{
+							return FTFs(GetAttributeName(FName("Teller")));
+						}))
 							.Font(TellerTextFont)
 							.OnTextCommitted(this,&SSectionClipRowWidget::Bind_OnEditingTeller)
 							.MinDesiredWidth(1)
@@ -114,7 +116,10 @@ void SSectionClipRowWidget::Construct(const FArguments& InArgs,const TSharedPtr<
 				SNew(SBox)
 				.MinDesiredWidth(500)
 				[
-					SAssignNew(SW_Content,SMultiLineEditableTextBox).Text(FTFs(GetAttributeName(FName("Content"))))
+				SAssignNew(SW_Content,SMultiLineEditableTextBox).Text(MakeAttributeLambda([this]()
+					{
+						return FTFs(GetAttributeName(FName("Content")));
+					}))
 					.Font(ContentTextFont)
 					.Justification(ETextJustify::Center)
 					.OnTextCommitted(this,&SSectionClipRowWidget::Bind_OnEditingContent)
@@ -245,8 +250,10 @@ void SSectionClipRowWidget::Bind_OnEditingTeller(const FText& NewText, ETextComm
 	if (mEditingData && mEditingData->Parent)
 	{
 		const FScopedTransaction AddTaskTransaction(FText::FromString("Editing Name"));
-		mEditingData->Parent->Modify();
+		mEditingData->Modify();
+		
 		mEditingData->Teller = FName(NewText.ToString());
+
 	}
 }
 
@@ -255,7 +262,7 @@ void SSectionClipRowWidget::Bind_OnEditingContent(const FText& NewText, ETextCom
 	if (mEditingData && mEditingData->Parent)
 	{
 		const FScopedTransaction AddTaskTransaction(FText::FromString("Editing Content"));
-		mEditingData->Parent->Modify();
+		mEditingData->Modify();
 		mEditingData->SimpleContent = FName(NewText.ToString());
 	}
 }
@@ -321,10 +328,12 @@ FReply SSectionClipRowWidget::BindButton_OnClickDelete()
 
 FReply SSectionClipRowWidget::BindButton_OnClickOpenTimelinePanel()
 {
-	if (bOpenedTimePanel)
+	/*if (bOpenedTimePanel)
 	{
 		return FReply::Handled();
 	}
+
+	
 	bOpenedTimePanel = true;
 	TSharedRef<SWindow> NewWindow = SNew(SWindow)
 	.Title(FTF("TimeEvent Editor"))
@@ -332,17 +341,25 @@ FReply SSectionClipRowWidget::BindButton_OnClickOpenTimelinePanel()
 	.SupportsMaximize(false)
 	.SupportsMinimize(false)
 	;
-	const TSharedPtr<SDockTab> ParentDockTab = KuruTabUtil::FindDockTabFromWidget(SharedThis(this));
+	const TSharedPtr<SDockTab> ParentDockTab = KuruTabUtil::FindDockTabFromWidget(SharedThis(this));*/
+	
 //在这里！
 
-	Core = MakeShareable(new FKuruStoryTimelinerCore);
-	TimelineWidget = SNew(SKuruStoryTimelineTopWidget,
+	if (EditorToolkit.IsValid()==false || EditorToolkit.Pin()->TimelinePanelDockTab.IsValid()==false)
+	{
+		return FReply::Handled();
+	}
+	
+	EditorToolkit.Pin()->Core = MakeShareable(new FKuruStoryTimelinerCore);
+	EditorToolkit.Pin()->TimelineWidget = SNew(SKuruStoryTimelineTopWidget,
 		EditorToolkit.Pin(),
-		ParentDockTab.ToSharedRef(),
-		Core.ToSharedRef(),
+		EditorToolkit.Pin()->TimelinePanelDockTab.ToSharedRef(),
+		EditorToolkit.Pin()->Core.ToSharedRef(),
 		mEditingData);
+	
+	EditorToolkit.Pin()->TimelinePanelDockTab->SetContent(EditorToolkit.Pin()->TimelineWidget.ToSharedRef());
 
-	NewWindow->SetContent(
+	/*NewWindow->SetContent(
 		TimelineWidget.ToSharedRef()
 		);
 
@@ -356,7 +373,7 @@ FReply SSectionClipRowWidget::BindButton_OnClickOpenTimelinePanel()
 			}
 			bOpenedTimePanel =false;
 		}));
-	FSlateApplication::Get().AddWindow(NewWindow);
+	FSlateApplication::Get().AddWindow(NewWindow);*/
 
 	return FReply::Handled();
 }
@@ -406,7 +423,7 @@ void SSectionClipRowWidget::OnImageSelected(const FAssetData& AssetData)
 		if (mEditingData && mEditingData->Parent)
 		{
 			const FScopedTransaction AddTaskTransaction(FText::FromString("Change Image"));
-			mEditingData->Parent->Modify();
+			mEditingData->Modify();
 			mEditingData->Texture2D = SelectedTexture;
 		}
 	}

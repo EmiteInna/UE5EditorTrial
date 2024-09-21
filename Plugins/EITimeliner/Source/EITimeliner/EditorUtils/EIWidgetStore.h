@@ -20,6 +20,8 @@ public:
 	static FSlateBrush* DeepPinkBrush;
 	static FSlateBrush* OrangeBrush;
 	static FSlateBrush* GrayBrush;
+	static FSlateBrush* KawaiiDefaultTrackNodeBrush;
+	static FSlateBrush* KawaiiChosenTrackNodeBrush;
 	static FScrollBoxStyle* KawaiiScrollBox;
 	static FScrollBarStyle* KawaiiScrollBar;
 	static FButtonStyle* KawaiiDefaultButton;
@@ -31,5 +33,5 @@ public:
 
 	static FEditableTextBoxStyle* KawaiiTextBox;
 
-	static void SetKawaiiRounded(FSlateBrush* Brush);
+	static void SetKawaiiRounded(FSlateBrush* Brush, float Radius);
 };

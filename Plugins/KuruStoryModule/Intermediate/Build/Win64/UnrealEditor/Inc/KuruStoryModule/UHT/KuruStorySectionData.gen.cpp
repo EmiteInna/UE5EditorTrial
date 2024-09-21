@@ -41,6 +41,10 @@ void EmptyLinkFunctionForGeneratedCodeKuruStorySectionData() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_ClipDatas_MetaData[];
 #endif
 		static const UECodeGen_Private::FArrayPropertyParams NewProp_ClipDatas;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_EditorUID_MetaData[];
+#endif
+		static const UECodeGen_Private::FIntPropertyParams NewProp_EditorUID;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -103,10 +107,17 @@ void EmptyLinkFunctionForGeneratedCodeKuruStorySectionData() {}
 	};
 #endif
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UKuruStorySectionData_Statics::NewProp_ClipDatas = { "ClipDatas", nullptr, (EPropertyFlags)0x0010008000000009, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKuruStorySectionData, ClipDatas), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStorySectionData_Statics::NewProp_ClipDatas_MetaData), Z_Construct_UClass_UKuruStorySectionData_Statics::NewProp_ClipDatas_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStorySectionData_Statics::NewProp_EditorUID_MetaData[] = {
+		{ "ModuleRelativePath", "Data/KuruStorySectionData.h" },
+	};
+#endif
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UKuruStorySectionData_Statics::NewProp_EditorUID = { "EditorUID", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKuruStorySectionData, EditorUID), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStorySectionData_Statics::NewProp_EditorUID_MetaData), Z_Construct_UClass_UKuruStorySectionData_Statics::NewProp_EditorUID_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UKuruStorySectionData_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStorySectionData_Statics::NewProp_Title,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStorySectionData_Statics::NewProp_ClipDatas_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStorySectionData_Statics::NewProp_ClipDatas,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UKuruStorySectionData_Statics::NewProp_EditorUID,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UKuruStorySectionData_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UKuruStorySectionData>::IsAbstract,
@@ -146,9 +157,9 @@ void EmptyLinkFunctionForGeneratedCodeKuruStorySectionData() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStorySectionData_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UKuruStorySectionData, UKuruStorySectionData::StaticClass, TEXT("UKuruStorySectionData"), &Z_Registration_Info_UClass_UKuruStorySectionData, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UKuruStorySectionData), 3249804104U) },
+		{ Z_Construct_UClass_UKuruStorySectionData, UKuruStorySectionData::StaticClass, TEXT("UKuruStorySectionData"), &Z_Registration_Info_UClass_UKuruStorySectionData, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UKuruStorySectionData), 1104933986U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStorySectionData_h_3413667165(TEXT("/Script/KuruStoryModule"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStorySectionData_h_55840494(TEXT("/Script/KuruStoryModule"),
 		Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStorySectionData_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStorySectionData_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

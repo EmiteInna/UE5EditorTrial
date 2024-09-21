@@ -122,16 +122,32 @@ void EmptyLinkFunctionForGeneratedCodeKuruStoryClipData() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Notifies_Inner_MetaData[] = {
 		{ "Category", "Story" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe6\x9c\x89\xe4\xb8\x80\xe8\xaf\xb4\xe4\xb8\x80\xef\xbc\x8c\xe8\xbf\x99\xe4\xb8\xaa\xe4\xb8\x9c\xe8\xa5\xbf\xe6\xa0\xb9\xe6\x9c\xac\xe6\xb2\xa1\xe5\xbf\x85\xe8\xa6\x81\xe6\x9a\xb4\xe9\x9c\xb2\xe7\xbb\x99\xe7\xbc\x96\xe8\xbe\x91\xe5\x99\xa8\xef\xbc\x8c\xe5\x8f\xaa\xe6\x98\xaf\xe4\xb8\xba\xe4\xba\x86""Export\xe6\x88\x91\xe4\xbb\xac\xe6\x89\x8d\xe8\xbf\x99\xe4\xb9\x88\xe5\x81\x9a\xe3\x80\x82\n" },
+#endif
+		{ "EditCondition", "false" },
+		{ "EditConditionHides", "" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Data/KuruStoryClipData.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe6\x9c\x89\xe4\xb8\x80\xe8\xaf\xb4\xe4\xb8\x80\xef\xbc\x8c\xe8\xbf\x99\xe4\xb8\xaa\xe4\xb8\x9c\xe8\xa5\xbf\xe6\xa0\xb9\xe6\x9c\xac\xe6\xb2\xa1\xe5\xbf\x85\xe8\xa6\x81\xe6\x9a\xb4\xe9\x9c\xb2\xe7\xbb\x99\xe7\xbc\x96\xe8\xbe\x91\xe5\x99\xa8\xef\xbc\x8c\xe5\x8f\xaa\xe6\x98\xaf\xe4\xb8\xba\xe4\xba\x86""Export\xe6\x88\x91\xe4\xbb\xac\xe6\x89\x8d\xe8\xbf\x99\xe4\xb9\x88\xe5\x81\x9a\xe3\x80\x82" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Notifies_Inner = { "Notifies", nullptr, (EPropertyFlags)0x00020000000a0008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UStoryNotifyBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Notifies_Inner_MetaData), Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Notifies_Inner_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Notifies_MetaData[] = {
 		{ "Category", "Story" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xe6\x9c\x89\xe4\xb8\x80\xe8\xaf\xb4\xe4\xb8\x80\xef\xbc\x8c\xe8\xbf\x99\xe4\xb8\xaa\xe4\xb8\x9c\xe8\xa5\xbf\xe6\xa0\xb9\xe6\x9c\xac\xe6\xb2\xa1\xe5\xbf\x85\xe8\xa6\x81\xe6\x9a\xb4\xe9\x9c\xb2\xe7\xbb\x99\xe7\xbc\x96\xe8\xbe\x91\xe5\x99\xa8\xef\xbc\x8c\xe5\x8f\xaa\xe6\x98\xaf\xe4\xb8\xba\xe4\xba\x86""Export\xe6\x88\x91\xe4\xbb\xac\xe6\x89\x8d\xe8\xbf\x99\xe4\xb9\x88\xe5\x81\x9a\xe3\x80\x82\n" },
+#endif
+		{ "EditCondition", "false" },
+		{ "EditConditionHides", "" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Data/KuruStoryClipData.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe6\x9c\x89\xe4\xb8\x80\xe8\xaf\xb4\xe4\xb8\x80\xef\xbc\x8c\xe8\xbf\x99\xe4\xb8\xaa\xe4\xb8\x9c\xe8\xa5\xbf\xe6\xa0\xb9\xe6\x9c\xac\xe6\xb2\xa1\xe5\xbf\x85\xe8\xa6\x81\xe6\x9a\xb4\xe9\x9c\xb2\xe7\xbb\x99\xe7\xbc\x96\xe8\xbe\x91\xe5\x99\xa8\xef\xbc\x8c\xe5\x8f\xaa\xe6\x98\xaf\xe4\xb8\xba\xe4\xba\x86""Export\xe6\x88\x91\xe4\xbb\xac\xe6\x89\x8d\xe8\xbf\x99\xe4\xb9\x88\xe5\x81\x9a\xe3\x80\x82" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Notifies = { "Notifies", nullptr, (EPropertyFlags)0x0010008000020009, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UKuruStoryClipData, Notifies), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Notifies_MetaData), Z_Construct_UClass_UKuruStoryClipData_Statics::NewProp_Notifies_MetaData) };
@@ -192,9 +208,9 @@ void EmptyLinkFunctionForGeneratedCodeKuruStoryClipData() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UKuruStoryClipData, UKuruStoryClipData::StaticClass, TEXT("UKuruStoryClipData"), &Z_Registration_Info_UClass_UKuruStoryClipData, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UKuruStoryClipData), 2952161278U) },
+		{ Z_Construct_UClass_UKuruStoryClipData, UKuruStoryClipData::StaticClass, TEXT("UKuruStoryClipData"), &Z_Registration_Info_UClass_UKuruStoryClipData, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UKuruStoryClipData), 1662753408U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_3580725764(TEXT("/Script/KuruStoryModule"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_3726426253(TEXT("/Script/KuruStoryModule"),
 		Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_KuruStoryClipData_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

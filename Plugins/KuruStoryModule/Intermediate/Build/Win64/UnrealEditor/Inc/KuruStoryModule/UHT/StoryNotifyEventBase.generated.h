@@ -30,7 +30,7 @@ public: \
 
 #define FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_StoryNotifies_StoryNotifyEventBase_h_8_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UStoryNotifyEventBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API UStoryNotifyEventBase(); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UStoryNotifyEventBase(UStoryNotifyEventBase&&); \
@@ -38,7 +38,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UStoryNotifyEventBase); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UStoryNotifyEventBase); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UStoryNotifyEventBase) \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UStoryNotifyEventBase) \
 	NO_API virtual ~UStoryNotifyEventBase();
 
 

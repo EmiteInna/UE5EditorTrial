@@ -112,4 +112,11 @@ public:
 	virtual void OnTrackNodeMoved(float DeltaMoveTime,int trackId){};
 
 	virtual void OnTrackNodeStretched(float NewStartTime, float NewEndTime,int trackId){};
+
+	virtual void OnDropWithNewStartDelta(float DeltaMoveTime,int trackId){};
+
+	virtual void OnDropWithNewEndDelta(float DeltaMoveTime,int trackId){};
+	
+
+	virtual ~FEITimelineEditingModel(){};
 };

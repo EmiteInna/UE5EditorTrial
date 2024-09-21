@@ -61,7 +61,7 @@
 ![Alt Text](./MAIJIAXIU/Chap3/p2.png)  
 
 ---
-## 课题4 通用时间轴模板（进行中） 
+## 课题4 通用时间轴模板（√） 
 课题内容：按上一个课题结尾所述，我会去制作一个通用的时间轴模板，从而使得我能够以最小的代价来量产可时间轴编辑的资产，并仅在此一个里维护基本的稳定性。
 这个时间轴面板会包含：  
 ① 时间刻度，板，刻度线，下滑轮，左右滑轮，控制台等固有组件。  
@@ -81,11 +81,25 @@
 目前锐意制作中，进度大概到一半，有待迭代。  
 大概设计如下（其实就是UE的设计）  
 ![Alt Text](./MAIJIAXIU/Chap4/p2.png)  
-具体的用法是继承SEITimelinerTopWidgetBase（用于调整Widget位置），和FEITimelinerCoreBase（用于替换组件），然后在后者中通过重载来替换组件，每一个替换的组件都必须继承原本的组件，除此之外可以自由组合。
+具体的用法是继承SEITimelinerTopWidgetBase（用于调整Widget位置），和FEITimelinerCoreBase（用于替换组件），然后在后者中通过重载来替换组件，每一个替换的组件都必须继承原本的组件，除此之外可以自由组合。由于这些东西耦合性极高，我会用一个Context去做桥，所有空件和Controller(红色部分)都可以访问到Context。
 
-想要编辑的东西只需要创建好资产UObject，然后继承FEITimelineEditingModel新建Model，在里面实现一些方法即可。
+想要编辑的东西只需要创建好资产UObject，然后继承FEITimelineEditingModel新建Model，在里面实现一些方法即可。  
 
-然后要在PreviewScene里看到想看的东西则是继承FEIPreviewScene，同时替换Core里的PreviewScene即可，如果想要更改PreviewScene的显示属性，则是从FEIViewportClient下手，这是组件都是可以换的。  
-当然，我们还可以往Core里塞些东西，比如我这个对话编辑器，我在创建Model的时候需要知道自己是EditingData的Clip数组的哪个成员，我就可以在创建Core的时候去做这个事情。  
-勉强加上了NotifyPanel，功能还不齐，而且好丑，真的丑  
-![Alt Text](./MAIJIAXIU/Chap4/p3.png)  
+关于具体用法可以参考KuruStoryModule里面Timeline这个文件夹里的内容。
+
+实际上TimelineTopWidget是不太需要重载的，最重要的莫过于Core，NotifyLibrary，Model，PreviewScene这四个，它们分别决定：
+
+1. 你会重载哪些组件、这些组件有哪些自定义的创建规则（Core）
+2. 你可以创建哪些Notify、它怎么和你需要的Notify系统桥接（NotifyLibrary）
+3. 你要编辑的是什么、它如何和时间轴编辑器的一些设定桥接（Model）
+4. 你在预览窗口能看见什么（PreviewScene）
+
+别的就是看心情来吧，目前还处于测试期，别抱太大期望。
+
+目前已经具备一定的完成度，gif没录太清晰的，就当省流吧。
+![Alt Text](./MAIJIAXIU/Chap4/p4.gif)  
+
+
+## Interval.1 性能优化和一些打磨（进行中）
+课题内容：其实到这里一套对话系统的编辑器最关键的该有的也都有了，但是我发现来回切时间轴还是会有点内存的上升，明明小心写sharedptr了……  
+总之这个阶段先休息一会，把内存问题完全排除掉，以及增添一些功能使其更加人性化。（说白了就是想休息会）

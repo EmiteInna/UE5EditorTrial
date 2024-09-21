@@ -44,6 +44,8 @@ public:
 	TSharedPtr<FEITimeSliderController> TimeSliderController = nullptr;
 	TSharedPtr<FEIPreviewScene> PreviewScene = nullptr;
 	TSharedPtr<FEINotifyLibrary> NotifyLibrary = nullptr;
+
+	TSharedPtr<IDetailsView> NotifyDetailView = nullptr;	
 	
 	TSharedPtr<FTabManager> WidgetTabManager; 
 };

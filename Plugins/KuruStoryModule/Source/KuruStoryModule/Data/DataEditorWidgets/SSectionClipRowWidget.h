@@ -60,8 +60,8 @@ protected:
 public:
 	UKuruStoryClipData* GetEditingData()const{return mEditingData;};
 
-	TSharedPtr<FKuruStoryTimelinerCore> Core;
-	TSharedPtr<SKuruStoryTimelineTopWidget> TimelineWidget;
+	//TSharedPtr<FKuruStoryTimelinerCore> Core;
+	//TSharedPtr<SKuruStoryTimelineTopWidget> TimelineWidget;
 };
 
 

@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "EITimeliner/DataInterface/EITimelineEditingModel.h"
 
+class UStoryNotifyBase;
 class UKuruStoryClipData;
 
 class KURUSTORYMODULE_API FKuruStoryClipData_Model:public FEITimelineEditingModel
@@ -10,6 +11,8 @@ public:
 	FKuruStoryClipData_Model();
 	
 	UKuruStoryClipData* GetEditingObj()const;
+
+	UStoryNotifyBase* GetNotifyByTrackID(int trackId)const;
 
 	virtual float GetTotalLength() override;
 	
@@ -25,8 +28,13 @@ public:
 
 	virtual void OnTrackNodeMoved(float DeltaMoveTime,int trackId) override;
 
-	virtual void OnTrackNodeStretched(float NewStartTime, float NewEndTime,int trackId) override;
+
+	virtual void OnDropWithNewStartDelta(float DeltaMoveTime, int trackId) override;
+
+	virtual void OnDropWithNewEndDelta(float DeltaMoveTime, int trackId) override;
 };
+
+
 
 
 

@@ -76,13 +76,13 @@ void SEITimelinerTopWidgetBase::Construct(const FArguments& InArgs,
                 ->SetSizeCoefficient(0.45f) // 第一列宽度比例
                 ->Split(
                     FTabManager::NewStack()
-                    ->SetSizeCoefficient(0.25f) 
+                    ->SetSizeCoefficient(0.3f) 
                     ->AddTab(FirstTabName, ETabState::OpenedTab)
                     ->SetForegroundTab(FName(FirstTabName))
                 )
                 ->Split(
                     FTabManager::NewStack()
-                    ->SetSizeCoefficient(0.75f) 
+                    ->SetSizeCoefficient(0.7f) 
                     ->AddTab(SecondTabName, ETabState::OpenedTab)
                 )
             )
@@ -152,11 +152,14 @@ TSharedRef<SDockTab> SEITimelinerTopWidgetBase::SpawnPreviewTab(const FSpawnTabA
 
 TSharedRef<SDockTab> SEITimelinerTopWidgetBase::SpawnEventDetailTab(const FSpawnTabArgs& Args)
 {
+	FPropertyEditorModule& PropertyEditorModule = FModuleManager::Get().LoadModuleChecked<FPropertyEditorModule>("PropertyEditor");
+	const FDetailsViewArgs DetailsViewArgs;
+	NotifyDetailView = PropertyEditorModule.CreateDetailView(DetailsViewArgs);
+	NotifyDetailView->SetObject(nullptr);
 	return SNew(SDockTab)
-		   .TabRole(ETabRole::PanelTab)
-		   [
-			   SNew(STextBlock).Text(FText::FromString("Spawn EventDetail Tab Content"))
-		   ];
+    [
+		NotifyDetailView.ToSharedRef()
+	];
 }
 
 TSharedRef<SDockTab> SEITimelinerTopWidgetBase::SpawnDetailTab(const FSpawnTabArgs& Args)

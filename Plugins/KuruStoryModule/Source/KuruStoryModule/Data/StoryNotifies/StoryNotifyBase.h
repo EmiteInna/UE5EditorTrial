@@ -13,16 +13,18 @@ class KURUSTORYMODULE_API UStoryNotifyBase: public UObject
 public:
 	GENERATED_BODY()
 
+	UStoryNotifyBase();
+
 	UPROPERTY(VisibleAnywhere)
 	FFrameRate BaseFrameRate = FFrameRate(60,1);
 	
 	UPROPERTY()
 	UObject* ObjectOwner = nullptr;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(EditAnywhere)
 	float StartTime = 0;
 	
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(EditAnywhere)
 	float EndTime = 0;
 	
 	UPROPERTY(VisibleAnywhere)
@@ -62,5 +64,7 @@ public:
     }
 
 	virtual void RematchTimeByFrameRate(const FFrameRate& FrameRate);
+
+	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
 
 };

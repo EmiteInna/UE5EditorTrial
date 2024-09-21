@@ -19,6 +19,7 @@ public:
 	virtual void SetCurrentChosenTrackStartTime(float newValue) override;
 	virtual void SetClipTotalDuration(float newValue) override;
 	virtual FReply OnDeleteChosenNotify() override;
+	virtual FReply OnChooseTrack(int ChooseID) override;
 };
 
 

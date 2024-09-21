@@ -3,15 +3,35 @@
 #include "EITimeliner/EditorComponents/FEITimelineTrack.h"
 #include "EITimeliner/EditorComponents/Widgets/SEITrackOutliner.h"
 #include "KuruStoryModule/Data/KuruStoryClipData.h"
+#include "KuruStoryModule/Data/KuruStorySectionData.h"
 #include "KuruStoryModule/Data/StoryNotifies/StoryNotifyBase.h"
 
 FKuruStoryClipData_Model::FKuruStoryClipData_Model()
 {
+	
 }
 
 UKuruStoryClipData* FKuruStoryClipData_Model::GetEditingObj() const
 {
 	return Cast<UKuruStoryClipData>(EditingInstacne);
+}
+
+UStoryNotifyBase* FKuruStoryClipData_Model::GetNotifyByTrackID(int trackId) const
+{
+
+	if (trackId < 0)
+	{
+		return nullptr;
+	}
+	
+	if (GetEditingObj())
+	{
+		if (GetEditingObj()->Notifies.Num() > trackId)
+		{
+			return GetEditingObj()->Notifies[trackId];
+		}
+	}
+	return nullptr;
 }
 
 float FKuruStoryClipData_Model::GetTotalLength()
@@ -38,14 +58,10 @@ void FKuruStoryClipData_Model::AddDefaultNewTrack()
 
 void FKuruStoryClipData_Model::RemoveTrack(int trackId)
 {
-	if (GetEditingObj() && GetEditingObj()->Notifies.Num() > trackId)
+	if (GetNotifyByTrackID(trackId))
 	{
+		
 		GetEditingObj()->Notifies.RemoveAt(trackId);
-	}
-	
-	if (RootTracks.Num() > trackId)
-	{
-		RootTracks.RemoveAt(trackId);
 	}
 
 	ReconcileTracks();
@@ -110,41 +126,85 @@ float FKuruStoryClipData_Model::GetTrackEndTime(int trackId)
 
 void FKuruStoryClipData_Model::OnTrackNodeMoved(float DeltaMoveTime,int trackId)
 {
-	if (GetEditingObj())
+	
+	auto Parent = GetEditingObj()->Parent;
+	
+	auto notify = GetNotifyByTrackID(trackId);
+	
+	const FScopedTransaction AddTaskTransaction(FText::FromString("NotifyModify"));
+	notify->Modify();
+
+	
+	if (notify == nullptr)
 	{
-		if (GetEditingObj()->Notifies.Num()>trackId)
-		{
-			auto notify = GetEditingObj()->Notifies[trackId];
-
-			if (notify == nullptr)
-			{
-				return;
-			}
-			
-			float Total = GetEditingObj()->TotalLength;
-			float Start = notify->GetStartTime();
-			float End = notify->GetEndTime();
-			float Delta = DeltaMoveTime;
-			if (Start+Delta < 0)
-			{
-				Delta = -Start;
-			}
-
-			if (End + Delta > Total)
-			{
-				Delta = Total - End;
-			}
-			Delta = FMath::RoundToFloat(Delta*GetFrameRate().AsDecimal())/GetFrameRate().AsDecimal();
-			notify->SetStartTime(Start+Delta);
-			notify->SetEndTime(End+Delta);
-			notify->StartFrame=notify->GetStartFrame();
-			UE_LOG(LogInit,Error,TEXT("Decimal is %g, ret is %d"),notify->BaseFrameRate.AsDecimal(),notify->GetStartFrame());
-			notify->EndFrame=notify->GetEndFrame();
-		}
+		return;
 	}
+	
+	float Total = GetEditingObj()->TotalLength;
+	float Start = notify->GetStartTime();
+	float End = notify->GetEndTime();
+	float Delta = DeltaMoveTime;
+	if (Start+Delta < 0)
+	{
+		Delta = -Start;
+	}
+
+	if (End + Delta > Total)
+	{
+		Delta = Total - End;
+	}
+	Delta = FMath::RoundToFloat(Delta*GetFrameRate().AsDecimal())/GetFrameRate().AsDecimal();
+	notify->SetStartTime(Start+Delta);
+	notify->SetEndTime(End+Delta);
+	notify->StartFrame=notify->GetStartFrame();
+	//UE_LOG(LogInit,Error,TEXT("Decimal is %g, ret is %d"),notify->BaseFrameRate.AsDecimal(),notify->GetStartFrame());
+	notify->EndFrame=notify->GetEndFrame();
+		
 }
 
-void FKuruStoryClipData_Model::OnTrackNodeStretched(float NewStartTime, float NewEndTime,int trackId)
+void FKuruStoryClipData_Model::OnDropWithNewStartDelta(float DeltaMoveTime, int trackId)
 {
+	auto notify = GetNotifyByTrackID(trackId);
+
+	if (notify == nullptr)
+	{
+		return;
+	}
 	
+	const FScopedTransaction AddTaskTransaction(FText::FromString("NotifyModify"));
+	notify->Modify();
+	
+	DeltaMoveTime = FMath::RoundToFloat(DeltaMoveTime*GetFrameRate().AsDecimal())/GetFrameRate().AsDecimal();
+	float Start = notify->GetStartTime();
+	float End = notify->GetEndTime();
+
+	float NewStart = Start + DeltaMoveTime;
+	NewStart = FMath::Clamp(NewStart,0 , End - 1/GetFrameRate().AsDecimal() );
+	notify->SetStartTime(NewStart);
+	notify->StartFrame = notify->GetStartFrame();
+}
+
+void FKuruStoryClipData_Model::OnDropWithNewEndDelta(float DeltaMoveTime, int trackId)
+{
+
+	
+	auto notify = GetNotifyByTrackID(trackId);
+
+	if (notify == nullptr)
+	{
+		return;
+	}
+
+	const FScopedTransaction AddTaskTransaction(FText::FromString("NotifyModify"));
+	notify->Modify();
+
+	DeltaMoveTime = FMath::RoundToFloat(DeltaMoveTime*GetFrameRate().AsDecimal())/GetFrameRate().AsDecimal();
+	float Total = GetEditingObj()->TotalLength;
+	float Start = notify->GetStartTime();
+	float End = notify->GetEndTime();
+
+	float NewEnd = End + DeltaMoveTime;
+	NewEnd = FMath::Clamp(NewEnd,Start + 1/GetFrameRate().AsDecimal() , Total);
+	notify->SetEndTime(NewEnd);
+	notify->EndFrame = notify->GetEndFrame();
 }

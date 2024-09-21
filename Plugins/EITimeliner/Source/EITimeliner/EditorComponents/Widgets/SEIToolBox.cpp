@@ -27,6 +27,7 @@ void SEIToolBox::Construct(const FArguments& Arguments, const TSharedRef<FEITime
 				SNew(SHorizontalBox)
 				+SHorizontalBox::Slot().Padding(0,5,0,5).AutoWidth()[
 							SNew(STextBlock).Text(FText::FromString(TEXT("总时长："))).Font(TitleTextFont)
+							.ColorAndOpacity(FEIWidgetStores::KawaiiBlack)
 					].VAlign(VAlign_Center).HAlign(HAlign_Center)
 				+
 				SHorizontalBox::Slot().Padding(5).AutoWidth()[
@@ -37,6 +38,7 @@ void SEIToolBox::Construct(const FArguments& Arguments, const TSharedRef<FEITime
 				
 				+SHorizontalBox::Slot().Padding(0,5,0,5).AutoWidth()[
 							SNew(STextBlock).Text(FText::FromString(TEXT("选中起始时间："))).Font(TitleTextFont)
+							.ColorAndOpacity(FEIWidgetStores::KawaiiBlack)
 					].VAlign(VAlign_Center).HAlign(HAlign_Center)
 				+
 				SHorizontalBox::Slot().Padding(5).AutoWidth()[
@@ -46,7 +48,8 @@ void SEIToolBox::Construct(const FArguments& Arguments, const TSharedRef<FEITime
 				]
 				
 				+SHorizontalBox::Slot().Padding(0,5,0,5).AutoWidth()[
-							SNew(STextBlock).Text(FText::FromString(TEXT("总时长："))).Font(TitleTextFont)
+							SNew(STextBlock).Text(FText::FromString(TEXT("选中结束时间："))).Font(TitleTextFont)
+							.ColorAndOpacity(FEIWidgetStores::KawaiiBlack)
 					].VAlign(VAlign_Center).HAlign(HAlign_Center)
 				+
 				SHorizontalBox::Slot().Padding(5).AutoWidth()[
@@ -56,7 +59,15 @@ void SEIToolBox::Construct(const FArguments& Arguments, const TSharedRef<FEITime
 				]
 			]
 
-			+SVerticalBox::Slot().Padding(5,50,0,0).VAlign(VAlign_Fill).HAlign(HAlign_Fill).AutoHeight()
+			+SVerticalBox::Slot().AutoHeight()
+			[
+				SNew(STextBlock)
+				.ColorAndOpacity(FEIWidgetStores::KawaiiBlack)
+				.Text(FText::FromString(TEXT("指令库")))
+				.Font(TitleTextFont)
+			]
+
+			+SVerticalBox::Slot().Padding(5,2,0,0).VAlign(VAlign_Fill).HAlign(HAlign_Fill).AutoHeight()
 			[
 				SNew(SHorizontalBox)
 				+SHorizontalBox::Slot().Padding(0,5,0,5).VAlign(VAlign_Fill).HAlign(HAlign_Fill).AutoWidth()[
@@ -80,7 +91,7 @@ void SEIToolBox::Construct(const FArguments& Arguments, const TSharedRef<FEITime
 				].VAlign(VAlign_Center).HAlign(HAlign_Center)
 				
 				+SHorizontalBox::Slot().Padding(25,5,0,5).AutoWidth()[
-					SAssignNew(Button_DeleteChosenNotify,SButton).Text(FText::FromString(TEXT("删")))
+					SAssignNew(Button_DeleteChosenNotify,SButton).Text(FText::FromString(TEXT("删除")))
 					.ButtonStyle(FEIWidgetStores::KawaiiDefaultButton)
 					.ForegroundColor(FEIWidgetStores::KawaiiBlack)
 					.OnClicked(this,&SEIToolBox::Bind_OnDeleteChosenNotify)

@@ -1,9 +1,11 @@
 ﻿#include "KuruStoryNotifyLibrary.h"
 
 #include "EITimeliner/ControllerInterface/EITimelinerContext.h"
+#include "EITimeliner/ControllerInterface/EITimelinerTopWidgetBase.h"
 #include "KuruStoryModule/Data/StoryNotifies/StoryNotifyEventBase.h"
 #include "KuruStoryModule/Data/Timeline/KuruStoryClipData_Model.h"
 #include "KuruStoryModule/Data/KuruStoryClipData.h"
+#include "KuruStoryModule/Data/KuruStorySectionData.h"
 
 UKuruStoryClipData* FKuruStoryNotifyLibrary::GetEdittingObj() const
 {
@@ -33,7 +35,7 @@ void FKuruStoryNotifyLibrary::Initialize()
 
 FReply FKuruStoryNotifyLibrary::OnClickAddNotify(FName NotifyName)
 {
-	UStoryNotifyEventBase* NewEvent = NewObject<UStoryNotifyEventBase>(GetEdittingObj());
+	UStoryNotifyEventBase* NewEvent = NewObject<UStoryNotifyEventBase>(GetEdittingObj()->Parent);
 	NewEvent->Name = NotifyName;
 	NewEvent->SetStartTime(0);
 	NewEvent->SetEndTime(1);
@@ -41,6 +43,9 @@ FReply FKuruStoryNotifyLibrary::OnClickAddNotify(FName NotifyName)
 	
 	if (GetEdittingObj())
 	{
+		const FScopedTransaction AddTaskTransaction(FText::FromString("NotifyAdd"));
+		GetEdittingObj()->Modify();
+		
 		GetEdittingObj()->Notifies.Emplace(NewEvent);
 	}
 	
@@ -81,5 +86,26 @@ void FKuruStoryNotifyLibrary::SetClipTotalDuration(float newValue)
 
 FReply FKuruStoryNotifyLibrary::OnDeleteChosenNotify()
 {
+	const FScopedTransaction AddTaskTransaction(FText::FromString("NotifyDeletion"));
+	GetEdittingObj()->Modify();
+	
 	return FEINotifyLibrary::OnDeleteChosenNotify();
+}
+
+FReply FKuruStoryNotifyLibrary::OnChooseTrack(int ChooseID)
+{
+	FReply RepBase = FEINotifyLibrary::OnChooseTrack(ChooseID);
+	if (Context.IsValid() && GetEdittingObj())
+	{
+		if (Context.Pin()->TopWidget.IsValid())
+		{
+			if (Context.Pin()->TopWidget.Pin()->NotifyDetailView.IsValid())
+			{
+				Context.Pin()->TopWidget.Pin()->NotifyDetailView->
+					SetObject(GetEdittingObj()->Notifies[CurrentChosenTrackIndex],true);
+			}
+		}
+	}
+
+	return RepBase;
 }

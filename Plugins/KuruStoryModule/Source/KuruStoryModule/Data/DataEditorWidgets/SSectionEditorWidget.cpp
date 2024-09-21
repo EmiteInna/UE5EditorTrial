@@ -38,7 +38,10 @@ void SSectionEditorWidget::Construct(const FArguments& InArgs,const TSharedPtr<F
 					].VAlign(VAlign_Center).HAlign(HAlign_Center)
 					
 					+SHorizontalBox::Slot().Padding(0,5).AutoWidth()[
-						SAssignNew(TitleTextBox,SEditableTextBox).Text(FTFs(GetTitleText()))
+						SAssignNew(TitleTextBox,SEditableTextBox).Text(MakeAttributeLambda([this]()
+						{
+							return FTFs(GetTitleText());
+						}))
 						.MinDesiredWidth(150)
 						.Style(KuruColorStores::KawaiiTextBox)
 						.Font(TitleTextFont).OnTextCommitted(this,&SSectionEditorWidget::Bind_OnEditingTitle)
@@ -197,12 +200,14 @@ FReply SSectionEditorWidget::ChildMoveUp(SSectionClipRowWidget* ChildWidget)
 		int index = GetChildClipIndex(ClipData);
 		if (index != 0 && index != -1)
 		{
+			const FScopedTransaction AddTaskTransaction(FText::FromString("Clip Move"));
+			EditingData->Modify();
+			
 			auto tmp = EditingData->ClipDatas[index-1];
 			EditingData->ClipDatas[index - 1]=ClipData;
 			EditingData->ClipDatas[index] = tmp;
 
-			const FScopedTransaction AddTaskTransaction(FText::FromString("Clip Move"));
-			EditingData->Modify();
+			
 
 			RefreshClipDatas();
 		}
@@ -218,12 +223,14 @@ FReply SSectionEditorWidget::ChildMoveDown(SSectionClipRowWidget* ChildWidget)
 		int index = GetChildClipIndex(ClipData);
 		if (index != EditingData->ClipDatas.Num()-1 && index != -1)
 		{
+			const FScopedTransaction AddTaskTransaction(FText::FromString("Clip Move"));
+			EditingData->Modify();
+			
 			auto tmp = EditingData->ClipDatas[index+1];
 			EditingData->ClipDatas[index + 1]=ClipData;
 			EditingData->ClipDatas[index] = tmp;
 
-			const FScopedTransaction AddTaskTransaction(FText::FromString("Clip Move"));
-			EditingData->Modify();
+			
 
 			RefreshClipDatas();
 		}

@@ -98,14 +98,14 @@ void EmptyLinkFunctionForGeneratedCodeStoryNotifyBase() {}
 		{ "ModuleRelativePath", "Data/StoryNotifies/StoryNotifyBase.h" },
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_StartTime = { "StartTime", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStoryNotifyBase, StartTime), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_StartTime_MetaData), Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_StartTime_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_StartTime = { "StartTime", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStoryNotifyBase, StartTime), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_StartTime_MetaData), Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_StartTime_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_EndTime_MetaData[] = {
 		{ "Category", "StoryNotifyBase" },
 		{ "ModuleRelativePath", "Data/StoryNotifies/StoryNotifyBase.h" },
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_EndTime = { "EndTime", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStoryNotifyBase, EndTime), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_EndTime_MetaData), Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_EndTime_MetaData) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_EndTime = { "EndTime", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStoryNotifyBase, EndTime), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_EndTime_MetaData), Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_EndTime_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_StartFrame_MetaData[] = {
 		{ "Category", "StoryNotifyBase" },
@@ -167,7 +167,6 @@ void EmptyLinkFunctionForGeneratedCodeStoryNotifyBase() {}
 	{
 		return UStoryNotifyBase::StaticClass();
 	}
-	UStoryNotifyBase::UStoryNotifyBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UStoryNotifyBase);
 	UStoryNotifyBase::~UStoryNotifyBase() {}
 	struct Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_StoryNotifies_StoryNotifyBase_h_Statics
@@ -175,9 +174,9 @@ void EmptyLinkFunctionForGeneratedCodeStoryNotifyBase() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_StoryNotifies_StoryNotifyBase_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UStoryNotifyBase, UStoryNotifyBase::StaticClass, TEXT("UStoryNotifyBase"), &Z_Registration_Info_UClass_UStoryNotifyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStoryNotifyBase), 4279502763U) },
+		{ Z_Construct_UClass_UStoryNotifyBase, UStoryNotifyBase::StaticClass, TEXT("UStoryNotifyBase"), &Z_Registration_Info_UClass_UStoryNotifyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStoryNotifyBase), 1381687147U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_StoryNotifies_StoryNotifyBase_h_3574581713(TEXT("/Script/KuruStoryModule"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_StoryNotifies_StoryNotifyBase_h_780348562(TEXT("/Script/KuruStoryModule"),
 		Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_StoryNotifies_StoryNotifyBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryModule_Source_KuruStoryModule_Data_StoryNotifies_StoryNotifyBase_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

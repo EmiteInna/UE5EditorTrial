@@ -2,6 +2,7 @@
 
 #include "EINotifyItem.h"
 #include "EITimeliner/ControllerInterface/EITimelinerContext.h"
+#include "EITimeliner/DataInterface/EITimelineEditingModel.h"
 
 void FEINotifyLibrary::Initialize()
 {
@@ -68,5 +69,35 @@ FReply FEINotifyLibrary::OnClickOpenNotifyDescriptionWindow(FName NotifyName)
 FReply FEINotifyLibrary::OnClickAddNotify(FName NotifyName)
 {
 	//我直接啥都不干
+	return FReply::Handled();
+}
+
+FReply FEINotifyLibrary::OnChooseTrack(int ChooseID)
+{
+	CurrentChosenTrackIndex = ChooseID;
+	
+	return FReply::Handled();
+}
+
+FReply FEINotifyLibrary::OnDeleteChosenNotify()
+{
+	const int Index = CurrentChosenTrackIndex;
+	if (Context.IsValid())
+	{
+		if (Context.Pin()->EditingModel.IsValid())
+		{
+			if (Context.Pin()->EditingModel.Pin()->EditingInstacne)
+			{
+				
+
+				Context.Pin()->EditingModel.Pin()->RemoveTrack(Index);
+			}
+			
+			
+		}
+	}
+
+	
+	
 	return FReply::Handled();
 }
