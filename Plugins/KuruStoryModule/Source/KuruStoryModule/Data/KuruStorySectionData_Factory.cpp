@@ -3,7 +3,7 @@
 
 #include "KuruStorySectionData_Factory.h"
 
-#include "KuruStorySectionData.h"
+#include "KuruStoryRuntime/KuruStorySectionData.h"
 
 UKuruStorySectionData_Factory::UKuruStorySectionData_Factory()
 {

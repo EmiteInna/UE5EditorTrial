@@ -75,7 +75,7 @@ public:
 		Context = InContext;
 	}
 
-	virtual ~FEITimelineTrack() {}
+	virtual ~FEITimelineTrack();
 
 	/** Get the children of this object */
 	const TArray<TSharedRef<FEITimelineTrack>>& GetChildren() { return Children; }

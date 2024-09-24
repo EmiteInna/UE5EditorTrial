@@ -56,4 +56,6 @@ private:
 	TWeakPtr<FEITimelinerContext> Context;
 
 	int trackId = 0;
+public:
+	virtual ~SEITrack();
 };

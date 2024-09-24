@@ -35,7 +35,8 @@ public class EITimeliner : ModuleRules
 				"ContentBrowser", 
 				"SequencerWidgets",
 				"TimeManagement",
-				"AdvancedPreviewScene"
+				"AdvancedPreviewScene",
+				"RenderCore"
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);

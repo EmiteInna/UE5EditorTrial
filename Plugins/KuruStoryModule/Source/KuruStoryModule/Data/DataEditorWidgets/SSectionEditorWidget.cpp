@@ -1,8 +1,8 @@
 ﻿#include "SSectionEditorWidget.h"
 
 #include "SSectionClipRowWidget.h"
-#include "KuruStoryModule/Data/KuruStoryClipData.h"
-#include "KuruStoryModule/Data/KuruStorySectionData.h"
+#include "KuruStoryRuntime/KuruStoryClipData.h"
+#include "KuruStoryRuntime/KuruStorySectionData.h"
 #include "KuruStoryModule/Types/ColorStores.h"
 #include "Widgets/Input/SMultiLineEditableTextBox.h"
 

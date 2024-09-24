@@ -2,10 +2,10 @@
 
 #include "EITimeliner/ControllerInterface/EITimelinerContext.h"
 #include "EITimeliner/ControllerInterface/EITimelinerTopWidgetBase.h"
-#include "KuruStoryModule/Data/StoryNotifies/StoryNotifyEventBase.h"
 #include "KuruStoryModule/Data/Timeline/KuruStoryClipData_Model.h"
-#include "KuruStoryModule/Data/KuruStoryClipData.h"
-#include "KuruStoryModule/Data/KuruStorySectionData.h"
+#include "KuruStoryRuntime/KuruStoryClipData.h"
+#include "KuruStoryRuntime/KuruStorySectionData.h"
+#include "KuruStoryRuntime/StoryNotifies/StoryNotifyEventBase.h"
 
 UKuruStoryClipData* FKuruStoryNotifyLibrary::GetEdittingObj() const
 {

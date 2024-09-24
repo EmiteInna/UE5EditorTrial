@@ -44,6 +44,171 @@
     <None Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EITimeliner.Build.cs">
       <Filter>Plugins\EITimeliner\Source\EITimeliner</Filter>
     </None>
+    <Filter Include="Plugins\EITimeliner\Source\EITimeliner\ControllerInterface">
+      <UniqueIdentifier>{221E236B-470E-3D5A-93D0-78FD1BE29F66}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\ControllerInterface\EITimelinerContext.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\ControllerInterface</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\ControllerInterface\EITimelinerContext.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\ControllerInterface</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\ControllerInterface\EITimelinerCoreBase.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\ControllerInterface</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\ControllerInterface\EITimelinerCoreBase.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\ControllerInterface</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\ControllerInterface\EITimelinerTopWidgetBase.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\ControllerInterface</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\ControllerInterface\EITimelinerTopWidgetBase.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\ControllerInterface</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\EITimeliner\Source\EITimeliner\DataInterface">
+      <UniqueIdentifier>{1314F547-5CEA-35D4-A54A-247717AB2AE7}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\DataInterface\EINotify.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\DataInterface</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\DataInterface\EINotify.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\DataInterface</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\DataInterface\EINotifyListContainer.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\DataInterface</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\DataInterface\EINotifyListContainer.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\DataInterface</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\DataInterface\EITimelineEditingModel.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\DataInterface</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\DataInterface\EITimelineEditingModel.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\DataInterface</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\EITimeliner\Source\EITimeliner\EditorComponents">
+      <UniqueIdentifier>{9764E61C-551D-3142-8729-4CAB517B2032}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\EINotifyItem.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\EINotifyItem.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\FEINotifyLibrary.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\FEINotifyLibrary.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\FEIPreviewScene.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\FEIPreviewScene.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\FEITimelineTrack.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\FEITimelineTrack.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\FEITimeSliderController.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\FEITimeSliderController.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\FEIViewportClient.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\FEIViewportClient.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets">
+      <UniqueIdentifier>{ED06F45B-CF71-33FE-A506-792CF60B7F51}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEIEditorViewport.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEIEditorViewport.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEINotifyPickerRow.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEINotifyPickerRow.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITimelineContainer.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITimelineContainer.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITimelineControlPanel.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITimelineControlPanel.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITimelineNode.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITimelineNode.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITimelineOverlay.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITimelineOverlay.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITimelineSplitterOverlay.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITimelineSplitterOverlay.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEIToolBox.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEIToolBox.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITrack.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITrack.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITrackArea.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITrackArea.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITrackOutliner.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITrackOutliner.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITrackOutlinerItem.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets\SEITrackOutlinerItem.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorComponents\Widgets</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\EITimeliner\Source\EITimeliner\EditorUtils">
+      <UniqueIdentifier>{8399EF4A-F504-3E71-B616-5449569A1528}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorUtils\EIWidgetStore.cpp">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorUtils</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\EITimeliner\Source\EITimeliner\EditorUtils\EIWidgetStore.h">
+      <Filter>Plugins\EITimeliner\Source\EITimeliner\EditorUtils</Filter>
+    </ClInclude>
     <Filter Include="Plugins\EITimeliner\Source\EITimeliner\Private">
       <UniqueIdentifier>{7657E3DE-140B-369D-A941-E484D0AF2D40}</UniqueIdentifier>
     </Filter>
@@ -122,6 +287,18 @@
     <None Include="..\..\Plugins\KuruStoryModule\Resources\Icon128.png">
       <Filter>Plugins\KuruStoryModule\Resources</Filter>
     </None>
+    <Filter Include="Plugins\KuruStoryRuntime">
+      <UniqueIdentifier>{43C52365-0E7E-3222-9518-09D6EC7A48C8}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\KuruStoryRuntime\KuruStoryRuntime.uplugin">
+      <Filter>Plugins\KuruStoryRuntime</Filter>
+    </None>
+    <Filter Include="Plugins\KuruStoryRuntime\Resources">
+      <UniqueIdentifier>{E8C5500F-988A-3665-95CE-E77ADBD72507}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\KuruStoryRuntime\Resources\Icon128.png">
+      <Filter>Plugins\KuruStoryRuntime\Resources</Filter>
+    </None>
     <Filter Include="Plugins\KuruEditorToolMaker\Source">
       <UniqueIdentifier>{E99C6ED7-6989-332B-A5DD-E27D28C64D56}</UniqueIdentifier>
     </Filter>
@@ -167,24 +344,6 @@
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\KuruStoryClipData.h">
       <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\KuruStoryClipData_AssetDefinition.cpp">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\KuruStoryClipData_AssetDefinition.h">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\KuruStoryClipData_EditorTool.cpp">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\KuruStoryClipData_EditorTool.h">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\KuruStoryClipData_Factory.cpp">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\KuruStoryClipData_Factory.h">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\KuruStorySectionData.cpp">
       <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data</Filter>
     </ClCompile>
@@ -212,34 +371,10 @@
     <Filter Include="Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets">
       <UniqueIdentifier>{AFC0A1F7-04C0-3B8F-8841-88D79E021700}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\KuruTimeSliderController.cpp">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\KuruTimeSliderController.h">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SClipTimelineWidget.cpp">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SClipTimelineWidget.h">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SImageSelectorWidget.cpp">
       <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SImageSelectorWidget.h">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SKuruTimelineContainer.cpp">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SKuruTimelineContainer.h">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SKuruTimelineControlPanel.cpp">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SKuruTimelineControlPanel.h">
       <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SSectionClipRowWidget.cpp">
@@ -254,95 +389,47 @@
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\SSectionEditorWidget.h">
       <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets</Filter>
     </ClInclude>
-    <Filter Include="Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack">
-      <UniqueIdentifier>{437D9993-F5E3-39A0-8E86-B7EA3354E6B8}</UniqueIdentifier>
+    <Filter Include="Plugins\KuruStoryModule\Source\KuruStoryModule\Data\StoryNotifies">
+      <UniqueIdentifier>{819A7CC0-4A29-3709-A97D-EE3F0A0883C8}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SKuruTimelineOverlay.cpp">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack</Filter>
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\StoryNotifies\StoryNotifyBase.cpp">
+      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\StoryNotifies</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SKuruTimelineOverlay.h">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack</Filter>
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\StoryNotifies\StoryNotifyBase.h">
+      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\StoryNotifies</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SKuruTimelineSplitterOverlay.cpp">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack</Filter>
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\StoryNotifies\StoryNotifyEventBase.cpp">
+      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\StoryNotifies</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SKuruTimelineSplitterOverlay.h">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack</Filter>
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\StoryNotifies\StoryNotifyEventBase.h">
+      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\StoryNotifies</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SStoryEventTrack.cpp">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SStoryEventTrack.h">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SStoryEventTrackArea.cpp">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SStoryEventTrackArea.h">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SStoryTrackOutliner.cpp">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SStoryTrackOutliner.h">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SStoryTrackOutlinerItem.cpp">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\SStoryTrackOutlinerItem.h">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\StoryTimelineTrack.cpp">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\StoryTimelineTrack.h">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack</Filter>
-    </ClInclude>
-    <Filter Include="Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\TimelineTrackNode">
-      <UniqueIdentifier>{60B80994-DF4E-339B-80A3-1143367E6F3C}</UniqueIdentifier>
+    <Filter Include="Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline">
+      <UniqueIdentifier>{833F0A25-C381-3800-8000-63E613589704}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\TimelineTrackNode\SKuruTimelineNode.cpp">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\TimelineTrackNode</Filter>
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline\KuruSotryTimelinerCore.cpp">
+      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\TimelineTrackNode\SKuruTimelineNode.h">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\DataEditorWidgets\TimelineTrack\TimelineTrackNode</Filter>
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline\KuruSotryTimelinerCore.h">
+      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline</Filter>
     </ClInclude>
-    <Filter Include="Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg">
-      <UniqueIdentifier>{2074D81E-EF42-35DA-87A4-2617B8C04365}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\SStoryClipEditorViewport.cpp">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg</Filter>
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline\KuruStoryClipData_Model.cpp">
+      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\SStoryClipEditorViewport.h">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg</Filter>
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline\KuruStoryClipData_Model.h">
+      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\StoryClipPreviewScene.cpp">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg</Filter>
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline\KuruStoryNotifyLibrary.cpp">
+      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\StoryClipPreviewScene.h">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg</Filter>
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline\KuruStoryNotifyLibrary.h">
+      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\StoryClipViewportClient.cpp">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg</Filter>
+    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline\KuruStoryTimelineTopWidget.cpp">
+      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg\StoryClipViewportClient.h">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\EditorEg</Filter>
-    </ClInclude>
-    <Filter Include="Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Runtime">
-      <UniqueIdentifier>{A8B33A0D-A081-374F-8F99-6284D5199680}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Runtime\KuruStoryClipDataInstance.cpp">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Runtime</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Runtime\KuruStoryClipDataInstance.h">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Runtime</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Runtime\KuruStoryClipEditorExecutor.cpp">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Runtime</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Runtime\KuruStoryClipEditorExecutor.h">
-      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Runtime</Filter>
+    <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline\KuruStoryTimelineTopWidget.h">
+      <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Data\Timeline</Filter>
     </ClInclude>
     <Filter Include="Plugins\KuruStoryModule\Source\KuruStoryModule\Private">
       <UniqueIdentifier>{F9D9FB78-38AE-302C-B018-A212F1CCBB7A}</UniqueIdentifier>
@@ -376,6 +463,27 @@
     </ClCompile>
     <ClInclude Include="..\..\Plugins\KuruStoryModule\Source\KuruStoryModule\Types\KuruTabUtil.h">
       <Filter>Plugins\KuruStoryModule\Source\KuruStoryModule\Types</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\KuruStoryRuntime\Source">
+      <UniqueIdentifier>{F5A86299-98F6-3AF6-AD56-4A7AE608A236}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\KuruStoryRuntime\Source\KuruStoryRuntime">
+      <UniqueIdentifier>{135617F4-B6B9-31AC-B332-E2DE5B043A3F}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\KuruStoryRuntime\Source\KuruStoryRuntime\KuruStoryRuntime.Build.cs">
+      <Filter>Plugins\KuruStoryRuntime\Source\KuruStoryRuntime</Filter>
+    </None>
+    <Filter Include="Plugins\KuruStoryRuntime\Source\KuruStoryRuntime\Private">
+      <UniqueIdentifier>{B9A0D486-D50A-3620-9AFB-1D86AEE42300}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\KuruStoryRuntime\Source\KuruStoryRuntime\Private\KuruStoryRuntime.cpp">
+      <Filter>Plugins\KuruStoryRuntime\Source\KuruStoryRuntime\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\KuruStoryRuntime\Source\KuruStoryRuntime\Public">
+      <UniqueIdentifier>{430290F4-2E38-33E9-9B8B-97F8DF9760B8}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\KuruStoryRuntime\Source\KuruStoryRuntime\Public\KuruStoryRuntime.h">
+      <Filter>Plugins\KuruStoryRuntime\Source\KuruStoryRuntime\Public</Filter>
     </ClInclude>
     <Filter Include="Source\KuruADV">
       <UniqueIdentifier>{112F0537-2789-31FF-AA66-619C0F71D7D0}</UniqueIdentifier>
@@ -411,6 +519,12 @@
       <Filter>Source\KuruADV</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\KuruADV\TestObj_Factory.h">
+      <Filter>Source\KuruADV</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\KuruADV\TestRawObject.cpp">
+      <Filter>Source\KuruADV</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\KuruADV\TestRawObject.h">
       <Filter>Source\KuruADV</Filter>
     </ClInclude>
   </ItemGroup>

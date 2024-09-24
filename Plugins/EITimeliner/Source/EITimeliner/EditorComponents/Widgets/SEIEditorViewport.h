@@ -35,4 +35,6 @@ public:
 	TWeakPtr<FAssetEditorToolkit> EditorTool;
 
 	TWeakPtr<FEITimelinerContext> Context;
+
+	virtual ~SEIEditorViewport();
 };

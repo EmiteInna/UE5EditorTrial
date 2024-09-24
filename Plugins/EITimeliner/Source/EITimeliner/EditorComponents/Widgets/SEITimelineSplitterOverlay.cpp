@@ -69,7 +69,12 @@ FMargin SEITimelineSplitterOverlay::GetSplitterHandlePadding(int32 Index) const
 
 	return 0.f;
 }
-	
+
+SEITimelineSplitterOverlay::~SEITimelineSplitterOverlay()
+{
+	UE_LOG(LogMemory,Display,TEXT("[Kuru编辑器内存] TimelineSplitterOverlay 被摧毁"))
+}
+
 FCursorReply SEITimelineSplitterOverlay::OnCursorQuery( const FGeometry& MyGeometry, const FPointerEvent& CursorEvent ) const
 {
 	return Splitter->OnCursorQuery(MyGeometry, CursorEvent);

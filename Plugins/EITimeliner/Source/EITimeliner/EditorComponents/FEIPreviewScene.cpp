@@ -5,6 +5,13 @@ FEIPreviewScene::FEIPreviewScene(ConstructionValues CVS, float InFloorOffset): F
 
 FEIPreviewScene::~FEIPreviewScene()
 {
+	if(GetWorld())
+	{
+		GetWorld()->CleanupWorld(true,true);
+		FlushRenderingCommands();
+		CollectGarbage(GARBAGE_COLLECTION_KEEPFLAGS);
+	}
+	UE_LOG(LogMemory,Display,TEXT("[Kuru编辑器内存] PreviewScene 被摧毁"))
 }
 
 void FEIPreviewScene::CreatePreviewInstance(TSharedRef<FEITimelinerContext> InContext)

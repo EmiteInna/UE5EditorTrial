@@ -254,4 +254,6 @@ private:
 	TSharedPtr<INumericTypeInterface<double>> SecondaryNumericTypeInterface;
 
 	TWeakPtr<FEITimelinerContext> Context;
+public:
+	virtual ~FEITimeSliderController();
 };

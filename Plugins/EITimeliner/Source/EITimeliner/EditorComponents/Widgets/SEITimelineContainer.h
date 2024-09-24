@@ -127,4 +127,6 @@ public:
 
 	/** Filter text used to search the tree */
 	FText FilterText;
+
+	virtual ~SEITimelineContainer();
 };

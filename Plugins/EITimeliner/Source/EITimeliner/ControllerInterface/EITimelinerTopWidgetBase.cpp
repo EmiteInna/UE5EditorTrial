@@ -142,6 +142,7 @@ TSharedRef<SDockTab> SEITimelinerTopWidgetBase::SpawnTimelineTab(const FSpawnTab
 TSharedRef<SDockTab> SEITimelinerTopWidgetBase::SpawnPreviewTab(const FSpawnTabArgs& Args)
 {
 	FEIEditorViewportRequireArgs Arg(PreviewScene.ToSharedRef(),AssetEditorToolkit.Pin().ToSharedRef());
+	//return SNew(SDockTab);
 	return SNew(SDockTab)
 		   .TabRole(ETabRole::PanelTab)
 		   [
@@ -173,3 +174,9 @@ TSharedRef<SDockTab> SEITimelinerTopWidgetBase::SpawnDetailTab(const FSpawnTabAr
 		AssetPropertyView
 	];
 }
+
+SEITimelinerTopWidgetBase::~SEITimelinerTopWidgetBase()
+{
+	UE_LOG(LogMemory,Display,TEXT("[Kuru编辑器内存] TopWidget 被摧毁"))
+}
+

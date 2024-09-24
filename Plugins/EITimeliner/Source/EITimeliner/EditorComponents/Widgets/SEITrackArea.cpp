@@ -240,3 +240,8 @@ FChildren* SEITrackArea::GetChildren()
 void SEITrackArea::UpdateHoverStates(const FGeometry& MyGeometry, const FPointerEvent& MouseEvent)
 {
 }
+
+SEITrackArea::~SEITrackArea()
+{
+	UE_LOG(LogMemory,Display,TEXT("[Kuru编辑器内存] TrackArea 被摧毁"))
+}

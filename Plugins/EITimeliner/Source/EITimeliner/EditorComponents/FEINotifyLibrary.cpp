@@ -101,3 +101,8 @@ FReply FEINotifyLibrary::OnDeleteChosenNotify()
 	
 	return FReply::Handled();
 }
+
+FEINotifyLibrary::~FEINotifyLibrary()
+{
+	UE_LOG(LogMemory,Display,TEXT("[Kuru编辑器内存] NotifyLibrary 被摧毁"))
+}

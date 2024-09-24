@@ -42,4 +42,6 @@ public:
 	EPlaybackMode::Type GetPlaybackMode() const;
 
 	bool IsRecording() const;
+
+	~SEITimelineControlPanel();
 };

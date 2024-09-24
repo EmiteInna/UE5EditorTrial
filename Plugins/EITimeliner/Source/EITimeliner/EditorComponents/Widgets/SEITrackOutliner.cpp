@@ -11,6 +11,7 @@
 SEITrackOutliner::~SEITrackOutliner()
 {
 	//todo 委托
+	UE_LOG(LogMemory,Display,TEXT("[Kuru编辑器内存] TrackOutliner 被摧毁"))
 }
 
 void SEITrackOutliner::Construct(const FArguments& InArgs,

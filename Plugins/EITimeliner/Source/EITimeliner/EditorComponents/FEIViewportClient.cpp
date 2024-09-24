@@ -18,6 +18,7 @@ FEditorViewportClient(&InEditorToolkit->GetEditorModeManager(),
 
 FEIViewportClient::~FEIViewportClient()
 {
+	UE_LOG(LogMemory,Display,TEXT("[Kuru编辑器内存] ViewportClient 被摧毁"))
 }
 
 void FEIViewportClient::Tick(float DeltaSeconds)

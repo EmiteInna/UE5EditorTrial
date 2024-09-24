@@ -201,3 +201,8 @@ FReply SEIToolBox::Bind_OnDeleteChosenNotify()
 	}
 	return FReply::Handled();
 }
+
+SEIToolBox::~SEIToolBox()
+{
+	UE_LOG(LogMemory,Display,TEXT("[Kuru编辑器内存] Toolbox 被摧毁"))
+}

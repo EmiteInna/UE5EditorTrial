@@ -10,6 +10,8 @@ SEITrackOutlinerItem::~SEITrackOutlinerItem()
 	{
 		Outliner->OnChildRowRemoved(PinnedTrack.ToSharedRef());
 	}
+
+	UE_LOG(LogMemory,Display,TEXT("[Kuru编辑器内存] TrackOutlinerItem 被摧毁"))
 }
 
 void SEITrackOutlinerItem::Construct(const FArguments& InArgs, const TSharedRef<STableViewBase>& InOwnerTableView,

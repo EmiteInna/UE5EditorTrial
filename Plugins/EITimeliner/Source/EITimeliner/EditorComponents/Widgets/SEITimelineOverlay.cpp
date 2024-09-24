@@ -20,3 +20,8 @@ int32 SEITimelineOverlay::OnPaint(const FPaintArgs& Args, const FGeometry& Allot
 
 	return SCompoundWidget::OnPaint( Args, AllottedGeometry, MyCullingRect, OutDrawElements, LayerId, InWidgetStyle, bParentEnabled  );
 }
+
+SEITimelineOverlay::~SEITimelineOverlay()
+{
+	UE_LOG(LogMemory,Display,TEXT("[Kuru编辑器内存] TimelineOverlay 被摧毁"))
+}

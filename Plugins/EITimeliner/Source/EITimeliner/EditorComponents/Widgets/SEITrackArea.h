@@ -96,4 +96,6 @@ private:
 
 	/** Weak pointer to the outliner (used for scrolling interactions). */
 	TWeakPtr<SEITrackOutliner> WeakOutliner;
+public:
+	virtual ~SEITrackArea();
 };

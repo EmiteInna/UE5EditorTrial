@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.KuruStoryRuntime.cpp.obj": [
+			"KuruStoryRuntime.cpp.obj"
+		]
+	}
+}

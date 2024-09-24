@@ -165,3 +165,8 @@ FVector2D SEITrack::ComputeDesiredSize(float LayoutScale) const
 
 	return FVector2D::ZeroVector;
 }
+
+SEITrack::~SEITrack()
+{
+	UE_LOG(LogMemory,Display,TEXT("[Kuru编辑器内存] Track 被摧毁"))
+}

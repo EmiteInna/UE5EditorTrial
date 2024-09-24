@@ -6,11 +6,7 @@
         "PCH": "d:\\04unreal\\unrealengine\\source\\engine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\unrealed\\sharedpch.unrealed.nonoptimized.cpp20.h.pch",
         "Includes": [
             "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\kurustorymodule\\definitions.kurustorymodule.h",
-            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\types\\kuruserializeutil.h",
-            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\kurustoryclipdata.h",
-            "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\sequencerwidgets\\public\\animatedrange.h",
-            "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\sequencerwidgets\\public\\viewrangeinterpolation.h",
-            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\intermediate\\build\\win64\\unrealeditor\\inc\\kurustorymodule\\uht\\kurustoryclipdata.generated.h"
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\types\\kuruserializeutil.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

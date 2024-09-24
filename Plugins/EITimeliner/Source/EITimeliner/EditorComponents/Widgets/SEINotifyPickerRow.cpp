@@ -68,3 +68,8 @@ FReply SEINotifyPickerRow::OnClickPickerAddButton()
 	}
 	return FReply::Handled();
 }
+
+SEINotifyPickerRow::~SEINotifyPickerRow()
+{
+	UE_LOG(LogMemory,Display,TEXT("[Kuru编辑器内存] NotifyPickerRow 被摧毁"))
+}

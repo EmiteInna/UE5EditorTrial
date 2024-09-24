@@ -40,9 +40,11 @@ public:
 	virtual void SetCurrentChosenTrackEndTime(float newValue){};
 	virtual void SetClipTotalDuration(float newValue){};
 	virtual FReply OnDeleteChosenNotify();
-	virtual ~FEINotifyLibrary(){};
+	virtual ~FEINotifyLibrary();
 
 	
 };
+
+
 
 

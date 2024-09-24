@@ -37,3 +37,9 @@ void FEITimelineEditingModel::ForEachRootTrack(TFunctionRef<void(FEITimelineTrac
 		InFunction(Track.Get());
 	}
 }
+
+FEITimelineEditingModel::~FEITimelineEditingModel()
+{
+	UE_LOG(LogMemory,Display,TEXT("[Kuru编辑器内存] Model 被摧毁"))
+}
+

@@ -68,6 +68,8 @@ public:
 	float ConvertScrubTimeToMousePosX(float ScrubTime, const FGeometry& AllottedGeometry)const;
 
 	ENodeOperation GetOperationTypeByClickingPos(float ClickingTime, float EdgeWidth, const FGeometry& AllottedGeometry)const;
+
+	virtual ~SEITimelineNode();
 };
 
 

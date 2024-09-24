@@ -35,6 +35,8 @@ public:
 	void Bind_OnEditingCurrentNotifyBeginTime(const FText& NewText, ETextCommit::Type CommitType);
 	void Bind_OnEditingCurrentNotifyEndTime(const FText& NewText, ETextCommit::Type CommitType);
 	FReply Bind_OnDeleteChosenNotify();
+
+	virtual ~SEIToolBox();
 };
 
 

@@ -118,5 +118,7 @@ public:
 	virtual void OnDropWithNewEndDelta(float DeltaMoveTime,int trackId){};
 	
 
-	virtual ~FEITimelineEditingModel(){};
+	virtual ~FEITimelineEditingModel();
 };
+
+

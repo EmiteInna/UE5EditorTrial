@@ -873,4 +873,10 @@ void SEITimelineContainer::SetPlayTime(double InFrameTime)
 	}*/
 }
 
+SEITimelineContainer::~SEITimelineContainer()
+{
+
+	UE_LOG(LogMemory,Display,TEXT("[Kuru编辑器内存] TimelineContainer 被摧毁"))
+}
+
 #undef LOCTEXT_NAMESPACE

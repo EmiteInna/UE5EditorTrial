@@ -1,5 +1,4 @@
 ﻿#pragma once
-#include "KuruStoryModule/Data/KuruStoryClipData.h"
 
 
 class KuruSerializeUtil

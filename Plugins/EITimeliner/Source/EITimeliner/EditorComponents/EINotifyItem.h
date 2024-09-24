@@ -14,4 +14,8 @@ public:
 	FName NotifyName = "";
 
 	FString NotifyDescription = "";
+
+	virtual ~UEINotifyItem();
 };
+
+

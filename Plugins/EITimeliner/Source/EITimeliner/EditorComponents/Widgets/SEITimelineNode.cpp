@@ -389,3 +389,8 @@ ENodeOperation SEITimelineNode::GetOperationTypeByClickingPos(float ClickingTime
 
 	return E_DragBody;
 }
+
+SEITimelineNode::~SEITimelineNode()
+{
+	UE_LOG(LogMemory,Display,TEXT("[Kuru编辑器内存] TimelineNode 被摧毁"))
+}

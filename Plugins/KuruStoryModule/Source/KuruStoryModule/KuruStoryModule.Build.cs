@@ -33,7 +33,8 @@ public class KuruStoryModule : ModuleRules
 				"SequencerWidgets",
 				"TimeManagement",
 				"AdvancedPreviewScene",
-				"EITimeliner"
+				"EITimeliner",
+				"KuruStoryRuntime"
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);

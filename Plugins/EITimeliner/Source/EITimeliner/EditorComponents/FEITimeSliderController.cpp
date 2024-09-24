@@ -517,6 +517,11 @@ int32 FEITimeSliderController::DrawEditableTimes(const FGeometry& AllottedGeomet
 	return LayerId + 1;
 }
 
+FEITimeSliderController::~FEITimeSliderController()
+{
+	UE_LOG(LogMemory,Display,TEXT("[Kuru编辑器内存] TimelineSliderController 被摧毁"))
+}
+
 FReply FEITimeSliderController::OnMouseButtonDown( SWidget& WidgetOwner, const FGeometry& MyGeometry, const FPointerEvent& MouseEvent )
 {
 	DistanceDragged = 0;

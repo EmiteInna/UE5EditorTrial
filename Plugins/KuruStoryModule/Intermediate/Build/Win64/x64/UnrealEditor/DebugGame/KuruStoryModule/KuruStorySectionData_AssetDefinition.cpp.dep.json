@@ -1,0 +1,40 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\kurustorysectiondata_assetdefinition.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\04unreal\\unrealengine\\source\\engine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\unrealed\\sharedpch.unrealed.nonoptimized.cpp20.h.pch",
+        "Includes": [
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\kurustorymodule\\definitions.kurustorymodule.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\kurustorysectiondata_assetdefinition.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\unrealed\\public\\assetdefinitiondefault.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\assetdefinition\\public\\assetdefinition.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\runtime\\core\\public\\misc\\scopedslowtask.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\assetdefinition\\public\\misc\\assetfilterdata.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\assetdefinition\\public\\misc\\assetcategorypath.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\assetdefinition\\uht\\assetfilterdata.generated.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\assetdefinition\\uht\\assetdefinition.generated.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealed\\uht\\assetdefinitiondefault.generated.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\developer\\assettools\\public\\assettypeactions_base.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\developer\\assettools\\public\\iassettools.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\developer\\assettools\\public\\assettypecategories.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\developer\\assettools\\public\\iassettypeactions.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\developer\\merge\\public\\merge.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\unrealed\\classes\\thumbnailrendering\\thumbnailmanager.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\unrealed\\classes\\thumbnailrendering\\thumbnailrenderer.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealed\\uht\\thumbnailrenderer.generated.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealed\\uht\\thumbnailmanager.generated.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\unrealed\\public\\automatedassetimportdata.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealed\\uht\\automatedassetimportdata.generated.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\assettools\\uht\\iassettools.generated.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\developer\\assettools\\public\\assettoolsmodule.h",
+            "d:\\04unreal\\unrealengine\\source\\engine\\source\\editor\\unrealed\\public\\toolkits\\simpleasseteditor.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustoryruntime\\source\\kurustoryruntime\\kurustorysectiondata.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustoryruntime\\intermediate\\build\\win64\\unrealeditor\\inc\\kurustoryruntime\\uht\\kurustorysectiondata.generated.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\intermediate\\build\\win64\\unrealeditor\\inc\\kurustorymodule\\uht\\kurustorysectiondata_assetdefinition.generated.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustorymodule\\source\\kurustorymodule\\data\\kurustorysectiondata_editortool.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

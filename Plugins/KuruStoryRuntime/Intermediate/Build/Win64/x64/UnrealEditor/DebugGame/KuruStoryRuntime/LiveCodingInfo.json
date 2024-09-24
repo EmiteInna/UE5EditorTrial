@@ -1,0 +1,17 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.KuruStoryRuntime.cpp.obj": [
+			"KuruStoryClipData.gen.cpp.obj",
+			"KuruStoryRuntime.init.gen.cpp.obj",
+			"KuruStorySectionData.gen.cpp.obj",
+			"StoryNotifyBase.gen.cpp.obj",
+			"StoryNotifyEventBase.gen.cpp.obj",
+			"KuruStoryClipData.cpp.obj",
+			"KuruStorySectionData.cpp.obj",
+			"KuruStoryRuntime.cpp.obj",
+			"StoryNotifyBase.cpp.obj",
+			"StoryNotifyEventBase.cpp.obj"
+		]
+	}
+}

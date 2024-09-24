@@ -71,8 +71,9 @@ public:
 	virtual TSharedRef<SEIToolBox> CreateToolBox(const TSharedRef<FEITimelinerContext>& Context);
 	
 	virtual TSharedRef<SEINotifyPickerRow> CreateNotifyPickerRow(const TSharedRef<FEITimelinerContext>& Context,TSharedPtr<UEINotifyItem> Item);
-};
 
+	virtual ~FEITimelinerCoreBase();
+};
 
 
 

@@ -21,4 +21,6 @@ private:
 
 	TSharedPtr<SSplitter> Splitter;
 	mutable TArray<FMargin> SlotPadding;
+public:
+	virtual ~SEITimelineSplitterOverlay();
 };

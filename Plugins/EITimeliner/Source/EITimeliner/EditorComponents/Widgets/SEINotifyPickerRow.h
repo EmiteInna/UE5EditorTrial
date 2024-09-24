@@ -20,6 +20,8 @@ public:
 
 	FReply OnClickPickerNameButton();
 	FReply OnClickPickerAddButton();
+
+	virtual ~SEINotifyPickerRow();
 };
 
 

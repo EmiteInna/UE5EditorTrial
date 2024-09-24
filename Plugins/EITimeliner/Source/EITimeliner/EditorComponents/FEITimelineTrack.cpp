@@ -8,6 +8,11 @@ const float FEITimelineTrack::OutlinerRightPadding = 8.0f;
 
 EITIMELINE_IMPLEMENT_TRACK(FEITimelineTrack);
 
+FEITimelineTrack::~FEITimelineTrack()
+{
+	UE_LOG(LogMemory,Display,TEXT("[Kuru编辑器内存] Timeline Track 被摧毁"))
+}
+
 void FEITimelineTrack::AddChild(const TSharedRef<FEITimelineTrack>& InChild)
 {
 }

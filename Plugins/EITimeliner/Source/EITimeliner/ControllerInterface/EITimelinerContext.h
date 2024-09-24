@@ -23,4 +23,6 @@ public:
 	TWeakPtr<FEINotifyLibrary> NotifyLibrary = nullptr;
 	//它被放在这的理由只是为了刷新窗口
 	TWeakPtr<SEITrackOutliner> TrackOutliner = nullptr;
+
+	~FEITimelinerContext();
 };

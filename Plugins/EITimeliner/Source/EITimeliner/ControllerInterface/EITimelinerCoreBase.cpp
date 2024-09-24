@@ -166,3 +166,8 @@ TSharedRef<SEINotifyPickerRow> FEITimelinerCoreBase::CreateNotifyPickerRow(
 {
 	return SNew(SEINotifyPickerRow,Context,Item.ToSharedRef());
 }
+
+FEITimelinerCoreBase::~FEITimelinerCoreBase()
+{
+	UE_LOG(LogMemory,Display,TEXT("[Kuru编辑器内存] Core 被摧毁"))
+}

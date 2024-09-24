@@ -47,5 +47,7 @@ public:
 
 	TSharedPtr<IDetailsView> NotifyDetailView = nullptr;	
 	
-	TSharedPtr<FTabManager> WidgetTabManager; 
+	TSharedPtr<FTabManager> WidgetTabManager;
+
+	virtual ~SEITimelinerTopWidgetBase();
 };

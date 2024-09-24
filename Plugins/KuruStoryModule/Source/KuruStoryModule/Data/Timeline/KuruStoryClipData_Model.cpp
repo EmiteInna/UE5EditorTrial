@@ -2,9 +2,9 @@
 
 #include "EITimeliner/EditorComponents/FEITimelineTrack.h"
 #include "EITimeliner/EditorComponents/Widgets/SEITrackOutliner.h"
-#include "KuruStoryModule/Data/KuruStoryClipData.h"
-#include "KuruStoryModule/Data/KuruStorySectionData.h"
-#include "KuruStoryModule/Data/StoryNotifies/StoryNotifyBase.h"
+#include "KuruStoryRuntime/KuruStoryClipData.h"
+#include "KuruStoryRuntime/StoryNotifies/StoryNotifyBase.h"
+
 
 FKuruStoryClipData_Model::FKuruStoryClipData_Model()
 {

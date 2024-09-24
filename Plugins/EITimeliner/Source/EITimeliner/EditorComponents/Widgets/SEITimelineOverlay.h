@@ -40,4 +40,6 @@ private:
 	TAttribute<FPaintPlaybackRangeArgs> PaintPlaybackRangeArgs;
 
 	TWeakPtr<FEITimelinerContext> Context;
+public:
+	virtual  ~SEITimelineOverlay();
 };

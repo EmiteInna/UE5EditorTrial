@@ -144,3 +144,8 @@ bool SEITimelineControlPanel::IsRecording() const
 {
 	return false;
 }
+
+SEITimelineControlPanel::~SEITimelineControlPanel()
+{
+	UE_LOG(LogMemory,Display,TEXT("[Kuru编辑器内存] TimelineControlPanel 被摧毁"))
+}

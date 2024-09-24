@@ -61,3 +61,8 @@ void SEIEditorViewport::PostRedo(bool bSuccess)
 {
 	FEditorUndoClient::PostRedo(bSuccess);
 }
+
+SEIEditorViewport::~SEIEditorViewport()
+{
+	UE_LOG(LogMemory,Display,TEXT("[Kuru编辑器内存] EditorViewport 被摧毁"))
+}
