@@ -58,7 +58,7 @@ void FKuruStoryClipData_Model::AddDefaultNewTrack()
 
 void FKuruStoryClipData_Model::RemoveTrack(int trackId)
 {
-	if (GetNotifyByTrackID(trackId))
+	if (GetNotifyByTrackID(trackId) && GetNotifyByTrackID(trackId)->bCanBeDeleted)
 	{
 		
 		GetEditingObj()->Notifies.RemoveAt(trackId);

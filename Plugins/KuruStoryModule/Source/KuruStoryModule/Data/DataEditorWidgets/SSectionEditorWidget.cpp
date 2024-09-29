@@ -4,6 +4,7 @@
 #include "KuruStoryRuntime/KuruStoryClipData.h"
 #include "KuruStoryRuntime/KuruStorySectionData.h"
 #include "KuruStoryModule/Types/ColorStores.h"
+#include "KuruStoryRuntime/StoryNotifies/SNE_LinkTo.h"
 #include "Widgets/Input/SMultiLineEditableTextBox.h"
 
 #define FTF(a) FText::FromString(TEXT(a))
@@ -168,6 +169,16 @@ FReply SSectionEditorWidget::Button_OnCreatingNewClip()
 	{
 		UKuruStoryClipData* Clip = NewObject<UKuruStoryClipData>(EditingData);
 		Clip->Parent = EditingData;
+		//自带一个无法删除的Link
+		USNE_LinkTo* LinkTo = NewObject<USNE_LinkTo>(Clip);
+
+		LinkTo->SetName("LinkTo");
+		LinkTo->SetStartTime(0);
+		LinkTo->SetEndTime(Clip->TotalLength);
+		LinkTo->bCanBeDeleted = false;
+		LinkTo->bLinkToNext = true;
+		Clip->Notifies.Emplace(LinkTo);
+		
 		const FScopedTransaction AddTaskTransaction(FText::FromString("Create New Clip"));
 		EditingData->Modify();
 		EditingData->ClipDatas.Emplace(Clip);

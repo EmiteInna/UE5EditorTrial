@@ -281,6 +281,9 @@
 /I "H:\KuruEditors\KuruADV\Plugins\KuruStoryModule\Intermediate\Build\Win64\UnrealEditor\Inc\KuruStoryModule\UHT"
 /I "H:\KuruEditors\KuruADV\Plugins\KuruStoryModule\Source"
 /I "H:\KuruEditors\KuruADV\Plugins\KuruStoryModule\Source\KuruStoryModule\Public"
+/I "H:\KuruEditors\KuruADV\Plugins\KuruStoryRuntime\Intermediate\Build\Win64\UnrealEditor\Inc\KuruStoryRuntime\UHT"
+/I "H:\KuruEditors\KuruADV\Plugins\KuruStoryRuntime\Source"
+/I "H:\KuruEditors\KuruADV\Plugins\KuruStoryRuntime\Source\KuruStoryRuntime\Public"
 /external:W0
 /external:I "ThirdParty\mimalloc\include"
 /external:I "ThirdParty\LibTiff\Source\Win64"

@@ -58,6 +58,11 @@ void EmptyLinkFunctionForGeneratedCodeStoryNotifyBase() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_Name_MetaData[];
 #endif
 		static const UECodeGen_Private::FNamePropertyParams NewProp_Name;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_bCanBeDeleted_MetaData[];
+#endif
+		static void NewProp_bCanBeDeleted_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_bCanBeDeleted;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -94,39 +99,56 @@ void EmptyLinkFunctionForGeneratedCodeStoryNotifyBase() {}
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_ObjectOwner = { "ObjectOwner", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStoryNotifyBase, ObjectOwner), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_ObjectOwner_MetaData), Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_ObjectOwner_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_StartTime_MetaData[] = {
-		{ "Category", "StoryNotifyBase" },
+		{ "Category", "Story" },
+		{ "DisplayName", "\xe8\xb5\xb7\xe5\xa7\x8b\xe6\x97\xb6\xe9\x95\xbf" },
 		{ "ModuleRelativePath", "StoryNotifies/StoryNotifyBase.h" },
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_StartTime = { "StartTime", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStoryNotifyBase, StartTime), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_StartTime_MetaData), Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_StartTime_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_EndTime_MetaData[] = {
-		{ "Category", "StoryNotifyBase" },
+		{ "Category", "Story" },
+		{ "DisplayName", "\xe7\xbb\x93\xe6\x9d\x9f\xe6\x97\xb6\xe9\x95\xbf" },
 		{ "ModuleRelativePath", "StoryNotifies/StoryNotifyBase.h" },
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_EndTime = { "EndTime", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStoryNotifyBase, EndTime), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_EndTime_MetaData), Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_EndTime_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_StartFrame_MetaData[] = {
-		{ "Category", "StoryNotifyBase" },
+		{ "Category", "Story" },
+		{ "DisplayName", "\xe8\xb5\xb7\xe5\xa7\x8b\xe5\xb8\xa7" },
 		{ "ModuleRelativePath", "StoryNotifies/StoryNotifyBase.h" },
 	};
 #endif
 	const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_StartFrame = { "StartFrame", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStoryNotifyBase, StartFrame), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_StartFrame_MetaData), Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_StartFrame_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_EndFrame_MetaData[] = {
-		{ "Category", "StoryNotifyBase" },
+		{ "Category", "Story" },
+		{ "DisplayName", "\xe7\xbb\x93\xe6\x9d\x9f\xe5\xb8\xa7" },
 		{ "ModuleRelativePath", "StoryNotifies/StoryNotifyBase.h" },
 	};
 #endif
 	const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_EndFrame = { "EndFrame", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStoryNotifyBase, EndFrame), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_EndFrame_MetaData), Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_EndFrame_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_Name_MetaData[] = {
-		{ "Category", "StoryNotifyBase" },
+		{ "Category", "Story" },
+		{ "DisplayName", "\xe6\x8c\x87\xe4\xbb\xa4\xe5\x90\x8d\xe7\xa7\xb0" },
 		{ "ModuleRelativePath", "StoryNotifies/StoryNotifyBase.h" },
 	};
 #endif
 	const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_Name = { "Name", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStoryNotifyBase, Name), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_Name_MetaData), Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_Name_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_bCanBeDeleted_MetaData[] = {
+		{ "Category", "Story" },
+		{ "DisplayName", "\xe8\x83\xbd\xe5\x90\xa6\xe8\xa2\xab\xe5\x88\xa0\xe9\x99\xa4" },
+		{ "ModuleRelativePath", "StoryNotifies/StoryNotifyBase.h" },
+	};
+#endif
+	void Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_bCanBeDeleted_SetBit(void* Obj)
+	{
+		((UStoryNotifyBase*)Obj)->bCanBeDeleted = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_bCanBeDeleted = { "bCanBeDeleted", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UStoryNotifyBase), &Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_bCanBeDeleted_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_bCanBeDeleted_MetaData), Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_bCanBeDeleted_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UStoryNotifyBase_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_BaseFrameRate,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_ObjectOwner,
@@ -135,6 +157,7 @@ void EmptyLinkFunctionForGeneratedCodeStoryNotifyBase() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_StartFrame,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_EndFrame,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_Name,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStoryNotifyBase_Statics::NewProp_bCanBeDeleted,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UStoryNotifyBase_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UStoryNotifyBase>::IsAbstract,
@@ -174,9 +197,9 @@ void EmptyLinkFunctionForGeneratedCodeStoryNotifyBase() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryRuntime_Source_KuruStoryRuntime_StoryNotifies_StoryNotifyBase_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UStoryNotifyBase, UStoryNotifyBase::StaticClass, TEXT("UStoryNotifyBase"), &Z_Registration_Info_UClass_UStoryNotifyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStoryNotifyBase), 2173134052U) },
+		{ Z_Construct_UClass_UStoryNotifyBase, UStoryNotifyBase::StaticClass, TEXT("UStoryNotifyBase"), &Z_Registration_Info_UClass_UStoryNotifyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStoryNotifyBase), 275625754U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryRuntime_Source_KuruStoryRuntime_StoryNotifies_StoryNotifyBase_h_4157212278(TEXT("/Script/KuruStoryRuntime"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryRuntime_Source_KuruStoryRuntime_StoryNotifies_StoryNotifyBase_h_2703947118(TEXT("/Script/KuruStoryRuntime"),
 		Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryRuntime_Source_KuruStoryRuntime_StoryNotifies_StoryNotifyBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryRuntime_Source_KuruStoryRuntime_StoryNotifies_StoryNotifyBase_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

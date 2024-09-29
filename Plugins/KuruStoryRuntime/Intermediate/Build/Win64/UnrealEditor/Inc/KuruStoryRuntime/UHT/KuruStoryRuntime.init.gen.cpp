@@ -17,13 +17,13 @@ void EmptyLinkFunctionForGeneratedCodeKuruStoryRuntime_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x48C9B78F,
-				0x3F4A8E51,
+				0x3955CCA4,
+				0xA2D510E6,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_KuruStoryRuntime.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_KuruStoryRuntime.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_KuruStoryRuntime(Z_Construct_UPackage__Script_KuruStoryRuntime, TEXT("/Script/KuruStoryRuntime"), Z_Registration_Info_UPackage__Script_KuruStoryRuntime, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x48C9B78F, 0x3F4A8E51));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_KuruStoryRuntime(Z_Construct_UPackage__Script_KuruStoryRuntime, TEXT("/Script/KuruStoryRuntime"), Z_Registration_Info_UPackage__Script_KuruStoryRuntime, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x3955CCA4, 0xA2D510E6));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

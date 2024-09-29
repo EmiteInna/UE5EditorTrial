@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\kurueditors\\kuruadv\\plugins\\kurustoryruntime\\source\\kurustoryruntime\\storynotifies\\sne_showchoices.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\04unreal\\unrealengine\\source\\engine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\engine\\sharedpch.engine.nonoptimized.cpp20.h.pch",
+        "Includes": [
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustoryruntime\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\kurustoryruntime\\definitions.kurustoryruntime.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustoryruntime\\source\\kurustoryruntime\\storynotifies\\sne_showchoices.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustoryruntime\\source\\kurustoryruntime\\storynotifies\\storynotifyeventbase.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustoryruntime\\source\\kurustoryruntime\\storynotifies\\storynotifybase.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustoryruntime\\intermediate\\build\\win64\\unrealeditor\\inc\\kurustoryruntime\\uht\\storynotifybase.generated.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustoryruntime\\intermediate\\build\\win64\\unrealeditor\\inc\\kurustoryruntime\\uht\\storynotifyeventbase.generated.h",
+            "h:\\kurueditors\\kuruadv\\plugins\\kurustoryruntime\\intermediate\\build\\win64\\unrealeditor\\inc\\kurustoryruntime\\uht\\sne_showchoices.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

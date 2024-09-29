@@ -6,18 +6,11 @@
 			"EITimelinerEditorMode.gen.cpp.obj",
 			"EITimelinerInteractiveTool.gen.cpp.obj",
 			"EITimelinerSimpleTool.gen.cpp.obj",
-			"EINotify.cpp.obj",
-			"EINotifyListContainer.cpp.obj",
-			"EIWidgetStore.cpp.obj",
-			"EITimelinerEditorMode.cpp.obj",
-			"EITimelinerEditorModeCommands.cpp.obj",
-			"EITimelinerEditorModeToolkit.cpp.obj",
-			"EITimelinerModule.cpp.obj",
-			"EITimelinerInteractiveTool.cpp.obj",
-			"EITimelinerSimpleTool.cpp.obj",
 			"EITimelinerContext.cpp.obj",
 			"EITimelinerCoreBase.cpp.obj",
 			"EITimelinerTopWidgetBase.cpp.obj",
+			"EINotify.cpp.obj",
+			"EINotifyListContainer.cpp.obj",
 			"EITimelineEditingModel.cpp.obj",
 			"EINotifyItem.cpp.obj",
 			"FEINotifyLibrary.cpp.obj",
@@ -36,7 +29,14 @@
 			"SEITrack.cpp.obj",
 			"SEITrackArea.cpp.obj",
 			"SEITrackOutliner.cpp.obj",
-			"SEITrackOutlinerItem.cpp.obj"
+			"SEITrackOutlinerItem.cpp.obj",
+			"EIWidgetStore.cpp.obj",
+			"EITimelinerEditorMode.cpp.obj",
+			"EITimelinerEditorModeCommands.cpp.obj",
+			"EITimelinerEditorModeToolkit.cpp.obj",
+			"EITimelinerModule.cpp.obj",
+			"EITimelinerInteractiveTool.cpp.obj",
+			"EITimelinerSimpleTool.cpp.obj"
 		]
 	}
 }

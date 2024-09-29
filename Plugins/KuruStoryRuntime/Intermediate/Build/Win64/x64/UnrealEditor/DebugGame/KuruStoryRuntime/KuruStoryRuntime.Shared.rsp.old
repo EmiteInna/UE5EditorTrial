@@ -257,6 +257,7 @@
 /I "Developer\PhysicsUtilities\Public"
 /I "..\Intermediate\Build\Win64\UnrealEditor\Inc\WidgetRegistration\UHT"
 /I "Developer\WidgetRegistration\Public"
+/I "H:\KuruEditors\KuruADV\Plugins\KuruStoryRuntime\Intermediate\Build\Win64\UnrealEditor\Inc\KuruStoryRuntime\UHT"
 /I "H:\KuruEditors\KuruADV\Plugins\KuruStoryRuntime\Source"
 /I "H:\KuruEditors\KuruADV\Plugins\KuruStoryRuntime\Source\KuruStoryRuntime\Public"
 /external:W0

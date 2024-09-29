@@ -23,4 +23,14 @@
   <Compile Include="..\..\..\..\Source\KuruADVEditor.Target.cs"><Link>Source\KuruADVEditor.Target.cs</Link></Compile>
   <Compile Include="..\..\..\..\Source\KuruADV\KuruADV.Build.cs"><Link>Source\KuruADV\KuruADV.Build.cs</Link></Compile>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Plugins\KuruStoryRuntime\Source\KuruStoryRuntime\KuruStoryPawn.h">
+      <Link>Plugins\KuruStoryRuntime\Source\KuruStoryRuntime\KuruStoryPawn.h</Link>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Plugins\KuruStoryRuntime\Source\KuruStoryRuntime\KuruStoryPawn.cpp">
+      <Link>Plugins\KuruStoryRuntime\Source\KuruStoryRuntime\KuruStoryPawn.cpp</Link>
+    </ClCompile>
+  </ItemGroup>
 </Project>

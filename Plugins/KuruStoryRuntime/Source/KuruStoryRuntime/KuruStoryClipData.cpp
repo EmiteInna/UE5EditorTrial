@@ -5,6 +5,7 @@
 
 
 #include "Misc/TransactionObjectEvent.h"
+#include "StoryNotifies/SNE_LinkTo.h"
 #include "StoryNotifies/StoryNotifyBase.h"
 #include "StoryNotifies/StoryNotifyEventBase.h"
 
@@ -20,5 +21,7 @@ UKuruStoryClipData::UKuruStoryClipData()
 	Notifies[2]->SetStartTime(3);
 	Notifies[2]->SetEndTime(5.5);*/
 	SetFlags(RF_Transactional);
+
+	
 }
 

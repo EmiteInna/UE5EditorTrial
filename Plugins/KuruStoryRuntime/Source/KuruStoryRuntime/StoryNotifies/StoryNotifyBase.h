@@ -21,20 +21,23 @@ public:
 	UPROPERTY()
 	UObject* ObjectOwner = nullptr;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category="Story", DisplayName="起始时长")
 	float StartTime = 0;
 	
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category="Story", DisplayName="结束时长")
 	float EndTime = 0;
 	
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, Category="Story", DisplayName="起始帧")
 	int StartFrame = 0;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, Category="Story", DisplayName="结束帧")
 	int EndFrame = 0;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, Category="Story", DisplayName="指令名称")
 	FName Name = "NewNotify";
+
+	UPROPERTY(VisibleAnywhere, Category="Story", DisplayName="能否被删除")
+	bool bCanBeDeleted = true;
 	
 	virtual UObject* GetOwner();
 

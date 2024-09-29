@@ -34,6 +34,7 @@
 /NODEFAULTLIB:"LIBCD"
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN:6
+/NATVIS:"..\Intermediate\Build\Win64\x64\UnrealEditor\Development\RenderCore\RenderCore.natvis"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\UnrealEd\SharedPCH.UnrealEd.NonOptimized.Cpp20.h.obj"
 "H:\KuruEditors\KuruADV\Plugins\EITimeliner\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\EITimeliner\Module.EITimeliner.cpp.obj"
 "H:\KuruEditors\KuruADV\Plugins\EITimeliner\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\EITimeliner\EITimelinerContext.cpp.obj"
@@ -81,6 +82,7 @@
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\SequencerWidgets\UnrealEditor-SequencerWidgets.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\TimeManagement\UnrealEditor-TimeManagement.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\AdvancedPreviewScene\UnrealEditor-AdvancedPreviewScene.lib"
+"..\Intermediate\Build\Win64\x64\UnrealEditor\Development\RenderCore\UnrealEditor-RenderCore.lib"
 "delayimp.lib"
 "wininet.lib"
 "rpcrt4.lib"

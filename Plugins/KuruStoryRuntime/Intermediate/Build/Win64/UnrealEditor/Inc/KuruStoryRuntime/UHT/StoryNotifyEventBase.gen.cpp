@@ -80,9 +80,9 @@ void EmptyLinkFunctionForGeneratedCodeStoryNotifyEventBase() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryRuntime_Source_KuruStoryRuntime_StoryNotifies_StoryNotifyEventBase_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UStoryNotifyEventBase, UStoryNotifyEventBase::StaticClass, TEXT("UStoryNotifyEventBase"), &Z_Registration_Info_UClass_UStoryNotifyEventBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStoryNotifyEventBase), 3633525147U) },
+		{ Z_Construct_UClass_UStoryNotifyEventBase, UStoryNotifyEventBase::StaticClass, TEXT("UStoryNotifyEventBase"), &Z_Registration_Info_UClass_UStoryNotifyEventBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStoryNotifyEventBase), 2372713641U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryRuntime_Source_KuruStoryRuntime_StoryNotifies_StoryNotifyEventBase_h_3067916468(TEXT("/Script/KuruStoryRuntime"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryRuntime_Source_KuruStoryRuntime_StoryNotifies_StoryNotifyEventBase_h_274276636(TEXT("/Script/KuruStoryRuntime"),
 		Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryRuntime_Source_KuruStoryRuntime_StoryNotifies_StoryNotifyEventBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_KuruADV_Plugins_KuruStoryRuntime_Source_KuruStoryRuntime_StoryNotifies_StoryNotifyEventBase_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
